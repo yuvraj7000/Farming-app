@@ -1,0 +1,13 @@
+{
+    "translation": {
+      "language" : " Select Language",
+     
+      
+      "featureCard_plant_heading" : "Plant Disease Diagnosis",
+      "featureCard_plant_content" : "Upload a plant image to detect diseases and get solutions.",
+      "featureCard_weather_heading" : "Accurate Weather Forecast",
+      "featureCard_weather_content" : "Stay updated with real-time weather information.",
+      "featureCard_mandi_heading" : "Market Prices",
+      "featureCard_mandi_content" : "Check prices of commodities across all Indian mandis.",
+  }
+}
