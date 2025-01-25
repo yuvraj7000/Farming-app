@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 import { useRouter } from 'expo-router';
-
+import Button from './button';
 const data = [
     { lan: "English", code: "en" },
     { lan: "Hindi", code: "hi" },
@@ -98,7 +98,7 @@ const Language_component = () => {
                         />
                     )}
                 />
-                <TouchableOpacity onPress={handleDone} style={{
+                {/* <TouchableOpacity onPress={handleDone} style={{
                     backgroundColor: '#007BFF',
                     padding: 10,
                     borderRadius: 10,
@@ -107,7 +107,8 @@ const Language_component = () => {
                     marginVertical: 10,
                 }}>
                     <Text style={{ color: 'white', fontSize: 16 }}>Done</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+                <Button handleDone={handleDone} buttonName="Done" />
             </View>
         </View>
     );
