@@ -42,7 +42,7 @@ const Feature = () => {
   const { t } = useTranslation();
   const router = useRouter();
   const buttonPress= ()=> {
-    router.push('/home')
+    router.push('/home');
   }
 
   return (
