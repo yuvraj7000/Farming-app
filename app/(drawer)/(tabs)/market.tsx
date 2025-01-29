@@ -1,21 +1,31 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
-import Dropdown from '@/components/dropdown'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React from 'react';
+import Dropdown from '@/components/dropdown';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import MandiData from '@/components/mandi_data';
 
 const Market = () => {
   return (
-    <SafeAreaView>
-    <View>
-      <Dropdown/>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <View>
+          <Dropdown />
+          <MandiData />
+        </View>
+      </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default Market
+export default Market;
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+  },
+  scrollViewContent: {
+    padding: 10,
+  },
   intruction: {
     padding: 5,
     justifyContent: 'center',
@@ -23,9 +33,7 @@ const styles = StyleSheet.create({
   },
   moto: {
     padding: 20,
-  
     fontSize: 15,
-    // fontWeight: 'bold',
     color: 'black',
   },
   weather: {
@@ -40,4 +48,4 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-})
+});
