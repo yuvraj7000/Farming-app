@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
 import Dropdown from '@/components/dropdown';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import MandiData from '@/components/mandi_data';
+// import MandiData from '@/components/mandi_data';
 
 const Market = () => {
   return (
@@ -10,7 +10,7 @@ const Market = () => {
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View>
           <Dropdown />
-          <MandiData />
+          {/* <MandiData /> */}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -49,3 +49,6 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 });
+
+
+
