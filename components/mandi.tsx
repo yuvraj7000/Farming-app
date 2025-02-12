@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import i18next from 'i18next';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import commodity from '../context/i18n/commodity_Translation.json';
 
-const Mandi = ({ data}) => {
+
+const Mandi = ({ data }) => {
   const [selectedMarket, setSelectedMarket] = useState(null);
   const [marketDetails, setMarketDetails] = useState([]);
 
@@ -13,10 +16,12 @@ const Mandi = ({ data}) => {
     setMarketDetails(details);
   };
 
+
   return (
     <ScrollView style={styles.container}>
+       <Text style={styles.marketTitle}>All Markets of {data[0].District} District</Text>
       <View style={styles.marketContainer}>
-        <Text style={styles.marketTitle}>Markets</Text>
+       
         {uniqueMarkets.map((market, index) => (
           <TouchableOpacity
             key={index}
@@ -30,19 +35,24 @@ const Mandi = ({ data}) => {
 
       {selectedMarket && (
         <View style={styles.tableContainer}>
-          <Text style={styles.tableTitle}>Market Data for {selectedMarket}</Text>
+          <Text style={styles.tableTitle}>Market Data for {selectedMarket} {i18next.language}</Text>
           <View style={styles.table}>
             <View style={styles.tableRow}>
               <Text style={styles.tableHeader}>Commodity</Text>
-              <Text style={styles.tableHeader}>Variety</Text>
+              {/* <Text style={styles.tableHeader}>Variety</Text> */}
               <Text style={styles.tableHeader}>Min Price</Text>
               <Text style={styles.tableHeader}>Max Price</Text>
               <Text style={styles.tableHeader}>Modal Price</Text>
             </View>
             {marketDetails.map((item, index) => (
               <View key={index} style={styles.tableRow}>
-                <Text style={styles.tableCell}>{item.Commodity}</Text>
-                <Text style={styles.tableCell}>{item.Variety}</Text>
+                <Text style={styles.tableCell}>
+                  {commodity[item.Commodity] && commodity[item.Commodity].translations[i18next.language]
+                    ? commodity[item.Commodity].translations[i18next.language]
+                    : item.Commodity}
+                </Text>
+                {/* { item.Variety == item.Commodity ? <Text>-</Text> : <Text style={styles.tableCell}>{item.Variety}</Text> } */}
+             
                 <Text style={styles.tableCell}>{item.Min_Price}</Text>
                 <Text style={styles.tableCell}>{item.Max_Price}</Text>
                 <Text style={styles.tableCell}>{item.Modal_Price}</Text>
@@ -60,9 +70,14 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   marketContainer: {
-    marginTop: 20,
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 5,
   },
   marketTitle: {
+    marginTop: 20,
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,

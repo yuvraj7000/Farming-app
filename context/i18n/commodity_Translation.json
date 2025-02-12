@@ -1,0 +1,3159 @@
+{
+  "Wheat": {
+    "code": 1,
+    "translations": {
+      "hi": "गेहूँ",
+      "en": "Wheat"
+    }
+  },
+  "Paddy(Dhan)(Common)": {
+    "code": 2,
+    "translations": {
+      "hi": "धान(सामान्य)",
+      "en": "Paddy(Dhan)(Common)"
+    }
+  },
+  "Rice": {
+    "code": 3,
+    "translations": {
+      "hi": "चावल",
+      "en": "Rice"
+    }
+  },
+  "Maize": {
+    "code": 4,
+    "translations": {
+      "hi": "मक्का",
+      "en": "Maize"
+    }
+  },
+  "Jowar(Sorghum)": {
+    "code": 5,
+    "translations": {
+      "hi": "ज्वार(सोरघम)",
+      "en": "Jowar(Sorghum)"
+    }
+  },
+  "Bengal Gram(Gram)(Whole)": {
+    "code": 6,
+    "translations": {
+      "hi": "बंगाल चना(पूरा)",
+      "en": "Bengal Gram(Gram)(Whole)"
+    }
+  },
+  "Red Gram": {
+    "code": 7,
+    "translations": {
+      "hi": "लाल चना",
+      "en": "Red Gram"
+    }
+  },
+  "Black Gram (Urd Beans)(Whole)": {
+    "code": 8,
+    "translations": {
+      "hi": "काला चना (उर्द)(पूरा)",
+      "en": "Black Gram (Urd Beans)(Whole)"
+    }
+  },
+  "Green Gram (Moong)(Whole)": {
+    "code": 9,
+    "translations": {
+      "hi": "हरा चना (मूंग)(पूरा)",
+      "en": "Green Gram (Moong)(Whole)"
+    }
+  },
+  "Groundnut": {
+    "code": 10,
+    "translations": {
+      "hi": "मूंगफली",
+      "en": "Groundnut"
+    }
+  },
+  "Sesamum(Sesame,Gingelly,Til)": {
+    "code": 11,
+    "translations": {
+      "hi": "तिल(तिल, मसूर, तिल)",
+      "en": "Sesamum(Sesame,Gingelly,Til)"
+    }
+  },
+  "Mustard": {
+    "code": 12,
+    "translations": {
+      "hi": "सरसों",
+      "en": "Mustard"
+    }
+  },
+  "Soyabean": {
+    "code": 13,
+    "translations": {
+      "hi": "सोयाबीन",
+      "en": "Soyabean"
+    }
+  },
+  "Sunflower": {
+    "code": 14,
+    "translations": {
+      "hi": "सूरजमुखी",
+      "en": "Sunflower"
+    }
+  },
+  "Cotton": {
+    "code": 15,
+    "translations": {
+      "hi": "कपास",
+      "en": "Cotton"
+    }
+  },
+  "Jute": {
+    "code": 16,
+    "translations": {
+      "hi": "जूट",
+      "en": "Jute"
+    }
+  },
+  "Apple": {
+    "code": 17,
+    "translations": {
+      "hi": "सेब",
+      "en": "Apple"
+    }
+  },
+  "Orange": {
+    "code": 18,
+    "translations": {
+      "hi": "संतरा",
+      "en": "Orange"
+    }
+  },
+  "Banana": {
+    "code": 19,
+    "translations": {
+      "hi": "केला",
+      "en": "Banana"
+    }
+  },
+  "Mango": {
+    "code": 20,
+    "translations": {
+      "hi": "आम",
+      "en": "Mango"
+    }
+  },
+  "Pineapple": {
+    "code": 21,
+    "translations": {
+      "hi": "अनानास",
+      "en": "Pineapple"
+    }
+  },
+  "Grapes": {
+    "code": 22,
+    "translations": {
+      "hi": "अंगूर",
+      "en": "Grapes"
+    }
+  },
+  "Onion": {
+    "code": 23,
+    "translations": {
+      "hi": "प्याज",
+      "en": "Onion"
+    }
+  },
+  "Potato": {
+    "code": 24,
+    "translations": {
+      "hi": "आलू",
+      "en": "Potato"
+    }
+  },
+  "Garlic": {
+    "code": 25,
+    "translations": {
+      "hi": "लहसुन",
+      "en": "Garlic"
+    }
+  },
+  "Chili Red": {
+    "code": 26,
+    "translations": {
+      "hi": "लाल मिर्च",
+      "en": "Chili Red"
+    }
+  },
+  "Ginger(Dry)": {
+    "code": 27,
+    "translations": {
+      "hi": "अदरक(सूखा)",
+      "en": "Ginger(Dry)"
+    }
+  },
+  "Bajra(Pearl Millet/Cumbu)": {
+    "code": 28,
+    "translations": {
+      "hi": "बाजरा(मोती बाजरा/कुम्बू)",
+      "en": "Bajra(Pearl Millet/Cumbu)"
+    }
+  },
+  "Barley (Jau)": {
+    "code": 29,
+    "translations": {
+      "hi": "जौ",
+      "en": "Barley (Jau)"
+    }
+  },
+  "Ragi (Finger Millet)": {
+    "code": 30,
+    "translations": {
+      "hi": "रागी",
+      "en": "Ragi (Finger Millet)"
+    }
+  },
+  "Cauliflower": {
+    "code": 34,
+    "translations": {
+      "hi": "फूलगोभी",
+      "en": "Cauliflower"
+    }
+  },
+  "Brinjal": {
+    "code": 35,
+    "translations": {
+      "hi": "बैंगन",
+      "en": "Brinjal"
+    }
+  },
+  "Cashewnuts": {
+    "code": 36,
+    "translations": {
+      "hi": "काजू",
+      "en": "Cashewnuts"
+    }
+  },
+  "Black pepper": {
+    "code": 38,
+    "translations": {
+      "hi": "काली मिर्च",
+      "en": "Black pepper"
+    }
+  },
+  "Turmeric": {
+    "code": 39,
+    "translations": {
+      "hi": "हल्दी",
+      "en": "Turmeric"
+    }
+  },
+  "Cardamoms": {
+    "code": 40,
+    "translations": {
+      "hi": "इलायची",
+      "en": "Cardamoms"
+    }
+  },
+  "Betelnuts": {
+    "code": 41,
+    "translations": {
+      "hi": "सुपारी",
+      "en": "Betelnuts"
+    }
+  },
+  "Cummin Seed(Jeera)": {
+    "code": 42,
+    "translations": {
+      "hi": "जीरा",
+      "en": "Cummin Seed(Jeera)"
+    }
+  },
+  "Coriander(Leaves)": {
+    "code": 43,
+    "translations": {
+      "hi": "धनिया(पत्तियाँ)",
+      "en": "Coriander(Leaves)"
+    }
+  },
+  "Tea": {
+    "code": 44,
+    "translations": {
+      "hi": "चाय",
+      "en": "Tea"
+    }
+  },
+  "Coffee": {
+    "code": 45,
+    "translations": {
+      "hi": "कॉफी",
+      "en": "Coffee"
+    }
+  },
+  "Methi(Leaves)": {
+    "code": 46,
+    "translations": {
+      "hi": "मेथी(पत्तियाँ)",
+      "en": "Methi(Leaves)"
+    }
+  },
+  "Methi Seeds": {
+    "code": 47,
+    "translations": {
+      "hi": "मेथी के बीज",
+      "en": "Methi Seeds"
+    }
+  },
+  "Sugar": {
+    "code": 48,
+    "translations": {
+      "hi": "चीनी",
+      "en": "Sugar"
+    }
+  },
+  "Arhar (Tur/Red Gram)(Whole)": {
+    "code": 49,
+    "translations": {
+      "hi": "अरहर (तुअर/लाल चना)(साबुत)",
+      "en": "Arhar (Tur/Red Gram)(Whole)"
+    }
+  },
+  "Green Peas": {
+    "code": 50,
+    "translations": {
+      "hi": "हरी मटर",
+      "en": "Green Peas"
+    }
+  },
+  "Binoula": {
+    "code": 51,
+    "translations": {
+      "hi": "बिनौला",
+      "en": "Binoula"
+    }
+  },
+  "Safflower": {
+    "code": 59,
+    "translations": {
+      "hi": "कुसुम",
+      "en": "Safflower"
+    }
+  },
+  "Mash": {
+    "code": 60,
+    "translations": {
+      "hi": "मैश",
+      "en": "Mash"
+    }
+  },
+  "Kharif Mash": {
+    "code": 61,
+    "translations": {
+      "hi": "खरीफ मैश",
+      "en": "Kharif Mash"
+    }
+  },
+  "Riccbcan": {
+    "code": 62,
+    "translations": {
+      "hi": "रिकबकन",
+      "en": "Riccbcan"
+    }
+  },
+  "Lentil (Masur)(Whole)": {
+    "code": 63,
+    "translations": {
+      "hi": "मसूर (साबुत)",
+      "en": "Lentil (Masur)(Whole)"
+    }
+  },
+  "Field Pea": {
+    "code": 64,
+    "translations": {
+      "hi": "खेत मटर",
+      "en": "Field Pea"
+    }
+  },
+  "Raya": {
+    "code": 65,
+    "translations": {
+      "hi": "राया",
+      "en": "Raya"
+    }
+  },
+  "Toria": {
+    "code": 66,
+    "translations": {
+      "hi": "तोरिया",
+      "en": "Toria"
+    }
+  },
+  "Linseed": {
+    "code": 67,
+    "translations": {
+      "hi": "अलसी",
+      "en": "Linseed"
+    }
+  },
+  "Dhaincha": {
+    "code": 69,
+    "translations": {
+      "hi": "ढैंचा",
+      "en": "Dhaincha"
+    }
+  },
+  "Chikoos(Sapota)": {
+    "code": 71,
+    "translations": {
+      "hi": "चीकूस(सपोटा)",
+      "en": "Chikoos(Sapota)"
+    }
+  },
+  "Papaya": {
+    "code": 72,
+    "translations": {
+      "hi": "पपीता",
+      "en": "Papaya"
+    }
+  },
+  "Water Melon": {
+    "code": 73,
+    "translations": {
+      "hi": "तरबूज",
+      "en": "Water Melon"
+    }
+  },
+  "Gur(Jaggery)": {
+    "code": 74,
+    "translations": {
+      "hi": "गुड़(गुड़)",
+      "en": "Gur(Jaggery)"
+    }
+  },
+  "Guar": {
+    "code": 75,
+    "translations": {
+      "hi": "ग्वार",
+      "en": "Guar"
+    }
+  },
+  "Taramira": {
+    "code": 76,
+    "translations": {
+      "hi": "तारामिरा",
+      "en": "Taramira"
+    }
+  },
+  "Mousambi(Sweet Lime)": {
+    "code": 77,
+    "translations": {
+      "hi": "मौसम्बी(मीठा नींबू)",
+      "en": "Mousambi(Sweet Lime)"
+    }
+  },
+  "Tomato": {
+    "code": 78,
+    "translations": {
+      "hi": "टमाटर",
+      "en": "Tomato"
+    }
+  },
+  "Cluster beans": {
+    "code": 80,
+    "translations": {
+      "hi": "क्लस्टर बीन्स",
+      "en": "Cluster beans"
+    }
+  },
+  "Bitter gourd": {
+    "code": 81,
+    "translations": {
+      "hi": "कड़वा लौकी",
+      "en": "Bitter gourd"
+    }
+  },
+  "Bottle gourd": {
+    "code": 82,
+    "translations": {
+      "hi": "लौकी",
+      "en": "Bottle gourd"
+    }
+  },
+  "Ashgourd": {
+    "code": 83,
+    "translations": {
+      "hi": "ऐशगॉर्ड",
+      "en": "Ashgourd"
+    }
+  },
+  "Pumpkin": {
+    "code": 84,
+    "translations": {
+      "hi": "कद्दू",
+      "en": "Pumpkin"
+    }
+  },
+ "Bhindi(Ladies Finger)": {
+    "code": 85,
+    "translations": {
+      "hi": "भिंडी",
+      "en": "Bhindi(Ladies Finger)"
+    }
+  },
+  "Amaranthus": {
+    "code": 86,
+    "translations": {
+      "hi": "ऐमरैन्थस",
+      "en": "Amaranthus"
+    }
+  },
+  "Green Chilli": {
+    "code": 87,
+    "translations": {
+      "hi": "हरी मिर्च",
+      "en": "Green Chilli"
+    }
+  },
+  "Chilly Capsicum": {
+    "code": 88,
+    "translations": {
+      "hi": "चिली कैप्सिकम",
+      "en": "Chilly Capsicum"
+    }
+  },
+  "Cowpea(Veg)": {
+    "code": 89,
+    "translations": {
+      "hi": "लोबिया(सब्जी)",
+      "en": "Cowpea(Veg)"
+    }
+  },
+  "Banana - Green": {
+    "code": 90,
+    "translations": {
+      "hi": "केला - हरा",
+      "en": "Banana - Green"
+    }
+  },
+  "Dal (Avare)": {
+    "code": 91,
+    "translations": {
+      "hi": "दाल (अवारे)",
+      "en": "Dal (Avare)"
+    }
+  },
+  "Cowpea (Lobia/Karamani)": {
+    "code": 92,
+    "translations": {
+      "hi": "लोबिया/करमानी)",
+      "en": "Cowpea (Lobia/Karamani)"
+    }
+  },
+  "Mataki": {
+    "code": 93,
+    "translations": {
+      "hi": "मटकी",
+      "en": "Mataki"
+    }
+  },
+  "Beans": {
+    "code": 94,
+    "translations": {
+      "hi": "बीन्स",
+      "en": "Beans"
+    }
+  },
+  "Moath Dal": {
+    "code": 258,
+    "translations": {
+      "hi": "मोठ दाल",
+      "en": "Moath Dal"
+    }
+  },
+  "Lak(Teora)": {
+    "code": 96,
+    "translations": {
+      "hi": "लाक(तेओरा)",
+      "en": "Lak(Teora)"
+    }
+  },
+  "Other Pulses": {
+    "code": 97,
+    "translations": {
+      "hi": "अन्य दालें",
+      "en": "Other Pulses"
+    }
+  },
+  "Niger Seed (Ramtil)": {
+    "code": 98,
+    "translations": {
+      "hi": "नाइजर बीज (रामतिल)",
+      "en": "Niger Seed (Ramtil)"
+    }
+  },
+  "Cotton Seed": {
+    "code": 99,
+    "translations": {
+      "hi": "कपास बीज",
+      "en": "Cotton Seed"
+    }
+  },
+  "Tapioca": {
+    "code": 100,
+    "translations": {
+      "hi": "टैपिओका",
+      "en": "Tapioca"
+    }
+  },
+  "Amphophalus": {
+    "code": 102,
+    "translations": {
+      "hi": "एम्फोफालस",
+      "en": "Amphophalus"
+    }
+  },
+  "Ginger(Green)": {
+    "code": 103,
+    "translations": {
+      "hi": "अदरक(हरा)",
+      "en": "Ginger(Green)"
+    }
+  },
+  "Cocoa": {
+    "code": 104,
+    "translations": {
+      "hi": "कोको",
+      "en": "Cocoa"
+    }
+  },
+  "Cloves": {
+    "code": 105,
+    "translations": {
+      "hi": "लौंग",
+      "en": "Cloves"
+    }
+  },
+  "Nutmeg": {
+    "code": 106,
+    "translations": {
+      "hi": "जायफल",
+      "en": "Nutmeg"
+    }
+  },
+  "Mace": {
+    "code": 107,
+    "translations": {
+      "hi": "जावित्री",
+      "en": "Mace"
+    }
+  },
+  "Corriander seed": {
+    "code": 108,
+    "translations": {
+      "hi": "धनिया बीज",
+      "en": "Corriander seed"
+    }
+  },
+  "Pepper garbled": {
+    "code": 109,
+    "translations": {
+      "hi": "काली मिर्च विकृत",
+      "en": "Pepper garbled"
+    }
+  },
+  "Pepper ungarbled": {
+    "code": 110,
+    "translations": {
+      "hi": "काली मिर्च अनगारबल्ड",
+      "en": "Pepper ungarbled"
+    }
+  },
+  "Rubber": {
+    "code": 111,
+    "translations": {
+      "hi": "रबर",
+      "en": "Rubber"
+    }
+  },
+  "Coconut Seed": {
+    "code": 112,
+    "translations": {
+      "hi": "नारियल बीज",
+      "en": "Coconut Seed"
+    }
+  },
+  "Big Gram": {
+    "code": 113,
+    "translations": {
+      "hi": "बड़ा चना",
+      "en": "Big Gram"
+    }
+  },
+  "Kulthi(Horse Gram)": {
+    "code": 114,
+    "translations": {
+      "hi": "कुलथी(हॉर्स ग्राम)",
+      "en": "Kulthi(Horse Gram)"
+    }
+  },
+  "Karamani": {
+    "code": 115,
+    "translations": {
+      "hi": "करमानी",
+      "en": "Karamani"
+    }
+  },
+  "Thinai (Italian Millet)": {
+    "code": 116,
+    "translations": {
+      "hi": "थिनाई (इतालवी बाजरा)",
+      "en": "Thinai (Italian Millet)"
+    }
+  },
+  "Kodo Millet(Varagu)": {
+    "code": 117,
+    "translations": {
+      "hi": "कोदो बाजरा (वरगु)",
+      "en": "Kodo Millet(Varagu)"
+    }
+  },
+  "Hybrid Cumbu": {
+    "code": 119,
+    "translations": {
+      "hi": "हाइब्रिड कुम्बू",
+      "en": "Hybrid Cumbu"
+    }
+  },
+  "T.V. Cumbu": {
+    "code": 120,
+    "translations": {
+      "hi": "टी.वी. कुम्बू",
+      "en": "T.V. Cumbu"
+    }
+  },
+  "Foxtail Millet(Navane)": {
+    "code": 121,
+    "translations": {
+      "hi": "फॉक्सटेल बाजरा (नवाने)",
+      "en": "Foxtail Millet(Navane)"
+    }
+  },
+  "Same/Savi": {
+    "code": 122,
+    "translations": {
+      "hi": "समान/सावी",
+      "en": "Same/Savi"
+    }
+  },
+  "Castor Seed": {
+    "code": 123,
+    "translations": {
+      "hi": "अरंडी का बीज",
+      "en": "Castor Seed"
+    }
+  },
+  "Honge seed": {
+    "code": 124,
+    "translations": {
+      "hi": "होंगे का बीज",
+      "en": "Honge seed"
+    }
+  },
+  "Hippe Seed": {
+    "code": 125,
+    "translations": {
+      "hi": "हिप्पे का बीज",
+      "en": "Hippe Seed"
+    }
+  },
+  "Neem Seed": {
+    "code": 126,
+    "translations": {
+      "hi": "नीम का बीज",
+      "en": "Neem Seed"
+    }
+  },
+  "Pundi Seed": {
+    "code": 128,
+    "translations": {
+      "hi": "पुंडी का बीज",
+      "en": "Pundi Seed"
+    }
+  },
+  "Copra": {
+    "code": 129,
+    "translations": {
+      "hi": "खोपरा",
+      "en": "Copra"
+    }
+  },
+  "Ambada Seed": {
+    "code": 130,
+    "translations": {
+      "hi": "अंबाड़ा का बीज",
+      "en": "Ambada Seed"
+    }
+  },
+  "Dry Chillies": {
+    "code": 132,
+    "translations": {
+      "hi": "सूखी मिर्च",
+      "en": "Dry Chillies"
+    }
+  },
+  "Soanf": {
+    "code": 135,
+    "translations": {
+      "hi": "सोनफ",
+      "en": "Soanf"
+    }
+  },
+  "Ajwan": {
+    "code": 137,
+    "translations": {
+      "hi": "अजवान",
+      "en": "Ajwan"
+    }
+  },
+  "Coconut": {
+    "code": 138,
+    "translations": {
+      "hi": "नारियल",
+      "en": "Coconut"
+    }
+  },
+  "Sunhemp": {
+    "code": 139,
+    "translations": {
+      "hi": "सनहेम्प",
+      "en": "Sunhemp"
+    }
+  },
+  "Arecanut(Betelnut/Supari)": {
+    "code": 140,
+    "translations": {
+      "hi": "सुपारी",
+      "en": "Arecanut(Betelnut/Supari)"
+    }
+  },
+  "Tobacco": {
+    "code": 141,
+    "translations": {
+      "hi": "तम्बाकू",
+      "en": "Tobacco"
+    }
+  },
+  "Myrobolan(Harad)": {
+    "code": 142,
+    "translations": {
+      "hi": "मायरोबोलन(हरड़)",
+      "en": "Myrobolan(Harad)"
+    }
+  },
+  "Betal Leaves": {
+    "code": 143,
+    "translations": {
+      "hi": "सुपारी के पत्ते",
+      "en": "Betal Leaves"
+    }
+  },
+  "Sugarcane": {
+    "code": 150,
+    "translations": {
+      "hi": "गन्ना",
+      "en": "Sugarcane"
+    }
+  },
+  "Jaggery": {
+    "code": 151,
+    "translations": {
+      "hi": "गुड़",
+      "en": "Jaggery"
+    }
+  },
+  "Sweet Potato": {
+    "code": 152,
+    "translations": {
+      "hi": "शकरकंद",
+      "en": "Sweet Potato"
+    }
+  },
+  "Carrot": {
+    "code": 153,
+    "translations": {
+      "hi": "गाजर",
+      "en": "Carrot"
+    }
+  },
+  "Cabbage": {
+    "code": 154,
+    "translations": {
+      "hi": "गोभी",
+      "en": "Cabbage"
+    }
+  },
+  "Ladies Finger": {
+    "code": 155,
+    "translations": {
+      "hi": "भिंडी",
+      "en": "Ladies Finger"
+    }
+  },
+  "Snakeguard": {
+    "code": 156,
+    "translations": {
+      "hi": "स्नेकगार्ड",
+      "en": "Snakeguard"
+    }
+  },
+  "Beetroot": {
+    "code": 157,
+    "translations": {
+      "hi": "चुकंदर",
+      "en": "Beetroot"
+    }
+  },
+  "White Pumpkin": {
+    "code": 158,
+    "translations": {
+      "hi": "सफेद कद्दू",
+      "en": "White Pumpkin"
+    }
+  },
+  "Cucumbar(Kheera)": {
+    "code": 159,
+    "translations": {
+      "hi": "खीरा",
+      "en": "Cucumbar(Kheera)"
+    }
+  },
+  "Ridgeguard(Tori)": {
+    "code": 160,
+    "translations": {
+      "hi": "रिजगार्ड(टोरी)",
+      "en": "Ridgeguard(Tori)"
+    }
+  },
+  "Raddish": {
+    "code": 161,
+    "translations": {
+      "hi": "मूली",
+      "en": "Raddish"
+    }
+  },
+  "Thondekai": {
+    "code": 162,
+    "translations": {
+      "hi": "थोंडेकाई",
+      "en": "Thondekai"
+    }
+  },
+  "Duster Beans": {
+    "code": 163,
+    "translations": {
+      "hi": "डस्टर बीन्स",
+      "en": "Duster Beans"
+    }
+  },
+  "Capsicum": {
+    "code": 164,
+    "translations": {
+      "hi": "कैप्सिकम",
+      "en": "Capsicum"
+    }
+  },
+  "Green Avare (W)": {
+    "code": 165,
+    "translations": {
+      "hi": "ग्रीन अवारे (डब्ल्यू)",
+      "en": "Green Avare (W)"
+    }
+  },
+  "Alsandikai": {
+    "code": 166,
+    "translations": {
+      "hi": "अलसंडिकाई",
+      "en": "Alsandikai"
+    }
+  },
+  "Chow Chow": {
+    "code": 167,
+    "translations": {
+      "hi": "चाउ चाउ",
+      "en": "Chow Chow"
+    }
+  },
+  "Drumstick": {
+    "code": 168,
+    "translations": {
+      "hi": "ड्रमस्टिक",
+      "en": "Drumstick"
+    }
+  },
+  "Chapparad Avare": {
+    "code": 169,
+    "translations": {
+      "hi": "चप्पड़ अवारे",
+      "en": "Chapparad Avare"
+    }
+  },
+  "Thogrikai": {
+    "code": 170,
+    "translations": {
+      "hi": "थोगरिकाई",
+      "en": "Thogrikai"
+    }
+  },
+  "Leafy Vegetable": {
+    "code": 171,
+    "translations": {
+      "hi": "पत्तेदार सब्जी",
+      "en": "Leafy Vegetable"
+    }
+  },
+  "Mango (Raw-Ripe)": {
+    "code": 172,
+    "translations": {
+      "hi": "आम (कच्चा-पका हुआ)",
+      "en": "Mango (Raw-Ripe)"
+    }
+  },
+  "Sweet Pumpkin": {
+    "code": 173,
+    "translations": {
+      "hi": "मीठा कद्दू",
+      "en": "Sweet Pumpkin"
+    }
+  },
+  "Peas Wet": {
+    "code": 174,
+    "translations": {
+      "hi": "गीली मटर",
+      "en": "Peas Wet"
+    }
+  },
+  "Jamamkhan": {
+    "code": 175,
+    "translations": {
+      "hi": "जमामखान",
+      "en": "Jamamkhan"
+    }
+  },
+  "Seemebadnekai": {
+    "code": 176,
+    "translations": {
+      "hi": "सीमेबदनेकाई",
+      "en": "Seemebadnekai"
+    }
+  },
+  "Knool Khol": {
+    "code": 177,
+    "translations": {
+      "hi": "नूल खोल",
+      "en": "Knool Khol"
+    }
+  },
+  "Suvarna Gadde": {
+    "code": 178,
+    "translations": {
+      "hi": "सुवर्णा गद्दे",
+      "en": "Suvarna Gadde"
+    }
+  },
+  "Lime": {
+    "code": 180,
+    "translations": {
+      "hi": "नींबू",
+      "en": "Lime"
+    }
+  },
+  "Marasebu": {
+    "code": 181,
+    "translations": {
+      "hi": "मारसेबू",
+      "en": "Marasebu"
+    }
+  },
+  "Jack Fruit": {
+    "code": 182,
+    "translations": {
+      "hi": "जैक फ्रूट",
+      "en": "Jack Fruit"
+    }
+  },
+  "Siddota": {
+    "code": 183,
+    "translations": {
+      "hi": "सिद्दोता",
+      "en": "Siddota"
+    }
+  },
+  "Jamun(Narale Hannu)": {
+    "code": 184,
+    "translations": {
+      "hi": "जामुन(नारले हन्नू)",
+      "en": "Jamun(Narale Hannu)"
+    }
+  },
+  "Guava": {
+    "code": 185,
+    "translations": {
+      "hi": "अमरूद",
+      "en": "Guava"
+    }
+  },
+  "Karbuja(Musk Melon)": {
+    "code": 187,
+    "translations": {
+      "hi": "करबुजा(खरबूजा)",
+      "en": "Karbuja(Musk Melon)"
+    }
+  },
+  "Chakotha": {
+    "code": 188,
+    "translations": {
+      "hi": "चकोथा",
+      "en": "Chakotha"
+    }
+  },
+  "Borehannu": {
+    "code": 189,
+    "translations": {
+      "hi": "बोरेहन्नू",
+      "en": "Borehannu"
+    }
+  },
+  "Pomegranate": {
+    "code": 190,
+    "translations": {
+      "hi": "अनार",
+      "en": "Pomegranate"
+    }
+  },
+  "Tender Coconut": {
+    "code": 200,
+    "translations": {
+      "hi": "कोमल नारियल",
+      "en": "Tender Coconut"
+    }
+  },
+  "Seetapal": {
+    "code": 201,
+    "translations": {
+      "hi": "सीतापाल",
+      "en": "Seetapal"
+    }
+  },
+  "Wood": {
+    "code": 203,
+    "translations": {
+      "hi": "लकड़ी",
+      "en": "Wood"
+    }
+  },
+  "Bamboo": {
+    "code": 204,
+    "translations": {
+      "hi": "बांस",
+      "en": "Bamboo"
+    }
+  },
+  "Cane": {
+    "code": 205,
+    "translations": {
+      "hi": "बेंत",
+      "en": "Cane"
+    }
+  },
+  "Firewood": {
+    "code": 206,
+    "translations": {
+      "hi": "जलाऊ लकड़ी",
+      "en": "Firewood"
+    }
+  },
+  "Soapnut(Antawala/Retha)": {
+    "code": 207,
+    "translations": {
+      "hi": "सोपनट(अंटावाला/रेठा)",
+      "en": "Soapnut(Antawala/Retha)"
+    }
+  },
+  "Tamarind Seed": {
+    "code": 208,
+    "translations": {
+      "hi": "इमली के बीज",
+      "en": "Tamarind Seed"
+    }
+  },
+  "Antawala": {
+    "code": 209,
+    "translations": {
+      "hi": "अंटावाला",
+      "en": "Antawala"
+    }
+  },
+  "Jute Seed": {
+    "code": 210,
+    "translations": {
+      "hi": "जूट के बीज",
+      "en": "Jute Seed"
+    }
+  },
+  "Cow": {
+    "code": 212,
+    "translations": {
+      "hi": "गाय",
+      "en": "Cow"
+    }
+  },
+  "Ox": {
+    "code": 213,
+    "translations": {
+      "hi": "बैल",
+      "en": "Ox"
+    }
+  },
+  "Bull": {
+    "code": 214,
+    "translations": {
+      "hi": "बैल",
+      "en": "Bull"
+    }
+  },
+  "Calf": {
+    "code": 215,
+    "translations": {
+      "hi": "बछड़ा",
+      "en": "Calf"
+    }
+  },
+  "He Buffalo": {
+    "code": 216,
+    "translations": {
+      "hi": "वह भैंस",
+      "en": "He Buffalo"
+    }
+  },
+  "She Buffalo": {
+    "code": 217,
+    "translations": {
+      "hi": "वह भैंस",
+      "en": "She Buffalo"
+    }
+  },
+  "Sheep": {
+    "code": 218,
+    "translations": {
+      "hi": "भेड़",
+      "en": "Sheep"
+    }
+  },
+  "Goat": {
+    "code": 219,
+    "translations": {
+      "hi": "बकरी",
+      "en": "Goat"
+    }
+  },
+  "Pigs": {
+    "code": 220,
+    "translations": {
+      "hi": "सूअर",
+      "en": "Pigs"
+    }
+  },
+  "Fig(Anjura/Anjeer)": {
+    "code": 221,
+    "translations": {
+      "hi": "अंजीर(अंजुरा/अंजीर)",
+      "en": "Fig(Anjura/Anjeer)"
+    }
+  },
+  "Nearle Hannu": {
+    "code": 222,
+    "translations": {
+      "hi": "नियरले हन्नू",
+      "en": "Nearle Hannu"
+    }
+  },
+  "Nelli Kai": {
+    "code": 223,
+    "translations": {
+      "hi": "नेल्ली काई",
+      "en": "Nelli Kai"
+    }
+  },
+  "Bunch Beans": {
+    "code": 224,
+    "translations": {
+      "hi": "बंच बीन्स",
+      "en": "Bunch Beans"
+    }
+  },
+  "Maragensu": {
+    "code": 225,
+    "translations": {
+      "hi": "मारगेनसु",
+      "en": "Maragensu"
+    }
+  },
+  "Skin And Hide": {
+    "code": 226,
+    "translations": {
+      "hi": "त्वचा और खाल",
+      "en": "Skin And Hide"
+    }
+  },
+  "Rose(Loose))": {
+    "code": 228,
+    "translations": {
+      "hi": "गुलाब(ढीला))",
+      "en": "Rose(Loose))"
+    }
+  },
+  "Jasmine": {
+    "code": 229,
+    "translations": {
+      "hi": "चमेली",
+      "en": "Jasmine"
+    }
+  },
+  "Kakada": {
+    "code": 230,
+    "translations": {
+      "hi": "काकाडा",
+      "en": "Kakada"
+    }
+  },
+  "Chrysanthemum(Loose)": {
+    "code": 231,
+    "translations": {
+      "hi": "गुलदाउदी(ढीला)",
+      "en": "Chrysanthemum(Loose)"
+    }
+  },
+  "Astera": {
+    "code": 232,
+    "translations": {
+      "hi": "एस्टेरा",
+      "en": "Astera"
+    }
+  },
+  "Kankambra": {
+    "code": 233,
+    "translations": {
+      "hi": "कांकम्बरा",
+      "en": "Kankambra"
+    }
+  },
+  "Tube Flower": {
+    "code": 234,
+    "translations": {
+      "hi": "ट्यूब फ्लावर",
+      "en": "Tube Flower"
+    }
+  },
+  "Marigold(Calcutta)": {
+    "code": 235,
+    "translations": {
+      "hi": "मैरीगोल्ड(कलकत्ता)",
+      "en": "Marigold(Calcutta)"
+    }
+  },
+  "Honey": {
+    "code": 236,
+    "translations": {
+      "hi": "शहद",
+      "en": "Honey"
+    }
+  },
+  "Millets": {
+    "code": 237,
+    "translations": {
+      "hi": "बाजरा",
+      "en": "Millets"
+    }
+  },
+  "Cashew Kernnel": {
+    "code": 238,
+    "translations": {
+      "hi": "काजू गिरी",
+      "en": "Cashew Kernnel"
+    }
+  },
+  "Polherb": {
+    "code": 240,
+    "translations": {
+      "hi": "पोलहर्ब",
+      "en": "Polherb"
+    }
+  },
+  "Chennangi (Whole)": {
+    "code": 241,
+    "translations": {
+      "hi": "चेन्नांगी (पूरा)",
+      "en": "Chennangi (Whole)"
+    }
+  },
+  "Suram": {
+    "code": 242,
+    "translations": {
+      "hi": "सूरम",
+      "en": "Suram"
+    }
+  },
+  "Kuchur": {
+    "code": 243,
+    "translations": {
+      "hi": "कुचुर",
+      "en": "Kuchur"
+    }
+  },
+  "Yam": {
+    "code": 244,
+    "translations": {
+      "hi": "यम",
+      "en": "Yam"
+    }
+  },
+  "Nargasi": {
+    "code": 245,
+    "translations": {
+      "hi": "नर्गसी",
+      "en": "Nargasi"
+    }
+  },
+  "Sompu": {
+    "code": 246,
+    "translations": {
+      "hi": "सोम्पू",
+      "en": "Sompu"
+    }
+  },
+  "Sarasum": {
+    "code": 247,
+    "translations": {
+      "hi": "सरसुम",
+      "en": "Sarasum"
+    }
+  },
+  "Rajgir": {
+    "code": 248,
+    "translations": {
+      "hi": "राजगीर",
+      "en": "Rajgir"
+    }
+  },
+  "Ghee": {
+    "code": 249,
+    "translations": {
+      "hi": "घी",
+      "en": "Ghee"
+    }
+  },
+  "Javi": {
+    "code": 250,
+    "translations": {
+      "hi": "जावी",
+      "en": "Javi"
+    }
+  },
+  "Haralekai": {
+    "code": 252,
+    "translations": {
+      "hi": "हरालेकै",
+      "en": "Haralekai"
+    }
+  },
+  "Seegu": {
+    "code": 253,
+    "translations": {
+      "hi": "सीगू",
+      "en": "Seegu"
+    }
+  },
+  "Pundi": {
+    "code": 254,
+    "translations": {
+      "hi": "पुंडी",
+      "en": "Pundi"
+    }
+  },
+  "Suva (Dill Seed)": {
+    "code": 255,
+    "translations": {
+      "hi": "सुवा (डिल सीड)",
+      "en": "Suva (Dill Seed)"
+    }
+  },
+  "Isabgul (Psyllium)": {
+    "code": 256,
+    "translations": {
+      "hi": "इसबगुल (साइलियम)",
+      "en": "Isabgul (Psyllium)"
+    }
+  },
+  "Masur Dal": {
+    "code": 259,
+    "translations": {
+      "hi": "मसूर दाल",
+      "en": "Masur Dal"
+    }
+  },
+  "Arhar Dal(Tur Dal)": {
+    "code": 260,
+    "translations": {
+      "hi": "अरहर दाल (तूर दाल)",
+      "en": "Arhar Dal(Tur Dal)"
+    }
+  },
+  "Tamarind Fruit": {
+    "code": 261,
+    "translations": {
+      "hi": "इमली फल",
+      "en": "Tamarind Fruit"
+    }
+  },
+  "Beaten Rice": {
+    "code": 262,
+    "translations": {
+      "hi": "बीटन राइस",
+      "en": "Beaten Rice"
+    }
+  },
+  "Bengal Gram Dal (Chana Dal)": {
+    "code": 263,
+    "translations": {
+      "hi": "बंगाल ग्राम दाल (चना दाल)",
+      "en": "Bengal Gram Dal (Chana Dal)"
+    }
+  },
+  "Black Gram Dal (Urd Dal)": {
+    "code": 264,
+    "translations": {
+      "hi": "काला ग्राम दाल (उर्द दाल)",
+      "en": "Black Gram Dal (Urd Dal)"
+    }
+  },
+  "Green Gram Dal (Moong Dal)": {
+    "code": 265,
+    "translations": {
+      "hi": "हरा ग्राम दाल (मूंग दाल)",
+      "en": "Green Gram Dal (Moong Dal)"
+    }
+  },
+  "Coconut Oil": {
+    "code": 266,
+    "translations": {
+      "hi": "नारियल तेल",
+      "en": "Coconut Oil"
+    }
+  },
+  "Ground Nut Oil": {
+    "code": 267,
+    "translations": {
+      "hi": "मूंग दाल तेल",
+      "en": "Ground Nut Oil"
+    }
+  },
+  "Ground Nut Seed": {
+    "code": 268,
+    "translations": {
+      "hi": "मूंगफली के बीज",
+      "en": "Ground Nut Seed"
+    }
+  },
+  "Avare Dal": {
+    "code": 269,
+    "translations": {
+      "hi": "अवारे दाल",
+      "en": "Avare Dal"
+    }
+  },
+  "Castor Oil": {
+    "code": 270,
+    "translations": {
+      "hi": "अरंडी का तेल",
+      "en": "Castor Oil"
+    }
+  },
+  "Sajje": {
+    "code": 271,
+    "translations": {
+      "hi": "सज्जे",
+      "en": "Sajje"
+    }
+  },
+  "Butter": {
+    "code": 272,
+    "translations": {
+      "hi": "मक्खन",
+      "en": "Butter"
+    }
+  },
+  "Dalda": {
+    "code": 273,
+    "translations": {
+      "hi": "डालडा",
+      "en": "Dalda"
+    }
+  },
+  "Balekai": {
+    "code": 274,
+    "translations": {
+      "hi": "बालेकाई",
+      "en": "Balekai"
+    }
+  },
+  "Gingelly Oil": {
+    "code": 276,
+    "translations": {
+      "hi": "जिंजेली तेल",
+      "en": "Gingelly Oil"
+    }
+  },
+  "Season Leaves": {
+    "code": 277,
+    "translations": {
+      "hi": "मौसमी पत्ते",
+      "en": "Season Leaves"
+    }
+  },
+  "Dry Grapes": {
+    "code": 278,
+    "translations": {
+      "hi": "सूखे अंगूर",
+      "en": "Dry Grapes"
+    }
+  },
+  "Gurellu": {
+    "code": 279,
+    "translations": {
+      "hi": "गुरेलु",
+      "en": "Gurellu"
+    }
+  },
+  "Lint": {
+    "code": 280,
+    "translations": {
+      "hi": "लिंट",
+      "en": "Lint"
+    }
+  },
+  "Alasande Gram": {
+    "code": 281,
+    "translations": {
+      "hi": "अलसांडे ग्राम",
+      "en": "Alasande Gram"
+    }
+  },
+  "Ram": {
+    "code": 282,
+    "translations": {
+      "hi": "राम",
+      "en": "Ram"
+    }
+  },
+  "She Goat": {
+    "code": 283,
+    "translations": {
+      "hi": "बकरी",
+      "en": "She Goat"
+    }
+  },
+  "Bullar": {
+    "code": 284,
+    "translations": {
+      "hi": "बुलर",
+      "en": "Bullar"
+    }
+  },
+  "Sunflower Seed": {
+    "code": 285,
+    "translations": {
+      "hi": "सूरजमुखी के बीज",
+      "en": "Sunflower Seed"
+    }
+  },
+  "Soji": {
+    "code": 286,
+    "translations": {
+      "hi": "सोजी",
+      "en": "Soji"
+    }
+  },
+  "Wheat Atta": {
+    "code": 287,
+    "translations": {
+      "hi": "गेहूँ का आटा",
+      "en": "Wheat Atta"
+    }
+  },
+  "Maida Atta": {
+    "code": 288,
+    "translations": {
+      "hi": "मैदा आटा",
+      "en": "Maida Atta"
+    }
+  },
+  "Bran": {
+    "code": 290,
+    "translations": {
+      "hi": "चोकर",
+      "en": "Bran"
+    }
+  },
+  "Sabu Dan": {
+    "code": 291,
+    "translations": {
+      "hi": "साबू दान",
+      "en": "Sabu Dan"
+    }
+  },
+  "Broken Rice": {
+    "code": 293,
+    "translations": {
+      "hi": "टूटा चावल",
+      "en": "Broken Rice"
+    }
+  },
+  "Gramflour": {
+    "code": 294,
+    "translations": {
+      "hi": "बेसन",
+      "en": "Gramflour"
+    }
+  },
+  "Chennangi Dal": {
+    "code": 295,
+    "translations": {
+      "hi": "चेन्नांगी दाल",
+      "en": "Chennangi Dal"
+    }
+  },
+  "Elephant Yam (Suran)": {
+    "code": 296,
+    "translations": {
+      "hi": "हाथी रतालू (सूरन)",
+      "en": "Elephant Yam (Suran)"
+    }
+  },
+  "Yam (Ratalu)": {
+    "code": 297,
+    "translations": {
+      "hi": "रतालू (रतालू)",
+      "en": "Yam (Ratalu)"
+    }
+  },
+  "French Beans (Frasbean)": {
+    "code": 298,
+    "translations": {
+      "hi": "फ्रेंच बीन्स (फ्रासबीन)",
+      "en": "French Beans (Frasbean)"
+    }
+  },
+  "Indian Beans (Seam)": {
+    "code": 299,
+    "translations": {
+      "hi": "भारतीय बीन्स (सीम)",
+      "en": "Indian Beans (Seam)"
+    }
+  },
+  "Surat Beans (Papadi)": {
+    "code": 300,
+    "translations": {
+      "hi": "सूरत बीन्स (पापड़ी)",
+      "en": "Surat Beans (Papadi)"
+    }
+  },
+  "Pegeon Pea (Arhar Fali)": {
+    "code": 301,
+    "translations": {
+      "hi": "अरहर फली (पपीजन मटर)",
+      "en": "Pegeon Pea (Arhar Fali)"
+    }
+  },
+  "Little gourd (Kundru)": {
+    "code": 302,
+    "translations": {
+      "hi": "छोटी लौकी (कुंदरू)",
+      "en": "Little gourd (Kundru)"
+    }
+  },
+  "Pointed gourd (Parval)": {
+    "code": 303,
+    "translations": {
+      "hi": "परवल (नुकीला लौकी)",
+      "en": "Pointed gourd (Parval)"
+    }
+  },
+  "Long Melon(Kakri)": {
+    "code": 304,
+    "translations": {
+      "hi": "लंबा खरबूजा (काकरी)",
+      "en": "Long Melon(Kakri)"
+    }
+  },
+  "Kartali (Kantola)": {
+    "code": 305,
+    "translations": {
+      "hi": "करतली (कंटोला)",
+      "en": "Kartali (Kantola)"
+    }
+  },
+  "Round gourd": {
+    "code": 306,
+    "translations": {
+      "hi": "गोल लौकी",
+      "en": "Round gourd"
+    }
+  },
+  "Rat Tail Radish (Mogari)": {
+    "code": 307,
+    "translations": {
+      "hi": "चूहे की पूँछ वाली मूली (मोगरी)",
+      "en": "Rat Tail Radish (Mogari)"
+    }
+  },
+  "Peas cod": {
+    "code": 308,
+    "translations": {
+      "hi": "मटर कॉड",
+      "en": "Peas cod"
+    }
+  },
+  "Turmeric (raw)": {
+    "code": 309,
+    "translations": {
+      "hi": "हल्दी (कच्ची)",
+      "en": "Turmeric (raw)"
+    }
+  },
+  "Lemon": {
+    "code": 310,
+    "translations": {
+      "hi": "नींबू",
+      "en": "Lemon"
+    }
+  },
+  "Sponge gourd": {
+    "code": 311,
+    "translations": {
+      "hi": "स्पंज लौकी",
+      "en": "Sponge gourd"
+    }
+  },
+  "Groundnut pods (raw)": {
+    "code": 312,
+    "translations": {
+      "hi": "मूंगफली की फली (कच्ची)",
+      "en": "Groundnut pods (raw)"
+    }
+  },
+  "Papaya (Raw)": {
+    "code": 313,
+    "translations": {
+      "hi": "पपीता (कच्चा)",
+      "en": "Papaya (Raw)"
+    }
+  },
+  "Groundnut (Split)": {
+    "code": 314,
+    "translations": {
+      "hi": "मूंगफली (विभाजित)",
+      "en": "Groundnut (Split)"
+    }
+  },
+  "Coca": {
+    "code": 315,
+    "translations": {
+      "hi": "कोका",
+      "en": "Coca"
+    }
+  },
+  "Cinamon(Dalchini)": {
+    "code": 316,
+    "translations": {
+      "hi": "दालचीनी",
+      "en": "Cinamon(Dalchini)"
+    }
+  },
+  "Kacholam": {
+    "code": 317,
+    "translations": {
+      "hi": "कचोलम",
+      "en": "Kacholam"
+    }
+  },
+  "Colacasia": {
+    "code": 318,
+    "translations": {
+      "hi": "कोलाकेशिया",
+      "en": "Colacasia"
+    }
+  },
+  "Broomstick(Flower Broom)": {
+    "code": 320,
+    "translations": {
+      "hi": "ब्रूमस्टिक(फूल झाड़ू)",
+      "en": "Broomstick(Flower Broom)"
+    }
+  },
+  "Bay leaf (Tejpatta)": {
+    "code": 321,
+    "translations": {
+      "hi": "तेजपत्ता",
+      "en": "Bay leaf (Tejpatta)"
+    }
+  },
+  "Resinwood": {
+    "code": 322,
+    "translations": {
+      "hi": "रेजिनवुड",
+      "en": "Resinwood"
+    }
+  },
+  "Torchwood": {
+    "code": 323,
+    "translations": {
+      "hi": "टॉर्चवुड",
+      "en": "Torchwood"
+    }
+  },
+  "Mustard Oil": {
+    "code": 324,
+    "translations": {
+      "hi": "सरसों का तेल",
+      "en": "Mustard Oil"
+    }
+  },
+  "Almond(Badam)": {
+    "code": 325,
+    "translations": {
+      "hi": "बादाम",
+      "en": "Almond(Badam)"
+    }
+  },
+  "Apricot(Jardalu/Khumani)": {
+    "code": 326,
+    "translations": {
+      "hi": "खुबानी(जर्दालु/खुमानी)",
+      "en": "Apricot(Jardalu/Khumani)"
+    }
+  },
+  "Persimon(Japani Fal)": {
+    "code": 327,
+    "translations": {
+      "hi": "पर्सिमोन(जापानी फाल)",
+      "en": "Persimon(Japani Fal)"
+    }
+  },
+  "Cherry": {
+    "code": 328,
+    "translations": {
+      "hi": "चेरी",
+      "en": "Cherry"
+    }
+  },
+  "Plum": {
+    "code": 329,
+    "translations": {
+      "hi": "बेर",
+      "en": "Plum"
+    }
+  },
+  "Pear(Marasebu)": {
+    "code": 330,
+    "translations": {
+      "hi": "नाशपाती(मारासेबू)",
+      "en": "Pear(Marasebu)"
+    }
+  },
+  "Peach": {
+    "code": 331,
+    "translations": {
+      "hi": "पीच",
+      "en": "Peach"
+    }
+  },
+  "Squash(Chappal Kadoo)": {
+    "code": 332,
+    "translations": {
+      "hi": "स्क्वैश(चप्पल कडू)",
+      "en": "Squash(Chappal Kadoo)"
+    }
+  },
+  "Mahua": {
+    "code": 335,
+    "translations": {
+      "hi": "महुआ",
+      "en": "Mahua"
+    }
+  },
+  "Kinnow": {
+    "code": 336,
+    "translations": {
+      "hi": "किन्नू",
+      "en": "Kinnow"
+    }
+  },
+  "Lukad": {
+    "code": 337,
+    "translations": {
+      "hi": "लुकाड",
+      "en": "Lukad"
+    }
+  },
+  "Saffron": {
+    "code": 338,
+    "translations": {
+      "hi": "केसर",
+      "en": "Saffron"
+    }
+  },
+  "Lotus Sticks": {
+    "code": 339,
+    "translations": {
+      "hi": "कमल की छड़ें",
+      "en": "Lotus Sticks"
+    }
+  },
+  "Mashrooms": {
+    "code": 340,
+    "translations": {
+      "hi": "मशरूम",
+      "en": "Mashrooms"
+    }
+  },
+  "Turnip": {
+    "code": 341,
+    "translations": {
+      "hi": "शलजम",
+      "en": "Turnip"
+    }
+  },
+  "Spinach": {
+    "code": 342,
+    "translations": {
+      "hi": "पालक",
+      "en": "Spinach"
+    }
+  },
+  "Walnut": {
+    "code": 343,
+    "translations": {
+      "hi": "अखरोट",
+      "en": "Walnut"
+    }
+  },
+  "Indian Colza(Sarson)": {
+    "code": 344,
+    "translations": {
+      "hi": "भारतीय कोल्ज़ा(सरसों)",
+      "en": "Indian Colza(Sarson)"
+    }
+  },
+  "Dry Fodder": {
+    "code": 345,
+    "translations": {
+      "hi": "सूखा चारा",
+      "en": "Dry Fodder"
+    }
+  },
+  "Green Fodder": {
+    "code": 346,
+    "translations": {
+      "hi": "हरा चारा",
+      "en": "Green Fodder"
+    }
+  },
+  "Peas(Dry)": {
+    "code": 347,
+    "translations": {
+      "hi": "मटर(सूखा)",
+      "en": "Peas(Dry)"
+    }
+  },
+  "Wool": {
+    "code": 348,
+    "translations": {
+      "hi": "ऊन",
+      "en": "Wool"
+    }
+  },
+  "Tinda": {
+    "code": 349,
+    "translations": {
+      "hi": "टिंडा",
+      "en": "Tinda"
+    }
+  },
+  "Galgal(Lemon)": {
+    "code": 350,
+    "translations": {
+      "hi": "गलगल(नींबू)",
+      "en": "Galgal(Lemon)"
+    }
+  },
+  "Litchi": {
+    "code": 351,
+    "translations": {
+      "hi": "लीची",
+      "en": "Litchi"
+    }
+  },
+  "Custard Apple (Sharifa)": {
+    "code": 352,
+    "translations": {
+      "hi": "कस्टर्ड एप्पल (शरीफा)",
+      "en": "Custard Apple (Sharifa)"
+    }
+  },
+  "Goat Hair": {
+    "code": 353,
+    "translations": {
+      "hi": "बकरी के बाल",
+      "en": "Goat Hair"
+    }
+  },
+  "Camel Hair": {
+    "code": 354,
+    "translations": {
+      "hi": "ऊंट के बाल",
+      "en": "Camel Hair"
+    }
+  },
+  "Amla(Nelli Kai)": {
+    "code": 355,
+    "translations": {
+      "hi": "आंवला(नेली काई)",
+      "en": "Amla(Nelli Kai)"
+    }
+  },
+  "Ber(Zizyphus/Borehannu)": {
+    "code": 357,
+    "translations": {
+      "hi": "बेर(जिजीफस/बोरेहनु)",
+      "en": "Ber(Zizyphus/Borehannu)"
+    }
+  },
+  "Onion Green": {
+    "code": 358,
+    "translations": {
+      "hi": "प्याज हरा",
+      "en": "Onion Green"
+    }
+  },
+  "Gram Raw(Chholia)": {
+    "code": 359,
+    "translations": {
+      "hi": "चना कच्चा(छोलिया)",
+      "en": "Gram Raw(Chholia)"
+    }
+  },
+  "Mint(Pudina)": {
+    "code": 360,
+    "translations": {
+      "hi": "पुदीना",
+      "en": "Mint(Pudina)"
+    }
+  },
+  "Egypian Clover(Barseem)": {
+    "code": 361,
+    "translations": {
+      "hi": "मिस्र का तिपतिया घास (बरसीम)",
+      "en": "Egypian Clover(Barseem)"
+    }
+  },
+  "Kabuli Chana(Chickpeas-White)": {
+    "code": 362,
+    "translations": {
+      "hi": "काबुली चना (छोले-सफेद)",
+      "en": "Kabuli Chana(Chickpeas-White)"
+    }
+  },
+  "Gladiolus Cut Flower": {
+    "code": 363,
+    "translations": {
+      "hi": "ग्लेडियोलस कट फ्लावर",
+      "en": "Gladiolus Cut Flower"
+    }
+  },
+  "Gladiolus Bulb": {
+    "code": 364,
+    "translations": {
+      "hi": "ग्लेडियोलस बल्ब",
+      "en": "Gladiolus Bulb"
+    }
+  },
+  "Flower Broom": {
+    "code": 365,
+    "translations": {
+      "hi": "फूल झाड़ू",
+      "en": "Flower Broom"
+    }
+  },
+  "Fish": {
+    "code": 366,
+    "translations": {
+      "hi": "मछली",
+      "en": "Fish"
+    }
+  },
+  "Egg": {
+    "code": 367,
+    "translations": {
+      "hi": "अंडा",
+      "en": "Egg"
+    }
+  },
+  "Cock": {
+    "code": 368,
+    "translations": {
+      "hi": "मुर्गा",
+      "en": "Cock"
+    }
+  },
+  "Hen": {
+    "code": 369,
+    "translations": {
+      "hi": "मुर्गी",
+      "en": "Hen"
+    }
+  },
+  "Duck": {
+    "code": 370,
+    "translations": {
+      "hi": "बत्तख",
+      "en": "Duck"
+    }
+  },
+  "Mahua Seed(Hippe seed)": {
+    "code": 371,
+    "translations": {
+      "hi": "महुआ बीज(हिप्पे बीज)",
+      "en": "Mahua Seed(Hippe seed)"
+    }
+  },
+  "Khoya": {
+    "code": 372,
+    "translations": {
+      "hi": "खोया",
+      "en": "Khoya"
+    }
+  },
+  "Rose(Tata)": {
+    "code": 373,
+    "translations": {
+      "hi": "गुलाब(टाटा)",
+      "en": "Rose(Tata)"
+    }
+  },
+  "Rose(Local)": {
+    "code": 374,
+    "translations": {
+      "hi": "गुलाब(स्थानीय)",
+      "en": "Rose(Local)"
+    }
+  },
+  "Carnation": {
+    "code": 375,
+    "translations": {
+      "hi": "कार्नेशन",
+      "en": "Carnation"
+    }
+  },
+  "Jarbara": {
+    "code": 376,
+    "translations": {
+      "hi": "जरबरा",
+      "en": "Jarbara"
+    }
+  },
+  "Tube Rose(Single)": {
+    "code": 377,
+    "translations": {
+      "hi": "ट्यूब गुलाब(एकल)",
+      "en": "Tube Rose(Single)"
+    }
+  },
+  "Lilly": {
+    "code": 378,
+    "translations": {
+      "hi": "लिली",
+      "en": "Lilly"
+    }
+  },
+  "Anthorium": {
+    "code": 379,
+    "translations": {
+      "hi": "एंथोरियम",
+      "en": "Anthorium"
+    }
+  },
+  "BOP": {
+    "code": 380,
+    "translations": {
+      "hi": "बीओपी",
+      "en": "BOP"
+    }
+  },
+  "Orchid": {
+    "code": 381,
+    "translations": {
+      "hi": "ऑर्किड",
+      "en": "Orchid"
+    }
+  },
+  "Daila(Chandni)": {
+    "code": 382,
+    "translations": {
+      "hi": "डैला(चांदनी)",
+      "en": "Daila(Chandni)"
+    }
+  },
+  "Tube Rose(Double)": {
+    "code": 401,
+    "translations": {
+      "hi": "ट्यूब रोज़(डबल)",
+      "en": "Tube Rose(Double)"
+    }
+  },
+  "Chrysanthemum": {
+    "code": 402,
+    "translations": {
+      "hi": "गुलदाउदी",
+      "en": "Chrysanthemum"
+    }
+  },
+  "Lotus": {
+    "code": 403,
+    "translations": {
+      "hi": "कमल",
+      "en": "Lotus"
+    }
+  },
+  "Patti Calcutta": {
+    "code": 404,
+    "translations": {
+      "hi": "पट्टी कलकत्ता",
+      "en": "Patti Calcutta"
+    }
+  },
+  "Marigold(loose)": {
+    "code": 405,
+    "translations": {
+      "hi": "मैरीगोल्ड(ढीला)",
+      "en": "Marigold(loose)"
+    }
+  },
+  "Jaffri": {
+    "code": 406,
+    "translations": {
+      "hi": "जाफ़री",
+      "en": "Jaffri"
+    }
+  },
+  "Marget": {
+    "code": 407,
+    "translations": {
+      "hi": "मार्गेट",
+      "en": "Marget"
+    }
+  },
+  "Tube Rose(Loose)": {
+    "code": 408,
+    "translations": {
+      "hi": "ट्यूब रोज़(ढीला)",
+      "en": "Tube Rose(Loose)"
+    }
+  },
+  "Raibel": {
+    "code": 409,
+    "translations": {
+      "hi": "रायबेल",
+      "en": "Raibel"
+    }
+  },
+  "Delha": {
+    "code": 410,
+    "translations": {
+      "hi": "डेल्हा",
+      "en": "Delha"
+    }
+  },
+  "Mahedi": {
+    "code": 411,
+    "translations": {
+      "hi": "महेदी",
+      "en": "Mahedi"
+    }
+  },
+  "White Peas": {
+    "code": 412,
+    "translations": {
+      "hi": "सफ़ेद मटर",
+      "en": "White Peas"
+    }
+  },
+  "Guar Seed(Cluster Beans Seed)": {
+    "code": 413,
+    "translations": {
+      "hi": "ग्वार बीज(क्लस्टर बीन्स बीज)",
+      "en": "Guar Seed(Cluster Beans Seed)"
+    }
+  },
+  "Paddy(Dhan)(Basmati)": {
+    "code": 414,
+    "translations": {
+      "hi": "धान(धान)(बासमती)",
+      "en": "Paddy(Dhan)(Basmati)"
+    }
+  },
+  "Kutki": {
+    "code": 415,
+    "translations": {
+      "hi": "कुटकी",
+      "en": "Kutki"
+    }
+  },
+  "buttery": {
+    "code": 416,
+    "translations": {
+      "hi": "मक्खन",
+      "en": "buttery"
+    }
+  },
+  "Ambady/Mesta": {
+    "code": 417,
+    "translations": {
+      "hi": "अंबाडी/मेस्ता",
+      "en": "Ambady/Mesta"
+    }
+  },
+  "Bael": {
+    "code": 418,
+    "translations": {
+      "hi": "बेल",
+      "en": "Bael"
+    }
+  },
+  "Amranthas Red": {
+    "code": 419,
+    "translations": {
+      "hi": "अमरंथस लाल",
+      "en": "Amranthas Red"
+    }
+  },
+  "Other green and fresh vegetables": {
+    "code": 420,
+    "translations": {
+      "hi": "अन्य हरी और ताजी सब्जियाँ",
+      "en": "Other green and fresh vegetables"
+    }
+  },
+  "poppy seeds": {
+    "code": 421,
+    "translations": {
+      "hi": "खसखस",
+      "en": "poppy seeds"
+    }
+  },
+  "mango powder": {
+    "code": 422,
+    "translations": {
+      "hi": "आम का पाउडर",
+      "en": "mango powder"
+    }
+  },
+  "dried mango": {
+    "code": 423,
+    "translations": {
+      "hi": "सूखे आम",
+      "en": "dried mango"
+    }
+  },
+  "nigella seeds": {
+    "code": 445,
+    "translations": {
+      "hi": "निगेला के बीज",
+      "en": "nigella seeds"
+    }
+  },
+  "Poppy capsules": {
+    "code": 425,
+    "translations": {
+      "hi": "पोपी कैप्सूल",
+      "en": "Poppy capsules"
+    }
+  },
+  "kutki": {
+    "code": 426,
+    "translations": {
+      "hi": "कुटकी",
+      "en": "kutki"
+    }
+  },
+  "macoy": {
+    "code": 427,
+    "translations": {
+      "hi": "मैकॉय",
+      "en": "macoy"
+    }
+  },
+  "Muleti": {
+    "code": 428,
+    "translations": {
+      "hi": "मुलेटी",
+      "en": "Muleti"
+    }
+  },
+  "White Muesli": {
+    "code": 429,
+    "translations": {
+      "hi": "सफ़ेद मूसली",
+      "en": "White Muesli"
+    }
+  },
+  "stone pulverizer": {
+    "code": 430,
+    "translations": {
+      "hi": "स्टोन पल्वराइज़र",
+      "en": "stone pulverizer"
+    }
+  },
+  "pippali": {
+    "code": 431,
+    "translations": {
+      "hi": "पिप्पली",
+      "en": "pippali"
+    }
+  },
+  "liquor turmeric": {
+    "code": 432,
+    "translations": {
+      "hi": "शराब हल्दी",
+      "en": "liquor turmeric"
+    }
+  },
+  "sanay": {
+    "code": 433,
+    "translations": {
+      "hi": "सनाय",
+      "en": "sanay"
+    }
+  },
+  "Asparagus": {
+    "code": 434,
+    "translations": {
+      "hi": "शतावरी",
+      "en": "Asparagus"
+    }
+  },
+  "basil": {
+    "code": 435,
+    "translations": {
+      "hi": "तुलसी",
+      "en": "basil"
+    }
+  },
+  "vadang": {
+    "code": 436,
+    "translations": {
+      "hi": "वदंग",
+      "en": "vadang"
+    }
+  },
+  "Vatsanabha": {
+    "code": 437,
+    "translations": {
+      "hi": "वत्सनाभ",
+      "en": "Vatsanabha"
+    }
+  },
+  "Chandrashoor": {
+    "code": 438,
+    "translations": {
+      "hi": "चंद्रशूर",
+      "en": "Chandrashoor"
+    }
+  },
+  "karanja seeds": {
+    "code": 439,
+    "translations": {
+      "hi": "करंज के बीज",
+      "en": "karanja seeds"
+    }
+  },
+  "stevia": {
+    "code": 440,
+    "translations": {
+      "hi": "स्टीविया",
+      "en": "stevia"
+    }
+  },
+  "Palash flowers": {
+    "code": 441,
+    "translations": {
+      "hi": "पलाश के फूल",
+      "en": "Palash flowers"
+    }
+  },
+  "dhawai flowers": {
+    "code": 442,
+    "translations": {
+      "hi": "धवई के फूल",
+      "en": "dhawai flowers"
+    }
+  },
+  "Ashwagandha": {
+    "code": 443,
+    "translations": {
+      "hi": "अश्वगंधा",
+      "en": "Ashwagandha"
+    }
+  },
+  "Asalia": {
+    "code": 444,
+    "translations": {
+      "hi": "असालिया",
+      "en": "Asalia"
+    }
+  },
+  "Muesli": {
+    "code": 446,
+    "translations": {
+      "hi": "म्यूसली",
+      "en": "Muesli"
+    }
+  },
+  "Pupadia": {
+    "code": 447,
+    "translations": {
+      "hi": "पुपड़िया",
+      "en": "Pupadia"
+    }
+  },
+  "Bhui Amlaya": {
+    "code": 448,
+    "translations": {
+      "hi": "भुई आंवला",
+      "en": "Bhui Amlaya"
+    }
+  },
+  "Brahmi": {
+    "code": 449,
+    "translations": {
+      "hi": "ब्राह्मी",
+      "en": "Brahmi"
+    }
+  },
+  "Sandalwood": {
+    "code": 450,
+    "translations": {
+      "hi": "चंदन",
+      "en": "Sandalwood"
+    }
+  },
+  "Absinthe": {
+    "code": 451,
+    "translations": {
+      "hi": "चिरायता",
+      "en": "Absinthe"
+    }
+  },
+  "Giloy": {
+    "code": 452,
+    "translations": {
+      "hi": "गिलोय",
+      "en": "Giloy"
+    }
+  },
+  "Gudmar": {
+    "code": 453,
+    "translations": {
+      "hi": "गुडमार",
+      "en": "Gudmar"
+    }
+  },
+  "Guggal": {
+    "code": 454,
+    "translations": {
+      "hi": "गुग्गल",
+      "en": "Guggal"
+    }
+  },
+  "spikenard": {
+    "code": 455,
+    "translations": {
+      "hi": "स्पाइकनार्ड",
+      "en": "spikenard"
+    }
+  },
+  "Kalihari": {
+    "code": 456,
+    "translations": {
+      "hi": "कलिहारी",
+      "en": "Kalihari"
+    }
+  },
+  "Kalmegh": {
+    "code": 457,
+    "translations": {
+      "hi": "कालमेघ",
+      "en": "Kalmegh"
+    }
+  },
+  "kokum": {
+    "code": 458,
+    "translations": {
+      "hi": "kokum",
+      "en": "kokum"
+    }
+  },
+  "Kooth": {
+    "code": 459,
+    "translations": {
+      "hi": "Kooth",
+      "en": "Kooth"
+    }
+  },
+  "Ratanjot": {
+    "code": 460,
+    "translations": {
+      "hi": "Ratanjot",
+      "en": "Ratanjot"
+    }
+  },
+  "gulli": {
+    "code": 461,
+    "translations": {
+      "hi": "gulli",
+      "en": "gulli"
+    }
+  },
+  "Glardia": {
+    "code": 462,
+    "translations": {
+      "hi": "Glardia",
+      "en": "Glardia"
+    }
+  },
+  "tulip": {
+    "code": 463,
+    "translations": {
+      "hi": "tulip",
+      "en": "tulip"
+    }
+  },
+  "sevanti": {
+    "code": 464,
+    "translations": {
+      "hi": "sevanti",
+      "en": "sevanti"
+    }
+  },
+  "Irish": {
+    "code": 465,
+    "translations": {
+      "hi": "Irish",
+      "en": "Irish"
+    }
+  },
+  "Sweet Sultan": {
+    "code": 466,
+    "translations": {
+      "hi": "Sweet Sultan",
+      "en": "Sweet Sultan"
+    }
+  },
+  "cineraria": {
+    "code": 467,
+    "translations": {
+      "hi": "सिनेरिया",
+      "en": "cineraria"
+    }
+  },
+  "salvia": {
+    "code": 468,
+    "translations": {
+      "hi": "साल्विया",
+      "en": "salvia"
+    }
+  },
+  "gypsophila": {
+    "code": 469,
+    "translations": {
+      "hi": "जिप्सोफिला",
+      "en": "gypsophila"
+    }
+  },
+  "Limonia (status)": {
+    "code": 470,
+    "translations": {
+      "hi": "लिमोनिया (स्थिति)",
+      "en": "Limonia (status)"
+    }
+  },
+  "Gamphrena": {
+    "code": 471,
+    "translations": {
+      "hi": "गैम्फ्रेना",
+      "en": "Gamphrena"
+    }
+  },
+  "Cossandra": {
+    "code": 472,
+    "translations": {
+      "hi": "कोसांद्रा",
+      "en": "Cossandra"
+    }
+  },
+  "hydrangea": {
+    "code": 473,
+    "translations": {
+      "hi": "हाइड्रेंजिया",
+      "en": "hydrangea"
+    }
+  },
+  "Heliconia species": {
+    "code": 474,
+    "translations": {
+      "hi": "हेलिकोनिया प्रजाति",
+      "en": "Heliconia species"
+    }
+  },
+  "golden rod": {
+    "code": 475,
+    "translations": {
+      "hi": "गोल्डन रॉड",
+      "en": "golden rod"
+    }
+  },
+  "dianthus": {
+    "code": 476,
+    "translations": {
+      "hi": "डायन्थस",
+      "en": "dianthus"
+    }
+  },
+  "sweet william": {
+    "code": 477,
+    "translations": {
+      "hi": "स्वीट विलियम",
+      "en": "sweet william"
+    }
+  },
+  "Clarkia": {
+    "code": 478,
+    "translations": {
+      "hi": "क्लार्किया",
+      "en": "Clarkia"
+    }
+  },
+  "Lupine": {
+    "code": 479,
+    "translations": {
+      "hi": "ल्यूपिन",
+      "en": "Lupine"
+    }
+  },
+  "Calendula": {
+    "code": 480,
+    "translations": {
+      "hi": "कैलेंडुला",
+      "en": "Calendula"
+    }
+  },
+  "Kevda": {
+    "code": 481,
+    "translations": {
+      "hi": "केवड़ा",
+      "en": "Kevda"
+    }
+  },
+  "balsam": {
+    "code": 482,
+    "translations": {
+      "hi": "बालसम",
+      "en": "balsam"
+    }
+  },
+  "Banana flower": {
+    "code": 483,
+    "translations": {
+      "hi": "केले का फूल",
+      "en": "Banana flower"
+    }
+  },
+  "Banana stem": {
+    "code": 484,
+    "translations": {
+      "hi": "केले का तना",
+      "en": "Banana stem"
+    }
+  },
+  "Banana Leaf": {
+    "code": 485,
+    "translations": {
+      "hi": "केले का पत्ता",
+      "en": "Banana Leaf"
+    }
+  },
+  "Curry Leaf": {
+    "code": 486,
+    "translations": {
+      "hi": "करी पत्ता",
+      "en": "Curry Leaf"
+    }
+  },
+  "Brocoli": {
+    "code": 487,
+    "translations": {
+      "hi": "ब्रोकोली",
+      "en": "Brocoli"
+    }
+  },
+  "Sundaikai": {
+    "code": 488,
+    "translations": {
+      "hi": "सुंडाईकाई",
+      "en": "Sundaikai"
+    }
+  },
+  "Perandai": {
+    "code": 489,
+    "translations": {
+      "hi": "पेरंडाई",
+      "en": "Perandai"
+    }
+  },
+  "Siru Kizhagu": {
+    "code": 490,
+    "translations": {
+      "hi": "सिरु किझागु",
+      "en": "Siru Kizhagu"
+    }
+  },
+  "Bajji chilli": {
+    "code": 491,
+    "translations": {
+      "hi": "बज्जी मिर्च",
+      "en": "Bajji chilli"
+    }
+  },
+  "Double Beans": {
+    "code": 492,
+    "translations": {
+      "hi": "डबल बीन्स",
+      "en": "Double Beans"
+    }
+  },
+  "Red Cabbage": {
+    "code": 493,
+    "translations": {
+      "hi": "लाल गोभी",
+      "en": "Red Cabbage"
+    }
+  },
+  "Goose berry (Nellikkai)": {
+    "code": 494,
+    "translations": {
+      "hi": "गूज बेरी (नेल्लिक्काई)",
+      "en": "Goose berry (Nellikkai)"
+    }
+  },
+  "Dragon fruit": {
+    "code": 495,
+    "translations": {
+      "hi": "ड्रैगन फ्रूट",
+      "en": "Dragon fruit"
+    }
+  },
+  "Water Apple": {
+    "code": 496,
+    "translations": {
+      "hi": "वाटर एप्पल",
+      "en": "Water Apple"
+    }
+  },
+  "Bread Fruit": {
+    "code": 497,
+    "translations": {
+      "hi": "ब्रेड फ्रूट",
+      "en": "Bread Fruit"
+    }
+  },
+  "Wild lemon": {
+    "code": 498,
+    "translations": {
+      "hi": "वाइल्ड लेमन",
+      "en": "Wild lemon"
+    }
+  },
+  "Wood Apple": {
+    "code": 499,
+    "translations": {
+      "hi": "वुड एप्पल",
+      "en": "Wood Apple"
+    }
+  },
+  "Nerium": {
+    "code": 500,
+    "translations": {
+      "hi": "नेरियम",
+      "en": "Nerium"
+    }
+  },
+  "kakatan": {
+    "code": 501,
+    "translations": {
+      "hi": "काकाटन",
+      "en": "kakatan"
+    }
+  },
+  "Marikozhunthu": {
+    "code": 502,
+    "translations": {
+      "hi": "मैरिकोझुन्थु",
+      "en": "Marikozhunthu"
+    }
+  },
+  "Tulasi": {
+    "code": 503,
+    "translations": {
+      "hi": "तुलसी",
+      "en": "Tulasi"
+    }
+  },
+  "Ma.Inji": {
+    "code": 504,
+    "translations": {
+      "hi": "मा.इंजी",
+      "en": "Ma.Inji"
+    }
+  },
+  "Asgand": {
+    "code": 505,
+    "translations": {
+      "hi": "असगंद",
+      "en": "Asgand"
+    }
+  },
+  "Ashoka": {
+    "code": 506,
+    "translations": {
+      "hi": "अशोक",
+      "en": "Ashoka"
+    }
+  },
+  "Atis": {
+    "code": 507,
+    "translations": {
+      "hi": "अतिस",
+      "en": "Atis"
+    }
+  },
+  "Behada": {
+    "code": 508,
+    "translations": {
+      "hi": "बेहड़ा",
+      "en": "Behada"
+    }
+  },
+  "Chironji": {
+    "code": 509,
+    "translations": {
+      "hi": "चिरौंजी",
+      "en": "Chironji"
+    }
+  },
+  "Flax seeds": {
+    "code": 510,
+    "translations": {
+      "hi": "अलसी के बीज",
+      "en": "Flax seeds"
+    }
+  },
+  "Gond": {
+    "code": 511,
+    "translations": {
+      "hi": "गोंड",
+      "en": "Gond"
+    }
+  },
+  "Harrah": {
+    "code": 512,
+    "translations": {
+      "hi": "हर्रा",
+      "en": "Harrah"
+    }
+  },
+  "Jaee": {
+    "code": 513,
+    "translations": {
+      "hi": "जै",
+      "en": "Jaee"
+    }
+  },
+  "Khirni": {
+    "code": 514,
+    "translations": {
+      "hi": "खिरनी",
+      "en": "Khirni"
+    }
+  },
+  "Laha": {
+    "code": 515,
+    "translations": {
+      "hi": "लाहा",
+      "en": "Laha"
+    }
+  },
+  "Muskmelon Seeds": {
+    "code": 516,
+    "translations": {
+      "hi": "खरबूजे के बीज",
+      "en": "Muskmelon Seeds"
+    }
+  },
+  "Rala": {
+    "code": 517,
+    "translations": {
+      "hi": "राला",
+      "en": "Rala"
+    }
+  },
+  "Ramphal": {
+    "code": 518,
+    "translations": {
+      "hi": "रामफल",
+      "en": "Ramphal"
+    }
+  },
+  "Rayee": {
+    "code": 519,
+    "translations": {
+      "hi": "रायी",
+      "en": "Rayee"
+    }
+  },
+  "Soha": {
+    "code": 520,
+    "translations": {
+      "hi": "सोहा",
+      "en": "Soha"
+    }
+  },
+  "Water chestnut": {
+    "code": 521,
+    "translations": {
+      "hi": "वाटर चेस्टनट",
+      "en": "Water chestnut"
+    }
+  },
+  "Wax": {
+    "code": 522,
+    "translations": {
+      "hi": "मोम",
+      "en": "Wax"
+    }
+  }
+}
