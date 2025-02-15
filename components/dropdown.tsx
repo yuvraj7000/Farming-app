@@ -9,6 +9,7 @@ const Dropdown = () => {
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [search, setSearch] = useState(false);
   const [key, setKey] = useState(0);
+
   const stateItems = statesData.states.map((item) => ({
     label: item.state,
     value: item.state,
@@ -24,12 +25,10 @@ const Dropdown = () => {
       })) || [];
 
   const handleSearch = () => {
-    if(selectedState && selectedDistrict){
-      setKey(prevKey => prevKey + 1);
+    if (selectedState && selectedDistrict) {
+      setKey((prevKey) => prevKey + 1);
       setSearch(true);
     }
-
-  
   };
 
   return (
@@ -62,55 +61,62 @@ const Dropdown = () => {
       <TouchableOpacity style={styles.button} onPress={handleSearch}>
         <Text style={styles.buttonText}>Search</Text>
       </TouchableOpacity>
-      
+
+      {!search && <View  style={styles.notSelected}><Text>Select State and District to see Mandi Prices</Text></View>}
+
       {search && <Mandi_Data key={key} state={selectedState} district={selectedDistrict} />}
-     
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
+    padding: 5,
   },
   label: {
-    fontSize: 16,
-    marginBottom: 5,
-    marginTop: 10,
+    fontSize: 14,
+    // marginBottom: 5,
+    // marginTop: 5,
   },
   button: {
     backgroundColor: '#007BFF',
-    marginTop: 20,
-    padding: 10,
+    // marginTop: 10,
+    padding: 8,
     borderRadius: 5,
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 14,
+  },
+  notSelected: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 400,
   },
 });
 
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
-    fontSize: 16,
-    paddingVertical: 8,
-    paddingHorizontal: 10,
+    fontSize: 14,
+    // paddingVertical: 6,
+    // paddingHorizontal: 8,
     borderWidth: 1,
     borderColor: 'gray',
     borderRadius: 4,
     color: 'black',
-    marginBottom: 10,
+    // marginBottom: 8,
   },
   inputAndroid: {
-    fontSize: 16,
-    paddingHorizontal: 10,
-    paddingVertical: 8,
+    fontSize: 14,
+    // paddingHorizontal: 8,
+    // paddingVertical: 6,
     borderWidth: 0.5,
     borderColor: 'gray',
     borderRadius: 4,
     color: 'black',
-    marginBottom: 10,
+    // marginBottom: 8,
   },
 });
 

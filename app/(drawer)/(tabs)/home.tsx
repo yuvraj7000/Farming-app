@@ -1,18 +1,21 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import Market_card from '@/components/market_card'
-
+import Dignose_card from '@/components/dignose_card'
 const Home= () => {
   return (
     <SafeAreaView>
+    <ScrollView>
     <View style={styles.container}>
         <Text style={styles.moto}>Empowring Farmers for a Better Tomorrow</Text>
         <View style={styles.weather}>
           <Text>Weather Card</Text>
         </View>
         <Market_card />
+        <Dignose_card />
     </View>
+    </ScrollView>
     </SafeAreaView>
   )
 }
