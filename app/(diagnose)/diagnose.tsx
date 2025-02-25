@@ -1,3 +1,4 @@
+
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useState, useEffect } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
@@ -5,10 +6,10 @@ import * as ImagePicker from 'expo-image-picker';
 import Diagnose_page from '@/components/diagnose_page';
 
 export default function Diagnose() {
-
   const [permission, requestPermission] = useCameraPermissions();
   const [image, setImage] = useState(null);
   const [cameraRef, setCameraRef] = useState(null);
+
   if (!permission) {
     // Camera permissions are still loading.
     return <View />;
@@ -27,39 +28,42 @@ export default function Diagnose() {
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ['images'],
-      // allowsEditing: true,
-      // aspect: [4, 3],
       quality: 1,
+      // base64: true,
     });
 
+    console.log(result);
+
     if (!result.canceled) {
-      setImage(result.assets[0].uri);
+     setImage(result.assets[0].uri);
     }
+    console.log("image ---",image);
   };
 
   const takePhoto = async () => {
     if (cameraRef) {
       let photo = await cameraRef.takePictureAsync({
         quality: 1,
+        // base64: true, 
       });
       setImage(photo.uri);
+      console.log(photo);
+      
     }
   };
 
-  if(image){
-    return(
-      <Diagnose_page image={image} setImage={setImage}/>
-    )
+  if (image) {
+    console.log("image ---",image);
+    return (
+      <Diagnose_page image={image} setImage={setImage} />
+    );
   }
 
-
   return (
-
     <View style={styles.container}>
       <CameraView style={styles.camera} facing={'back'} ref={(ref) => setCameraRef(ref)}>
-        
         <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={takePhoto}>
+          <TouchableOpacity style={styles.button} onPress={takePhoto}>
             <Text style={styles.text}>Take Photo</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={pickImage}>
@@ -67,9 +71,7 @@ export default function Diagnose() {
           </TouchableOpacity>
         </View>
       </CameraView>
-      
     </View>
-
   );
 }
 
@@ -84,7 +86,6 @@ const styles = StyleSheet.create({
   },
   camera: {
     flex: 1,
-    
   },
   buttonContainer: {
     flex: 1,
