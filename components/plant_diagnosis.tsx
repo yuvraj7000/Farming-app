@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Platform, Text, Image, TouchableOpacity, View , StyleSheet } from 'react-native';
+import Diagnose_presentation from './diagnose_presentation';
 import axios from 'axios';
+import LottieView from 'lottie-react-native';
+
 
 const PlantDiagnosis = ({ imageUri, setImage }) => {
   const [loading, setLoading] = useState(false);
@@ -24,7 +27,15 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
         });
     
         console.log('Response:', res.data);
-        setResponse(res.data);
+        try {
+          const jsonString = res.data.diagnose.replace(/```json|```/g, ''); // Remove ```json and ```
+          const diagnoseObject = JSON.parse(jsonString);
+          console.log('diagnoseobject : ',diagnoseObject);
+          setResponse(diagnoseObject);
+        } catch (error) {
+          console.error("Invalid JSON:", error);
+        }
+        
         setLoading(false);
       } catch (error) {
         console.error('Error:', error);
@@ -39,13 +50,14 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   )
 }
 if(response){
+  console.log("response : ",response);
   return (
-    <Text>response</Text>
+    <Diagnose_presentation imageUri={imageUri} data={response} />
   )
 }
 
 const handleRightChoice =() => {
-  uploadImage(imageUri, 'english');
+  uploadImage(imageUri, 'hindi');
 }
 
 const handleWrongChoice = () => {
