@@ -3,7 +3,7 @@ import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useState, useEffect } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import Diagnose_page from '@/components/diagnose_page';
+import PlantDiagnosis from '@/components/plant_diagnosis';
 
 export default function Diagnose() {
   const [permission, requestPermission] = useCameraPermissions();
@@ -55,7 +55,7 @@ export default function Diagnose() {
   if (image) {
     console.log("image ---",image);
     return (
-      <Diagnose_page image={image} setImage={setImage} />
+      <PlantDiagnosis imageUri={image} setImage ={setImage} />
     );
   }
 
