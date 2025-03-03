@@ -3,15 +3,15 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import Market_card from '@/components/market_card'
 import Dignose_card from '@/components/dignose_card'
+import Weather_card from '@/components/weather_card'
+
 const Home= () => {
   return (
     <SafeAreaView>
     <ScrollView>
     <View style={styles.container}>
         <Text style={styles.moto}>Empowring Farmers for a Better Tomorrow</Text>
-        <View style={styles.weather}>
-          <Text>Weather Card</Text>
-        </View>
+        <Weather_card />
         <Market_card />
         <Dignose_card />
     </View>
