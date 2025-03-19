@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet} from 'react-native';
 import Mandi from './mandi';
+import LottieView from 'lottie-react-native';
 
 const Mandi_Data = ({district, state}) => {
     const[response, setResponse] = useState()
-
+  const animation = useRef<LottieView>(null);
 
     function getDateArray() {
         const dates = [];
@@ -161,19 +162,40 @@ const Mandi_Data = ({district, state}) => {
     
     
     return (
-        <View >
-            <Text>Mandi</Text>
-            <Text>Loading ...</Text>
-               {/* <TouchableOpacity onPress={handleSearch}>
-                    <Text >Search {response}</Text>
-                  </TouchableOpacity>
-                 */}
-        </View>
+        <View style={styles.animationContainer}>
+                    <LottieView
+                      autoPlay
+                      ref={animation}
+                      style={styles.lottie}
+                      source={require('../assets/animations/market.json')}
+                    />
+                    <Text style={styles.loadingText}>Analyzing your plant...</Text>
+                  </View>
     );
 };
 
 
 export default Mandi_Data;
+
+
+const styles = StyleSheet.create({
+    animationContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      lottie: {
+        width: 200,
+        height: 200,
+      },
+      loadingText: {
+        fontWeight: '600',
+        fontSize: 20,
+        // color: '#333',
+      },
+
+
+
+})
 
 
 

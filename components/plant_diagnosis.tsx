@@ -72,7 +72,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
               autoPlay
               ref={animation}
               style={styles.lottie}
-              source={require('../assets/animations/Animation - 1740852996224.json')}
+              source={require('../assets/animations/plant.json')}
             />
             <Text style={styles.loadingText}>Analyzing your plant...</Text>
           </View>

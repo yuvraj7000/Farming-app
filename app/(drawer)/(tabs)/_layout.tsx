@@ -72,15 +72,15 @@ const RootLayout = () => {
       />
 
 <Tabs.Screen
-        name="weather"
+        name="schems"
         options={{
           headerShown: false,
-          title: "Weather",
+          title: "schems",
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               icon="weather"
               color={color}
-              name="Weather"
+              name="schems"
               focused={focused}
             />
           ),
