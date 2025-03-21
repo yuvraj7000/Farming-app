@@ -1,9 +1,15 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { useTranslation  } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '@/components/button';
 import { useRouter } from 'expo-router';
+import { usePushNotifications } from '@/context/usePushNotification';
+
+const API_URL = 'http://165.22.223.49:5000/api/v1/pushNotification/add';
+
+
 const data = [
   {
     heading: 'featureCard_plant_heading',
@@ -21,12 +27,18 @@ const data = [
     heading: 'featureCard_mandi_heading',
     content: 'featureCard_mandi_content',
     image: require('../../assets/icons/mandi_feature.png'),
-    color: '#B9E670',
+    color: '#6FCF97',
+  },
+  {
+    heading: 'featureCard_scheme_heading',
+    content: 'featureCard_scheme_content',
+    image: require('../../assets/icons/scheme_feature.png'),
+    color: '#F7DC6F',
   },
 ];
 
 const FeatureCard = ({ heading, content, image, color }) => {
-  const { t } = useTranslation();
+  const { t} = useTranslation();
   return (
     <View style={[styles.card, { backgroundColor: color }]}>
       <Image source={image} style={styles.cardImage} />
@@ -39,27 +51,48 @@ const FeatureCard = ({ heading, content, image, color }) => {
 };
 
 const Feature = () => {
+  const { expoPushToken, notification } = usePushNotifications();
   const { t } = useTranslation();
   const router = useRouter();
-  const buttonPress= ()=> {
+
+  // Function to send FCM token to the backend
+  const sendFcmToken = async (token) => {
+    try {
+      const response = await axios.post(API_URL, { fcm_token: token });
+      console.log('FCM Token sent:', response.data);
+    } catch (error) {
+      console.error('Error sending FCM token:', error.response?.data || error.message);
+    }
+  };
+
+  // Send FCM token when it's available
+  useEffect(() => {
+    if (expoPushToken?.data) {
+      sendFcmToken(expoPushToken.data);
+    }
+  }, [expoPushToken]);
+
+  const buttonPress = () => {
     router.push('/home');
-  }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Image style={styles.logo} source={require('../../assets/icons/app_icon.png')} />
-        <Text style={styles.title}>KisanBandhu</Text>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.subtitle}>{t('What we offer')}</Text>
-        <View style={styles.cardsContainer}>
+      <ScrollView>
+        {/* <View style={styles.header}>
+          <Image style={styles.logo} source={require('../../assets/icons/app_logo.png')} />
+          <Text style={styles.title}>KisanBandhu</Text>
+        </View> */}
+        <View style={styles.body}>
+          <Text style={styles.subtitle}>{t('what we offer')}</Text>
+          <View style={styles.cardsContainer}>
           {data.map((item, index) => (
             <FeatureCard key={index} {...item} />
           ))}
         </View>
-        <Button buttonName={t('Get Started')} handleDone={buttonPress} />
-      </View>
+          <Button buttonName={t('Get Started')} handleDone={buttonPress} />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -69,19 +102,27 @@ export default Feature;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    paddingVertical: 20,
+    alignContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 50,
+    paddingTop: 30,
     paddingBottom: 20,
   },
   logo: {
-    height: 80,
-    width: 80,
-    marginRight: 10,
+    height: 100, 
+    width: 100, 
+    borderRadius: 10,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 10, // For Android shadow
   },
   title: {
     fontSize: 30,
@@ -94,8 +135,9 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    margin: 20,
     textAlign: 'center',
+    color: 'blue',
   },
   cardsContainer: {
     flexDirection: 'column',
@@ -123,6 +165,7 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     flex: 1,
+  
   },
   cardHeading: {
     fontSize: 18,
@@ -131,5 +174,6 @@ const styles = StyleSheet.create({
   },
   cardContent: {
     fontSize: 14,
+    
   },
 });

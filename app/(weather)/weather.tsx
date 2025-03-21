@@ -11,6 +11,7 @@ import {
   ActivityIndicator, 
   ScrollView 
 } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import weather_icon from '../../context/weather_icon/weather_icon.json';
 import axios from 'axios';
 import * as Location from 'expo-location';
@@ -21,6 +22,7 @@ const HOURLY_API = 'https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=
 const DAILY_API = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat=44.34&lon=10.99&cnt=16&appid=90d2e1a10f78f0969364bab71f203ed5';
 
 const Weather = () => {
+  const { t } = useTranslation();
     const [hourlyData, setHourlyData] = useState([]);
     const [dailyData, setDailyData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -123,7 +125,7 @@ const Weather = () => {
   const getSprayCondition = (windSpeed) => {
     const mph = windSpeed * 2.23694;
     if (mph >= 2 && mph <= 4) return { text: 'Good for Spraying', color: '#4CAF50' };
-    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'Moderate condit.', color: '#FFC107' };
+    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'moderate for Spraying', color: '#FFC107' };
     return { text: 'Avoid Spraying', color: '#F44336' };
   };
 
@@ -146,14 +148,14 @@ const Weather = () => {
     <View style={styles.hourdayContainer}>
       <View style={styles.hourdayHeader}>
         <Text style={styles.hourdateText}>
-          {new Date(item.date).toLocaleDateString('en-US', {
+          {new Date(item.date).toLocaleDateString(t('en-US'), {
             weekday: 'long',
             month: 'long',
             day: 'numeric'
           })}
         </Text>
         <Text style={styles.minMaxText}>
-          High: {Math.round(item.maxTemp)}°C / Low: {Math.round(item.minTemp)}°C
+          {t("High")}: {Math.round(item.maxTemp)}°C / {t("Low")}: {Math.round(item.minTemp)}°C
         </Text>
       </View>
       <FlatList
@@ -172,11 +174,15 @@ const Weather = () => {
     return (
       <View style={styles.dailyContainer}>
         <View style={styles.dailydayHeader}>
-          <Text style={styles.dailydateText}>{formatDate(item.dt)}</Text>
+          <Text style={styles.dailydateText}>{new Date(item.dt * 1000).toLocaleDateString('hi-IN', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric'
+})}</Text>
         
         </View>
         <Text style={styles.dailyminMaxText}>
-            High: {Math.round(item.temp.max - 273.15)}°C / Low: {Math.round(item.temp.min - 273.15)}°C
+            {t("High")}: {Math.round(item.temp.max - 273.15)}°C / {t("Low")}: {Math.round(item.temp.min - 273.15)}°C
           </Text>
         <View style={styles.dailyContent}>
           <Image
@@ -184,7 +190,7 @@ const Weather = () => {
             style={styles.weatherIcon}
           />
            <Text style={styles.descriptionText}>
-              {item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1)}
+              {t(item.weather[0].description)}
             </Text>
          
             {/* <Text style={styles.descriptionText}>
@@ -193,7 +199,7 @@ const Weather = () => {
             {/* <View style={[styles.sprayCondition, { backgroundColor: sprayCondition.color }]}>
               <Text style={styles.sprayText}>{sprayCondition.text}</Text>
             </View> */}
-            <Text style={styles.popText}>🌧️ {Math.round(item.pop * 100)}% Precipitation</Text>
+            <Text style={styles.popText}>🌧️ {Math.round(item.pop * 100)}% {t("Precipitation")}</Text>
           </View>
         
       </View>
@@ -216,10 +222,10 @@ const Weather = () => {
           {Math.round(item.main.temp - 273.15)}°C
         </Text>
         <Text style={styles.descriptionText}>
-          {item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1)}
+          {t(item.weather[0].description)}
         </Text>
         <View style={[styles.sprayCondition, { backgroundColor: sprayCondition.color }]}>
-          <Text style={styles.sprayText}>{sprayCondition.text}</Text>
+          <Text style={styles.sprayText}>{t(sprayCondition.text)}</Text>
         </View>
         <Text style={styles.popText}>🌧️ {Math.round(item.pop * 100)}%</Text>
       </View>
@@ -235,7 +241,7 @@ const Weather = () => {
                 style={styles.lottie}
                 source={require('../../assets/animations/weather.json')}
               />
-              <Text style={styles.loadingText}>Loading weather...</Text>
+              <Text style={styles.loadingText}>{t("loading Weather")}</Text>
             </View>
         
     );
@@ -246,9 +252,9 @@ const Weather = () => {
       <ScrollView>
       <View style={styles.header}>
   <Text style={styles.title}>
-    {location.city}, {location.country == 'IN' ? 'India' : location.country}
+    {location.city}, {t(location.country)}
   </Text>
-  <Text style={styles.subtitle}>First 4 days: Hourly Forecast</Text>
+  <Text style={styles.subtitle}>{t("4 days Hourly")}</Text>
 </View>
 
         {/* Hourly Forecast Section */}
@@ -261,7 +267,7 @@ const Weather = () => {
         />
 
         {/* Daily Forecast Section */}
-        <Text style={styles.sectionTitle}>Daily Forecast (Next 12 Days)</Text>
+        <Text style={styles.sectionTitle}>{t("next 12 days")}</Text>
         <FlatList
           data={dailyData}
           renderItem={renderDailyDay}
@@ -281,18 +287,18 @@ const Weather = () => {
           
           {/* Disclaimer Section */}
           <View style={styles.disclaimerContainer}>
-            <Text style={styles.disclaimerHeading}>Important Note for Farmers:</Text>
-            <Text style={styles.disclaimerText}>
-              • Weather forecasts are estimates and actual conditions may vary{'\n'}
-              • Always verify field conditions before agricultural operations{'\n'}
-              • Wind speed recommendations are general guidelines{'\n'}
-              • Consider microclimate variations in your specific location{'\n'}
-              • Consult local agricultural authorities for critical decisions{'\n'}
-              • Forecast data source: OpenWeatherMap API{'\n\n'}
-              This information should not be used as sole basis for farming decisions. 
-              The developers assume no liability for actions taken based on this forecast.
-            </Text>
-          </View>
+  <Text style={styles.disclaimerHeading}>{t("Important Note for Farmers")}</Text>
+  <Text style={styles.disclaimerText}>
+    • {t("Weather forecasts are estimates and actual conditions may vary")}{'\n'}
+    • {t("Always verify field conditions before agricultural operations")}{'\n'}
+    • {t("Wind speed recommendations are general guidelines")}{'\n'}
+    • {t("Consider microclimate variations in your specific location")}{'\n'}
+    • {t("Consult local agricultural authorities for critical decisions")}{'\n'}
+    • {t("Forecast data source: OpenWeatherMap API")}{'\n\n'}
+    {t("This information should not be used as sole basis for farming decisions.")}{' '}
+    {t("The developers assume no liability for actions taken based on this forecast.")}
+  </Text>
+</View>
         </View>
       }
     />

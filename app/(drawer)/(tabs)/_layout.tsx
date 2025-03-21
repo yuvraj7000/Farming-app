@@ -36,7 +36,8 @@ const RootLayout = () => {
           borderTopWidth: 1,
           borderTopColor: "#232533",
           height: 75,
-          
+          paddingTop: 8,
+          justifyContent: 'center',
           
         },
       }}

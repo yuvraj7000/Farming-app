@@ -1,16 +1,18 @@
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useTranslation } from 'react-i18next'
 import React from 'react'
 import Market_card from '@/components/market_card'
 import Dignose_card from '@/components/dignose_card'
 import Weather_card from '@/components/weather_card'
 
 const Home= () => {
+  const { t } = useTranslation()
   return (
     <SafeAreaView>
     <ScrollView>
     <View style={styles.container}>
-        <Text style={styles.moto}>Empowring Farmers for a Better Tomorrow</Text>
+        <Text style={styles.moto}>{t('app_slogan')}</Text>
         <Weather_card />
         <Market_card />
         <Dignose_card />

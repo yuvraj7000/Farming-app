@@ -1,12 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Platform, Text, Image, TouchableOpacity, View , StyleSheet } from 'react-native';
+import { Platform, Text, Image, TouchableOpacity, View, StyleSheet, Modal, TouchableWithoutFeedback } from 'react-native';
 import Diagnose_presentation from './diagnose_presentation';
 import axios from 'axios';
 import LottieView from 'lottie-react-native';
+import { useTranslation } from 'react-i18next';
+import languages from '../context/i18n/language.json';
 
 const PlantDiagnosis = ({ imageUri, setImage }) => {
+  const { t, i18n } = useTranslation();
+  // console.log(i18n.language);
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const [isFullScreen, setIsFullScreen] = useState(false);
   const animation = useRef<LottieView>(null);
 
   const uploadImage = async (uri, language) => {
@@ -18,7 +23,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
         name: 'image.jpg',
         type: 'image/jpeg',
       });
-      formData.append('language', language);
+      formData.append('language', languages[i18n.language]);
   
       const res = await axios.post('http://165.22.223.49:5000/api/v1/diagnose/plant', formData, {
         headers: {
@@ -51,19 +56,45 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   return (
     <View style={styles.container}>
       {imageUri ? (
-        <Image source={{ uri: imageUri }} style={styles.image} />
+        <TouchableOpacity 
+          onPress={() => setIsFullScreen(true)}
+          activeOpacity={0.8}
+        >
+          <Image 
+            source={{ uri: imageUri }} 
+            style={styles.image} 
+            resizeMode="contain"
+          />
+        </TouchableOpacity>
       ) : (
         <Text>No image selected</Text>
       )}
-      
+
       <View style={styles.choiceContainer}>
         <TouchableOpacity style={styles.choiceButton} onPress={handleRightChoice}>
-          <Text style={styles.choiceText}>Right</Text>
+          <Text style={styles.choiceText}>{t("See Diagnose")}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.choiceButton} onPress={handleWrongChoice}>
-          <Text style={styles.choiceText}>Wrong</Text>
+        <TouchableOpacity style={styles.choiceAnother} onPress={handleWrongChoice}>
+          <Text style={styles.anotherText}>{t("choose another image")}</Text>
         </TouchableOpacity>
       </View>
+
+      {/* Full Screen Image Modal */}
+      <Modal
+        visible={isFullScreen}
+        transparent={true}
+        onRequestClose={() => setIsFullScreen(false)}
+      >
+        <TouchableWithoutFeedback onPress={() => setIsFullScreen(false)}>
+          <View style={styles.modalContainer}>
+            <Image
+              source={{ uri: imageUri }}
+              style={styles.fullScreenImage}
+              resizeMode="contain"
+            />
+          </View>
+        </TouchableWithoutFeedback>
+      </Modal>
 
       {loading && (
         <View style={styles.overlay}>
@@ -74,7 +105,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
               style={styles.lottie}
               source={require('../assets/animations/plant.json')}
             />
-            <Text style={styles.loadingText}>Analyzing your plant...</Text>
+            <Text style={styles.loadingText}>{t("Analyzing your plant...")}</Text>
           </View>
         </View>
       )}
@@ -88,6 +119,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: '#fff',
   },
   image: {
     width: 300,
@@ -96,18 +128,32 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   choiceContainer: {
-    flexDirection: 'row',
-    marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   choiceButton: {
     backgroundColor: '#007BFF',
     padding: 12,
     borderRadius: 8,
     marginHorizontal: 10,
+    minWidth: 100,
+    alignItems: 'center',
   },
   choiceText: {
     color: '#fff',
     fontSize: 16,
+    fontWeight: '500',
+  },
+  choiceAnother: {
+    marginTop: 10,
+    padding: 5,
+    borderRadius: 8,
+  },
+  anotherText: {
+    color: '#007BFF',
+    fontSize: 14,
+    fontWeight: '500',
+    textDecorationLine: 'underline',
   },
   overlay: {
     position: 'absolute',
@@ -118,6 +164,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 1,
   },
   animationContainer: {
     alignItems: 'center',
@@ -131,6 +178,17 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
     color: '#333',
+    marginTop: 20,
+  },
+  modalContainer: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.9)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  fullScreenImage: {
+    width: '100%',
+    height: '100%',
   },
 });
 

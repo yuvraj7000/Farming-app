@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Modal, Dimensions } from 'react-native';
 import React, { useState } from 'react';
 import { BlurView } from 'expo-blur'; 
+import { useTranslation } from 'react-i18next';
 
 const Diagnose_presentation = ({ imageUri, data }) => {
+    const { t } = useTranslation();
     const [isImageFullscreen, setIsImageFullscreen] = useState(false);
     const screen = Dimensions.get('window');
   
@@ -36,18 +38,18 @@ const Diagnose_presentation = ({ imageUri, data }) => {
 
           <Text style={styles.description}>{data.Description}</Text>
 
-          <Section title="Symptoms" items={data.symptoms} />
-          <Section title="cause" items={data.cause} />
-          <Section title="Organic Solution" items={data["Organic solution"]} />
-          <Section title="Regular Solution" items={data["Regular solution"]} />
-          {data["chemical solution"] && (
-            <Section title="Chemical Solution" items={data["chemical solution"]} />
-          )}
-          <Section title="Important Notes" items={data["important notes"]} />
+          <Section title={t("Symptoms")} items={data.symptoms} />
+  <Section title={t("Cause")} items={data.cause} />
+  <Section title={t("Organic Solution")} items={data["Organic solution"]} />
+  <Section title={t("Regular Solution")} items={data["Regular solution"]} />
+  {data["chemical solution"] && (
+    <Section title={t("Chemical Solution")} items={data["chemical solution"]} />
+  )}
+  <Section title={t("Important Notes")} items={data["important notes"]} />
         </View>
       ) : (
         <View style={styles.content}>
-          <Text style={styles.title}>Diagnosis Failed</Text>
+          <Text style={styles.title}>{t("Diagnosis Failed")}</Text>
           <Text style={styles.description}>{data.remarks}</Text>
         </View>
       )}

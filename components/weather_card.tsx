@@ -1,28 +1,32 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native'
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios'
 import { Link } from 'expo-router'
 import * as Location from 'expo-location'
 import weatherIcon from '../context/weather_icon/weather_icon.json'
 import LottieView from 'lottie-react-native';
+import { useTranslation } from 'react-i18next';
 
 const Weather_card = () => {
   const [weatherData, setWeatherData] = useState(null)
+  const[reload, setReload] = useState(false)
   const [loading, setLoading] = useState(true)
   const animation = useRef<LottieView>(null);
+  const { t } = useTranslation()
 
   const API_KEY = '90d2e1a10f78f0969364bab71f203ed5'
 
   const getSprayCondition = (windSpeed) => {
     const mph = windSpeed * 2.23694
     if (mph >= 2 && mph <= 4) return { text: 'Good for Spraying', color: '#4CAF50' }
-    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'Moderate', color: '#FFC107' }
+    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'Moderate for Spraying', color: '#FFC107' }
     return { text: 'Avoid Spraying', color: '#F44336' }
   }
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
+        setLoading(true)
         let { status } = await Location.requestForegroundPermissionsAsync()
         if (status !== 'granted') return
 
@@ -38,7 +42,7 @@ const Weather_card = () => {
       }
     }
     fetchWeather()
-  }, [])
+  }, [reload])
 
 if (loading) {
   return (
@@ -50,19 +54,33 @@ if (loading) {
           style={styles.lottie}
           source={require('../assets/animations/weather.json')}
         />
-        <Text style={styles.loadingText}>Loading weather...</Text>
+        <Text style={styles.loadingText}>{t("loading Weather")}</Text>
       </View>
   
   );
 }
 
-  if (!weatherData) {
-    return (
-      <View style={styles.weather}>
-        <Text>Failed to load weather data</Text>
+if (!weatherData) {
+  return (
+    <View style={styles.weather}>
+      <View style={styles.failedContainer}>
+      <Image
+        source={require('../assets/icons/failed_weather.png')}
+        style={styles.failedWeatherIcon}
+      />
+      <View style={styles.failedWeather}>
+      <Text style={styles.failedWeatherText}>{t("Failed to load weather data")}</Text>
+      <TouchableOpacity
+        style={styles.reloadButton}
+        onPress={() => setReload(!reload)}
+      >
+        <Text style={styles.reloadButtonText}>{t("Reload")}</Text>
+      </TouchableOpacity>
       </View>
-    )
-  }
+      </View>
+    </View>
+  );
+}
 
   const sprayCondition = getSprayCondition(weatherData.wind.speed)
   const rainAmount = weatherData.rain?.['1h'] || weatherData.rain?.['3h'] || 0
@@ -75,17 +93,17 @@ if (loading) {
             {(weatherData.main.temp - 273.15).toFixed(1)}°C
           </Text>
           <Text style={styles.location}>
-            {weatherData.name}, {weatherData.sys.country === 'IN' ? 'India' : weatherData.sys.country}
+            {weatherData.name}, {weatherData.sys.country === 'IN' ? t("India") : weatherData.sys.country}
           </Text>
 
           <View style={styles.conditionContainer}>
             <View style={styles.conditionup}>
               <View style={[styles.sprayCondition, { backgroundColor: sprayCondition.color }]}>
-                <Text style={styles.conditionText}>{sprayCondition.text}</Text>
+                <Text style={styles.conditionText}>{t(sprayCondition.text)}</Text>
               </View>
               <View style={styles.rainContainer}>
                 <Text style={styles.description}>
-                  {weatherData.weather[0].description}
+                  {t(weatherData.weather[0].description)}
                 </Text>
               </View>
               
@@ -114,7 +132,7 @@ if (loading) {
               <View style={styles.forcast}>
                 <Link href="/weather">
                   <View style={styles.linkContainer}>
-                    <Text style={styles.link}>See 16 days weather forecast >></Text>
+                    <Text style={styles.link}>{t("weather forcast")} >></Text>
                   </View>
                 </Link>
               </View>
@@ -240,6 +258,45 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
     color: '#333',
+  },
+  failedContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  failedWeatherIcon: {
+    width: 160,
+    height: 160,
+  },
+  failedWeather: {
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  failedWeatherText: {
+    fontSize: 16,
+    width: 150,
+    fontWeight: '500',
+    color: '#333',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
+  reloadButton: {
+    backgroundColor: '#007BFF',
+    width: 100,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  reloadButtonText: {
+    color: '#FFF',
+    fontSize: 14,
+    fontWeight: '600',
+    textAlign: 'center',
   },
 
 })

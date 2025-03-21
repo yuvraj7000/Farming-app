@@ -1,7 +1,8 @@
 {
     "translation": {
+      "app_name" : "KisanBandhu",
+      "app_slogan" : "Empowring Farmers for a Better Tomorrow",
       "language" : " Select Language",
-     
       "what we offer" : "What We Offer",
       "featureCard_plant_heading" : "Plant Disease Diagnosis",
       "featureCard_plant_content" : "Upload a plant image to detect diseases and get solutions.",
@@ -9,5 +10,82 @@
       "featureCard_weather_content" : "Stay updated with real-time weather information.",
       "featureCard_mandi_heading" : "Market Prices",
       "featureCard_mandi_content" : "Check prices of commodities across all Indian mandis.",
+     "featureCard_scheme_heading" : "Schemes",
+"featureCard_scheme_content" : "Explore all private and gov schemes available for farmers.",
+"Get Started" : "Get Started",
+
+
+//weather_card 
+"loading Weather": "Loading Weather ...",
+"Failed to load weather data": "Failed to load weather data",
+"Reload": "Reload",
+"India": "India",
+"Good for Spraying": "Good for Spraying",
+"moderate for Spraying": "Moderate for Spraying",
+"Avoid Spraying": "Avoid Spraying",
+//weather_description
+"clear sky": "Clear Sky",
+"sky is clear": "Clear Sky",
+"few clouds": "Few Clouds",
+"scattered clouds": "Scattered Clouds",
+"broken clouds": "Broken Clouds",
+"shower rain": "Shower Rain",
+"rain": "Rain",
+"thunderstorm": "Thunderstorm",
+"snow": "Snow",
+"mist": "Mist",
+
+"weather forcast": "See 16 days weather forecast",
+
+
+//16 days weather page
+"16 days weather": "16 Day Weather Forecast",
+"4 days Hourly" : "First 4 days: Hourly Forecast",
+"next 12 days" : "Next 12 days: Daily Forecast",
+"en-US" : "en-US",
+"High": "High",
+"Low": "Low",
+"Precipitation": "Precipitation",
+//weather disclamer
+"Important Note for Farmers": "Important Note for Farmers",
+"Weather forecasts are estimates and actual conditions may vary": "Weather forecasts are estimates and actual conditions may vary",
+"Always verify field conditions before agricultural operations": "Always verify field conditions before agricultural operations",
+"Wind speed recommendations are general guidelines": "Wind speed recommendations are general guidelines",
+"Consider microclimate variations in your specific location": "Consider microclimate variations in your specific location",
+"Consult local agricultural authorities for critical decisions": "Consult local agricultural authorities for critical decisions",
+"Forecast data source: OpenWeatherMap API": "Forecast data source: OpenWeatherMap API",
+"This information should not be used as sole basis for farming decisions.": "This information should not be used as sole basis for farming decisions.",
+"The developers assume no liability for actions taken based on this forecast.": "The developers assume no liability for actions taken based on this forecast.",
+
+
+//market card
+"Get real-time prices of commodities from mandis across the country": "Get real-time prices of commodities from mandis across the country",
+"See mandi prices": "See Mandi Prices",
+
+//plant Diagnosis
+"Plant Diagnosis": "Plant Diagnosis",
+"Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "Upload an image of your plant to identify diseases and get solutions tailored to your needs.",
+"Take Image": "Take Image",
+"Get Diagnose": "Get Diagnose",
+"See Solution": "See Solution",
+"Take a Photo": "Take a Photo",
+"Take Photo": "Take Photo",
+"Open Gallery": "Open Gallery",
+"We need your permission to access the camera": "We need your permission to access the camera",
+"Grant Permission": "Grant Permission",
+"Analyzing your plant...": "Diagnosing your plant...",
+"choose another image": "choose another image",
+"See Diagnose": "See Diagnose",
+"Diagnosis Failed": "Diagnosis Failed",
+
+"Symptoms": "Symptoms",
+"Cause": "Cause",
+"Organic Solution": "Organic Solution",
+"Regular Solution": "Regular Solution",
+"Chemical Solution": "Chemical Solution",
+"Important Notes": "Important Notes",
+
+
+
   }
 }

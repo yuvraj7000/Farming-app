@@ -1,6 +1,7 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
 import { Text, View, StyleSheet, TouchableOpacity  } from 'react-native';
+import { useTranslation  } from 'react-i18next';
 
 
 const DrawerLabel =({label, icon})=>{
@@ -12,6 +13,7 @@ const DrawerLabel =({label, icon})=>{
 }
 
 export default function Layout() {
+  const { t } = useTranslation();
  
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -19,10 +21,10 @@ export default function Layout() {
         <Drawer.Screen
           name="(tabs)" 
           options={{
-            drawerLabel: () => ( <View><Text style={styles.drawerLabel}>KisanBandhu</Text></View> ),
+            drawerLabel: () => ( <View><Text style={styles.drawerLabel}>{t('app_name')}</Text></View> ),
             title: 'KisanBandhu',
             headerTitle: () => (
-              <Text style={styles.headerTitle}>KisanBandhu</Text>
+              <Text style={styles.headerTitle}>{t('app_name')}</Text>
             ),
 
           }}

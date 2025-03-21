@@ -1,7 +1,91 @@
 {
     "translation": {
-        "language" : " नमस्ते पंक्ति अनुवा",
-      "hello":"नमस्ते",
-      "this line is translated":"यह पंक्ति अनुवादित है"
+      "app_name" : "किसान बंधु",
+      "app_slogan" : "किसानों को एक बेहतर कल के लिए सशक्त बनाना",
+        "language" : " भाषा चुने",
+       "what we offer" : "हम क्या प्रदान करते हैं",
+"featureCard_plant_heading" : "पौधों की बीमारी का निदान",
+"featureCard_plant_content" : "बीमारियों का पता लगाने और समाधान प्राप्त करने के लिए पौधे की छवि अपलोड करें।",
+"featureCard_weather_heading" : "मौसम पूर्वानुमान",
+"featureCard_weather_content" : "वास्तविक समय मौसम जानकारी के साथ अपडेट रहें।",
+"featureCard_mandi_heading" : "बाजार मूल्य",
+"featureCard_mandi_content" : "सभी भारतीय मंडियों में वस्तुओं की कीमतें जांचें।",
+"featureCard_scheme_heading" : "योजनाएँ और सब्सिडी",
+"featureCard_scheme_content" : "किसानों के लिए उपलब्ध सभी निजी और सरकारी योजनाओं और सब्सिडी का अन्वेषण करें।",
+"Get Started" : "शुरू करें",
+
+//weather_card
+"loading Weather": "मौसम लोड हो रहा है ...",
+"Failed to load weather data": "मौसम डेटा लोड करने में विफल",
+"Reload": "पुनः लोड करें",
+"India": "भारत",
+"Good for Spraying": "छिड़काव के लिए अच्छा",
+"moderate for Spraying": "छिड़काव के लिए मध्यम",
+"Avoid Spraying": "छिड़काव से बचें",
+//weather description
+"clear sky": "साफ आसमान",
+"sky is clear": "साफ आसमान",
+"few clouds": "थोड़े बादल",
+"scattered clouds": "बिखरे हुए बादल",
+"broken clouds": "टूटे हुए बादल",
+"shower rain": "हल्की बारिश",
+"rain": "बारिश",
+"thunderstorm": "आंधी-तूफान",
+"snow": "बर्फ",
+"mist": "कोहरा",
+
+"weather forcast": "16 दिनों का मौसम पूर्वानुमान देखें",
+
+
+
+//16 days weather page
+"16 days weather": "16 दिनों का मौसम पूर्वानुमान",
+"4 days Hourly" : "पहले 4 दिन: प्रति घंटा पूर्वानुमान",
+"next 12 days" : "अगले 12 दिन: दैनिक पूर्वानुमान",
+"en-US" : "hi-IN",
+"High": "उच्च",
+"Low": "निम्न",
+"Precipitation": "वर्षा",
+//weather disclamer
+"Important Note for Farmers": "किसानों के लिए महत्वपूर्ण नोट",
+"Weather forecasts are estimates and actual conditions may vary": "मौसम पूर्वानुमान अनुमानित हैं और वास्तविक परिस्थितियाँ भिन्न हो सकती हैं",
+"Always verify field conditions before agricultural operations": "कृषि कार्यों से पहले हमेशा क्षेत्र की स्थिति की पुष्टि करें",
+"Wind speed recommendations are general guidelines": "हवा की गति की सिफारिशें सामान्य दिशानिर्देश हैं",
+"Consider microclimate variations in your specific location": "अपने विशिष्ट स्थान में सूक्ष्म जलवायु भिन्नताओं पर विचार करें",
+"Consult local agricultural authorities for critical decisions": "महत्वपूर्ण निर्णयों के लिए स्थानीय कृषि अधिकारियों से परामर्श करें",
+"Forecast data source: OpenWeatherMap API": "पूर्वानुमान डेटा स्रोत: OpenWeatherMap API",
+"This information should not be used as sole basis for farming decisions.": "इस जानकारी का उपयोग कृषि निर्णयों के लिए एकमात्र आधार के रूप में नहीं किया जाना चाहिए।",
+"The developers assume no liability for actions taken based on this forecast.": "इस पूर्वानुमान के आधार पर की गई कार्रवाइयों के लिए डेवलपर्स कोई जिम्मेदारी नहीं लेते हैं।",
+
+
+//market card
+"Get real-time prices of commodities from mandis across the country": "देश भर की मंडियों से वस्तुओं की वास्तविक समय कीमतें प्राप्त करें।",
+"See mandi prices": "मंडी की कीमतें देखें",
+
+//plant Diagnosis
+"Plant Diagnosis": "पौधे की जांच",
+"Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "अपने पौधे की छवि अपलोड करें ताकि बीमारियों की पहचान हो सके और आपकी आवश्यकताओं के अनुसार समाधान प्राप्त हो।",
+"Take Image": "छवि लें",
+"Get Diagnose": "निदान प्राप्त करें",
+"See Solution": "समाधान देखें",
+"Take a Photo": "पौधे की छवि लें",
+"Take Photo": "फोटो लें",
+"Open Gallery": "गैलरी खोलें",
+"We need your permission to access the camera": "हमें कैमरा एक्सेस करने की आपकी अनुमति चाहिए",
+"Grant Permission": "अनुमति दें",
+"Analyzing your plant...": "आपके पौधे का निदान किया जा रहा है...",
+"choose another image": "कोई अन्य छवि चुनें",
+"See Diagnose": "निदान देखें",
+"Diagnosis Failed": "निदान विफल",
+
+"Symptoms": "लक्षण",
+"Cause": "कारण",
+"Organic Solution": "जैविक समाधान",
+"Regular Solution": "सामान्य समाधान",
+"Chemical Solution": "रासायनिक समाधान",
+"Important Notes": "महत्वपूर्ण नोट्स",
+
+
+
     }
   }

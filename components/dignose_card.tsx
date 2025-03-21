@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 
 const Dignose_card = () => {
+    const { t } = useTranslation();
 
     const router = useRouter();
 
@@ -12,30 +14,30 @@ const Dignose_card = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Plant Diagnosis</Text>
-      <Text style={styles.description}>
-        Upload an image of your plant to identify diseases and get solutions tailored to your needs.
-      </Text>
-      <View style={styles.stepsContainer}>
-        <View style={styles.step}>
-          <Image source={require('../assets/icons/diagnose_icons/takeImage.png')} style={styles.icon} />
-          <Text style={styles.stepText}>Take Image</Text>
-        </View>
-        <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
-        <View style={styles.step}>
-          <Image source={require('../assets/icons/diagnose_icons/getDiagnose.png')} style={styles.icon} />
-          <Text style={styles.stepText}>Get Diagnose</Text>
-        </View>
-        <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
-        <View style={styles.step}>
-          <Image source={require('../assets/icons/diagnose_icons/seeSolution.png')} style={styles.icon} />
-          <Text style={styles.stepText}>See Solution</Text>
-        </View>
-      </View>
-      <TouchableOpacity onPress={handleNavigate} style={styles.linkContainer}>
-        <Text style={styles.linkText}>Take a Photo</Text>
-        <Image source={require('../assets/icons/diagnose_icons/takePhoto.png')} style={styles.takePhoto} />
-      </TouchableOpacity>
+     <Text style={styles.title}>{t("Plant Diagnosis")}</Text>
+<Text style={styles.description}>
+  {t("Upload an image of your plant to identify diseases and get solutions tailored to your needs.")}
+</Text>
+<View style={styles.stepsContainer}>
+  <View style={styles.step}>
+    <Image source={require('../assets/icons/diagnose_icons/takeImage.png')} style={styles.icon} />
+    <Text style={styles.stepText}>{t("Take Image")}</Text>
+  </View>
+  <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
+  <View style={styles.step}>
+    <Image source={require('../assets/icons/diagnose_icons/getDiagnose.png')} style={styles.icon} />
+    <Text style={styles.stepText}>{t("Get Diagnose")}</Text>
+  </View>
+  <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
+  <View style={styles.step}>
+    <Image source={require('../assets/icons/diagnose_icons/seeSolution.png')} style={styles.icon} />
+    <Text style={styles.stepText}>{t("See Solution")}</Text>
+  </View>
+</View>
+<TouchableOpacity onPress={handleNavigate} style={styles.linkContainer}>
+  <Text style={styles.linkText}>{t("Take a Photo")}</Text>
+  <Image source={require('../assets/icons/diagnose_icons/takePhoto.png')} style={styles.takePhoto} />
+</TouchableOpacity>
     </View>
   );
 };
@@ -48,13 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    // backgroundColor: '#fff',
     borderRadius: 10,
-    // shadowColor: '#000',
-    // shadowOffset: { width: 0, height: 2 },
-    // shadowOpacity: 0.1,
-    // shadowRadius: 5,
-    // elevation: 3,
   },
   title: {
     fontSize: 20,
@@ -63,6 +59,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
+    textAlign: 'center',
     color: '#555',
     
   },
