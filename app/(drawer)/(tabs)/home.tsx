@@ -5,8 +5,14 @@ import React from 'react'
 import Market_card from '@/components/market_card'
 import Dignose_card from '@/components/dignose_card'
 import Weather_card from '@/components/weather_card'
+import Diagnose_history from '@/components/diagnose_history'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 const Home= () => {
+  AsyncStorage.getItem('diagnose_history').then((value) => { 
+    console.log(value)
+  })
   const { t } = useTranslation()
   return (
     <SafeAreaView>
@@ -16,6 +22,7 @@ const Home= () => {
         <Weather_card />
         <Market_card />
         <Dignose_card />
+        <Diagnose_history/>
     </View>
     </ScrollView>
     </SafeAreaView>
@@ -26,7 +33,8 @@ export default Home
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
   },

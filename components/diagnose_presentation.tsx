@@ -7,11 +7,21 @@ const Diagnose_presentation = ({ imageUri, data }) => {
     const { t } = useTranslation();
     const [isImageFullscreen, setIsImageFullscreen] = useState(false);
     const screen = Dimensions.get('window');
+    console.log("imageUri---",imageUri);
   
     return (
       <ScrollView contentContainerStyle={styles.container}>
+
         <TouchableOpacity onPress={() => setIsImageFullscreen(true)}>
-          <Image source={{ uri: imageUri }} style={styles.image} />
+        <Image
+  source={
+    imageUri
+      ? { uri: imageUri }
+      : require('../assets/icons/placeholder.png') // Fallback placeholder
+  }
+  style={styles.image}
+  onError={(e) => console.log('Image Load Error:', e.nativeEvent.error)} // Debugging image load errors
+/>
         </TouchableOpacity>
   
         <Modal visible={isImageFullscreen} transparent={true} animationType="fade">

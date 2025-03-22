@@ -5,10 +5,11 @@ import axios from 'axios';
 import LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 import languages from '../context/i18n/language.json';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const PlantDiagnosis = ({ imageUri, setImage }) => {
   const { t, i18n } = useTranslation();
-  // console.log(i18n.language);
+
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -23,7 +24,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
         name: 'image.jpg',
         type: 'image/jpeg',
       });
-      formData.append('language', languages[i18n.language]);
+      formData.append('language', language);
   
       const res = await axios.post('http://165.22.223.49:5000/api/v1/diagnose/plant', formData, {
         headers: {
@@ -42,11 +43,17 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   };
 
   if (response) {
+    AsyncStorage.getItem('diagnose_history').then((value) => {
+      
+      const history = JSON.parse(value);
+      const newHistory = [...history, {imageUri, response}];
+      AsyncStorage.setItem('diagnose_history', JSON.stringify(newHistory));
+    });
     return <Diagnose_presentation imageUri={imageUri} data={response} />;
   }
 
   const handleRightChoice = () => {
-    uploadImage(imageUri, 'hindi');
+    uploadImage(imageUri, languages[i18n.language]);
   };
 
   const handleWrongChoice = () => {

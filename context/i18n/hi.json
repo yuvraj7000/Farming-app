@@ -20,7 +20,7 @@
 "Reload": "पुनः लोड करें",
 "India": "भारत",
 "Good for Spraying": "छिड़काव के लिए अच्छा",
-"moderate for Spraying": "छिड़काव के लिए मध्यम",
+"Moderate for Spraying": "छिड़काव के लिए मध्यम",
 "Avoid Spraying": "छिड़काव से बचें",
 //weather description
 "clear sky": "साफ आसमान",
@@ -84,6 +84,14 @@
 "Regular Solution": "सामान्य समाधान",
 "Chemical Solution": "रासायनिक समाधान",
 "Important Notes": "महत्वपूर्ण नोट्स",
+
+//diagnose history
+"Diagnose History": "निदान इतिहास",
+"Delete Confirmation": "हटाने की पुष्टि",
+"Are you sure you want to delete this item?": "क्या आप वाकई इस आइटम को हटाना चाहते हैं?",
+"Cancel": "रद्द करें",
+"Delete": "हटाएं",
+"No history available": "कोई इतिहास उपलब्ध नहीं है",
 
 
 

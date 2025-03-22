@@ -1,10 +1,23 @@
 import { StyleSheet, Text, View, Image, FlatList, ScrollView } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import Language_component from '@/components/language_component';
 
 const Index = () => {
+  const diagnose_history = [];
+  try{
+   AsyncStorage.getItem('diagnose_history').then((val)=>{
+     console.log("assss-----",val)
+   })
+  }
+  catch{
+    AsyncStorage.setItem('diagnose_history', JSON.stringify(diagnose_history));
+  }
+  
+
+  
   return (
     <SafeAreaProvider>
       

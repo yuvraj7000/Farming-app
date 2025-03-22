@@ -14,6 +14,13 @@ const DiagnoseLayout = () => {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="diagnosePresentation"
+        options={{
+          title: 'DiagnosePresentation',
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

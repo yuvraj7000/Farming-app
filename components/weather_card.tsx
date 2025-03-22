@@ -118,16 +118,14 @@ if (!weatherData) {
             style={styles.weatherIcon}
             source={{ uri: weatherIcon[weatherData.weather[0].icon] }}
           />
-          {/* <Text style={styles.description}>
-            {weatherData.weather[0].description}
-          </Text> */}
+         
         </View>
       </View>
 
       <View style={styles.conditiondown}>
       <View style={styles.rainContainer}>
                 <Text style={styles.conditionValue}>🌧️ {rainAmount}mm</Text>
-                {/* <Text style={styles.conditionLabel}>Last hour</Text> */}
+              
               </View>
               <View style={styles.forcast}>
                 <Link href="/weather">
@@ -172,8 +170,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   iconContainer: {
+    position: 'absolute',
+    top: 0, 
+    right: 0,
+    zIndex: -10,
     alignItems: 'center',
   },
+
   weatherIcon: {
     width: 80,
     height: 80,
