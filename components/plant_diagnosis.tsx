@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
+import * as FileSystem from 'expo-file-system';
 import { Platform, Text, Image, TouchableOpacity, View, StyleSheet, Modal, TouchableWithoutFeedback } from 'react-native';
 import Diagnose_presentation from './diagnose_presentation';
 import axios from 'axios';
 import LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 import languages from '../context/i18n/language.json';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import  saveHistory  from '../context/diagnoseHistory.ts';
 
 const PlantDiagnosis = ({ imageUri, setImage }) => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,20 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   const [response, setResponse] = useState(null);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const animation = useRef<LottieView>(null);
+
+  useEffect(() => {
+    const handleHistorySave = async () => {
+      if (response) {
+        try {
+          await saveHistory(imageUri, response);
+        } catch (error) {
+          console.log("History save error:", error);
+        }
+      }
+    };
+  
+    handleHistorySave();
+  }, [response, imageUri]);
 
   const uploadImage = async (uri, language) => {
     setLoading(true);
@@ -43,14 +58,22 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   };
 
   if (response) {
-    AsyncStorage.getItem('diagnose_history').then((value) => {
-      
-      const history = JSON.parse(value);
-      const newHistory = [...history, {imageUri, response}];
-      AsyncStorage.setItem('diagnose_history', JSON.stringify(newHistory));
-    });
     return <Diagnose_presentation imageUri={imageUri} data={response} />;
   }
+
+  // if (response) {
+  //   const saveHistory = async (imageUri, response) => {
+  //  try{
+  //   await saveHistory(imageUri, response);
+  //   return <Diagnose_presentation imageUri={imageUri} data={response} />;
+  //  }
+  //  catch{
+  //   console.log("Error saving history");
+  //  }
+  // }
+  
+    
+  // }
 
   const handleRightChoice = () => {
     uploadImage(imageUri, languages[i18n.language]);

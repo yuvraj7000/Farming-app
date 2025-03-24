@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    padding: 20,
+    padding: 15,
     justifyContent: 'center',
   },
   topSection: {
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     width: 150,
     fontWeight: '500',
-    color: '#333',
+    color: 'grey',
     textAlign: 'center',
     marginBottom: 15,
   },

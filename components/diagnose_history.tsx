@@ -4,28 +4,46 @@ import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
-import { useRouter } from 'expo-router'; 
+import { useRouter } from 'expo-router';
+import * as FileSystem from 'expo-file-system';
 
 const HistoryCard = ({ imageUri, response, onDelete }) => {
   const { t } = useTranslation();
   const router = useRouter();
+  const [imageExists, setImageExists] = useState(true);
+
+  useEffect(() => {
+    const checkImage = async () => {
+      try {
+        const fileInfo = await FileSystem.getInfoAsync(imageUri);
+        setImageExists(fileInfo.exists);
+      } catch (error) {
+        setImageExists(false);
+      }
+    };
+    checkImage();
+  }, [imageUri]);
+
   return (
     <View style={styles.card}>
-      <Image source={{ uri: imageUri }} style={styles.image} />
+      <Image 
+        source={imageExists ? { uri: imageUri } : require('../assets/icons/placeholder.png')} 
+        style={styles.image} 
+      />
       <View style={styles.cardContent}>
-      <TouchableOpacity
+        <TouchableOpacity
           onPress={() =>
             router.push({
               pathname: '/diagnosePresentation',
-              params: { imageUri, response: JSON.stringify(response) }, // Pass data as query parameters
+              params: { imageUri, response: JSON.stringify(response) },
             })
           }
         >
-        <Text style={styles.remarks}>
-          {response.remarks
-            ? response.remarks.split(' ').slice(0, 10).join(' ') + '...'
-            : response.Description.split(' ').slice(0, 10).join(' ') + '...'}
-        </Text>
+          <Text style={styles.remarks}>
+            {response.remarks
+              ? response.remarks.split(' ').slice(0, 10).join(' ') + '...'
+              : response.Description.split(' ').slice(0, 10).join(' ') + '...'}
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.deleteButton} onPress={onDelete}>
           <Text style={styles.deleteButtonText}>{t("Delete")}</Text>
@@ -52,16 +70,20 @@ const DiagnoseHistory = () => {
 
   const deleteHistoryItem = async (index) => {
     try {
-      const updatedHistory = [...history];
-      updatedHistory.splice(index, 1); // Remove the item at the specified index
-      setHistory(updatedHistory);
+      const itemToDelete = history[index];
+      
+      // Delete associated file
+      await FileSystem.deleteAsync(itemToDelete.imageUri).catch(console.log);
+      
+      // Update storage
+      const updatedHistory = history.filter((_, i) => i !== index);
       await AsyncStorage.setItem('diagnose_history', JSON.stringify(updatedHistory));
+      setHistory(updatedHistory);
     } catch (error) {
-      console.error('Error deleting history item:', error);
+      console.error('Delete error:', error);
     }
   };
 
-  // Refetch history whenever the screen is focused
   useFocusEffect(
     React.useCallback(() => {
       fetchHistory();
@@ -74,7 +96,7 @@ const DiagnoseHistory = () => {
       {history.length > 0 ? (
         history.map((val, index) => (
           <HistoryCard
-            key={index}
+            key={val.timestamp}
             imageUri={val.imageUri}
             response={val.response}
             onDelete={() =>
@@ -95,6 +117,9 @@ const DiagnoseHistory = () => {
     </ScrollView>
   );
 };
+
+// Keep the same styles
+export default DiagnoseHistory;
 
 const styles = StyleSheet.create({
   container: {

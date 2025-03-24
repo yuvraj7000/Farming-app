@@ -8,6 +8,8 @@ const Diagnose_presentation = ({ imageUri, data }) => {
     const [isImageFullscreen, setIsImageFullscreen] = useState(false);
     const screen = Dimensions.get('window');
     console.log("imageUri---",imageUri);
+    const resolvedUri = Image.resolveAssetSource({ uri: imageUri }).uri;
+console.log('Resolved URI:', resolvedUri);
   
     return (
       <ScrollView contentContainerStyle={styles.container}>

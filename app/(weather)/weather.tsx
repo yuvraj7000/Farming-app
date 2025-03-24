@@ -125,7 +125,7 @@ const Weather = () => {
   const getSprayCondition = (windSpeed) => {
     const mph = windSpeed * 2.23694;
     if (mph >= 2 && mph <= 4) return { text: 'Good for Spraying', color: '#4CAF50' };
-    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'moderate for Spraying', color: '#FFC107' };
+    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'Moderate for Spraying', color: '#FFC107' };
     return { text: 'Avoid Spraying', color: '#F44336' };
   };
 

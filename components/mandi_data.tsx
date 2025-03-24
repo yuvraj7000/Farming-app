@@ -152,6 +152,7 @@ const Mandi_Data = ({district, state}) => {
       }, []);
 
      if(response){
+        console.log("mandi response --",response);
         
         return <Mandi data={response}/>
      }

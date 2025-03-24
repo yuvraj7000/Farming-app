@@ -15,6 +15,14 @@ const Mandi = ({ data }) => {
     setMarketDetails(details);
   };
 
+  if(!data || data.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text>No data available</Text>
+      </View>
+    );
+  }
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.marketTitle}>All Markets of {data[0].District} District</Text>
