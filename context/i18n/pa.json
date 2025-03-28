@@ -1,0 +1,115 @@
+{
+    "translation": {
+      "app_name" : "ਕਿਸਾਨਬੰਧੂ",
+      "app_slogan" : "ਇੱਕ ਬਿਹਤਰ ਕੱਲ੍ਹ ਲਈ ਕਿਸਾਨਾਂ ਨੂੰ ਸਸ਼ਕਤ ਬਣਾ ਰਿਹਾ ਹੈ",
+      "language" : "ਭਾਸ਼ਾ ਚੁਣੋ",
+      "what we offer" : "ਅਸੀਂ ਕੀ ਦਿੰਦੇ ਹਾਂ",
+      "featureCard_plant_heading" : "ਪੌਦਾ ਬੀਮਾਰੀ ਨਿਧਾਰਣ",
+      "featureCard_plant_content" : "ਪੌਦੇ ਦੀ ਇੱਕ ਤਸਵੀਰ ਅੱਪਲੋਡ ਕਰੋ ਜਿਹੜੀ ਕਿ ਬੀਮਾਰੀ ਨੂੰ ਪਛਾਣਨ ਅਤੇ ਸਮਾਧਾਨ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰੇਗੀ।",
+      "featureCard_weather_heading" : "ਮੌਸਮ ਪੂਰਨਾਂਮਾਨ",
+      "featureCard_weather_content" : "ਵਾਸਤਵਿਕ ਸਮੇਂ ਦੇ ਮੌਸਮ ਜਾਣਕਾਰੀ ਨਾਲ ਅੱਪਡੇਟ ਰਹੋ",
+      "featureCard_mandi_heading" : "ਬਾਜ਼ਾਰ ਕੀਮਤਾਂ",
+      "featureCard_mandi_content" : "ਸਾਰੇ ਭਾਰਤ ਦੇ ਮੰਡੀ ਵਿਚ ਉਤਪਾਦਾਂ ਦੀ ਕੀਮਤ ਦੇਖੋ",
+      "featureCard_scheme_heading" : "ਯੋਜਨਾਵਾਂ",
+      "featureCard_scheme_content" : "ਕਿਸਾਨਾਂ ਲਈ ਸਾਰੀਆਂ ਸਰਕਾਰੀ ਅਤੇ ਨਿੱਜੀ ਯੋਜਨਾਵਾਂ ਦੇਖੋ",
+      "Get Started" : "ਸ਼ੁਰੂ ਕਰੋ",
+  
+      // weather_card
+      "loading Weather": "ਮੌਸਮ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ ...",
+      "Failed to load weather data": "ਮੌਸਮ ਡੇਟਾ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ",
+      "Reload": "ਦੁਬਾਰਾ ਲੋਡ ਕਰੋ",
+      "India": "ਭਾਰਤ",
+      "Good for Spraying": "ਛਿੜਕਾਅ ਲਈ ਚੰਗਾ",
+      "moderate for Spraying": "ਛਿੜਕਾਅ ਲਈ ਮੋਡਰੇਟ",
+      "Avoid Spraying": "ਛਿੜਕਾਅ ਤੋਂ ਬਚੋ",
+      
+      // weather_description
+      "clear sky": "ਸਾਫ ਆਕਾਸ਼",
+      "sky is clear": "ਆਕਾਸ਼ ਸਾਫ ਹੈ",
+      "few clouds": "ਥੋੜ੍ਹੇ ਬੱਦਲ",
+      "scattered clouds": "ਪਸਰੇ ਹੋਏ ਬੱਦਲ",
+      "broken clouds": "ਟੁੱਟੇ ਹੋਏ ਬੱਦਲ",
+      "shower rain": "ਬਾਰਿਸ਼",
+      "rain": "ਬਾਰਿਸ਼",
+      "thunderstorm": "ਤੂਫ਼ਾਨ",
+      "snow": "ਬਰਫ",
+      "mist": "ਕੁਹਾਸਾ",
+  
+      "weather forcast": "16 ਦਿਨਾਂ ਦਾ ਮੌਸਮ ਪੂਰਨਾਂਮਾਨ ਦੇਖੋ",
+  
+      // 16 days weather page
+      "16 days weather": "16 ਦਿਨਾਂ ਦਾ ਮੌਸਮ ਪੂਰਨਾਂਮਾਨ",
+      "4 days Hourly" : "ਪਹਿਲੇ 4 ਦਿਨ: ਘੰਟਾ ਦਰ ਘੰਟਾ ਪੂਰਨਾਂਮਾਨ",
+      "next 12 days" : "ਅਗਲੇ 12 ਦਿਨ: ਰੋਜ਼ਾਨਾ ਪੂਰਨਾਂਮਾਨ",
+      "en-US" : "pa-IN",
+      "High": "ਉੱਚਾ",
+      "Low": "ਨਿਊਂਦਾ",
+      "Precipitation": "ਬਰਸਾਤ",
+  
+      // weather disclamer
+      "Important Note for Farmers": "ਕਿਸਾਨਾਂ ਲਈ ਮਹੱਤਵਪੂਰਨ ਨੋਟ",
+      "Weather forecasts are estimates and actual conditions may vary": "ਮੌਸਮ ਪੂਰਨਾਂਮਾਨ ਅੰਦਾਜ਼ੇ ਹਨ ਅਤੇ ਅਸਲ ਹਾਲਤ ਵਿੱਚ ਤਬਦੀਲੀ ਹੋ ਸਕਦੀ ਹੈ",
+      "Always verify field conditions before agricultural operations": "ਕਿਸਾਨੀ ਕਾਮ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਮੇਸ਼ਾ ਖੇਤ ਦੀ ਹਾਲਤ ਦੀ ਜਾਂਚ ਕਰੋ",
+      "Wind speed recommendations are general guidelines": "ਹਵਾ ਦੀ ਰਫਤਾਰ ਦੀ ਸੁਝਾਵਨਾਵਾਂ ਆਮ ਮਾਰਗਦਰਸ਼ਨ ਹਨ",
+      "Consider microclimate variations in your specific location": "ਆਪਣੇ ਖੇਤਰ ਵਿੱਚ ਮਾਇਕ੍ਰੋਕਲਾਈਮੇਟ ਭੇਦਾਂ ਨੂੰ ਧਿਆਨ ਵਿੱਚ ਰੱਖੋ",
+      "Consult local agricultural authorities for critical decisions": "ਮਹੱਤਵਪੂਰਨ ਫੈਸਲੇ ਲਈ ਸਥਾਨਕ ਕਿਰਸ਼ੀ ਅਧਿਕਾਰੀਆਂ ਨਾਲ ਸਲਾਹ ਕਰੋ",
+      "Forecast data source: OpenWeatherMap API": "ਪੂਰਨਾਂਮਾਨ ਡੇਟਾ ਸ੍ਰੋਤ: OpenWeatherMap API",
+      "This information should not be used as sole basis for farming decisions.": "ਇਹ ਜਾਣਕਾਰੀ ਕਿਸਾਨੀ ਫੈਸਲਿਆਂ ਲਈ ਇਕੱਲਾ ਆਧਾਰ ਨਹੀਂ ਬਣਾਇਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ",
+      "The developers assume no liability for actions taken based on this forecast.": "ਡਿਵੈਲਪਰ ਇਸ ਪੂਰਨਾਂਮਾਨ ਦੇ ਆਧਾਰ 'ਤੇ ਕੀਤੇ ਗਏ ਕੰਮਾਂ ਲਈ ਕੋਈ ਜਵਾਬਦੇਹੀ ਨਹੀਂ ਲੈਂਦੇ",
+  
+      // market card
+      "Get real-time prices of commodities from mandis across the country": "ਦੇਸ਼ ਭਰ ਦੀਆਂ ਮੰਡੀ ਤੋਂ ਸਮਾਨ ਦੀਆਂ ਕੀਮਤਾਂ ਰੀਅਲ ਟਾਈਮ ਵਿੱਚ ਦੇਖੋ",
+      "See mandi prices": "ਮੰਡੀ ਦੀਆਂ ਕੀਮਤਾਂ ਦੇਖੋ",
+  
+      // plant Diagnosis
+      "Plant Diagnosis": "ਪੌਦੇ ਦੀ ਬੀਮਾਰੀ ਨਿਧਾਰਣ",
+      "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "ਆਪਣੇ ਪੌਦੇ ਦੀ ਤਸਵੀਰ ਅੱਪਲੋਡ ਕਰੋ ਤਾਂ ਜੋ ਬੀਮਾਰੀ ਪਛਾਣ ਕੇ ਤੁਹਾਡੇ ਲਈ ਕੁੱਝ ਸੁਝਾਅ ਮਿਲ ਸਕੇ",
+      "Take Image": "ਤਸਵੀਰ ਲਓ",
+      "Get Diagnose": "ਨਿਧਾਰਣ ਲਓ",
+      "See Solution": "ਸਮਾਧਾਨ ਦੇਖੋ",
+      "Take a Photo": "ਫੋਟੋ ਲਓ",
+      "Take Photo": "ਫੋਟੋ ਲਓ",
+      "Open Gallery": "ਗੈਲਰੀ ਖੋਲ੍ਹੋ",
+      "We need your permission to access the camera": "ਅਸੀਂ ਕੈਮਰਾ ਤੱਕ ਪਹੁੰਚ ਲਈ ਤੁਹਾਡੀ ਅਨੁਮਤੀ ਦੀ ਲੋੜ ਹੈ",
+      "Grant Permission": "ਅਨੁਮਤੀ ਦਿਓ",
+      "Analyzing your plant...": "ਤੁਹਾਡੇ ਪੌਦੇ ਦਾ ਨਿਧਾਰਣ ਕਰ ਰਹੇ ਹਾਂ...",
+      "choose another image": "ਹੋਰ ਤਸਵੀਰ ਚੁਣੋ",
+      "See Diagnose": "ਨਿਧਾਰਣ ਦੇਖੋ",
+      "Diagnosis Failed": "ਨਿਧਾਰਣ ਅਸਫਲ",
+  
+      "Symptoms": "ਲੱਛਣ",
+      "Cause": "ਕਾਰਣ",
+      "Organic Solution": "ਜੈਵਿਕ ਸਮਾਧਾਨ",
+      "Regular Solution": "ਸਾਧਾਰਣ ਸਮਾਧਾਨ",
+      "Chemical Solution": "ਰਸਾਇਣਿਕ ਸਮਾਧਾਨ",
+      "Important Notes": "ਮਹੱਤਵਪੂਰਨ ਨੋਟਸ",
+  
+      // diagnose history
+      "Diagnose History": "ਨਿਧਾਰਣ ਇਤਿਹਾਸ",
+      "Delete Confirmation": "ਹਟਾਉਣ ਦੀ ਪੁਸ਼ਟੀ",
+      "Are you sure you want to delete this item?": "ਕੀ ਤੁਸੀਂ ਇਸ ਆਈਟਮ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+      "Cancel": "ਰੱਦ ਕਰੋ",
+      "Delete": "ਹਟਾਓ",
+      "No history available": "ਕੋਈ ਇਤਿਹਾਸ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+  
+      // market page
+      "No data available": "ਕੋਈ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+      "All Markets of": "ਸਾਰੇ ਮੰਡੀ ਦੇ",
+      "District": "ਜ਼ਿਲ੍ਹਾ",
+      "Market Data for": "ਮੰਡੀ ਡੇਟਾ (₹):",
+      "Commodity": "ਸਮਾਨ",
+      "Min Price": "ਘੱਟੋ ਘੱਟ ਕੀਮਤ",
+      "Max Price": "ਜ਼ਿਆਦਾ ਕੀਮਤ",
+      "Modal Price": "ਮੋਡਲ ਕੀਮਤ",
+      "Variety": "ਵਿਧ",
+      "Arrival Date": "ਆਗਮਨ ਦੀ ਤਾਰੀਖ",
+  
+      "Select State": "ਰਾਜ ਚੁਣੋ",
+      "Select District": "ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ",
+      "Search": "ਖੋਜੋ",
+      "Select State and District to see Mandi Prices": "ਮੰਡੀ ਦੀਆਂ ਕੀਮਤਾਂ ਦੇਖਣ ਲਈ ਰਾਜ ਅਤੇ ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ",
+      "Please select a market to view commodity prices": "ਕਿਰਪਾ ਕਰਕੇ ਸਮਾਨ ਦੀਆਂ ਕੀਮਤਾਂ ਦੇਖਣ ਲਈ ਇੱਕ ਮੰਡੀ ਚੁਣੋ",
+      "district : Finding markets ...": "ਜ਼ਿਲ੍ਹਾ : ਮੰਡੀ ਖੋਜ ਰਹੇ ਹਨ ..."
+    }
+  }
+  

@@ -12,6 +12,7 @@ import {
 
 const Schemes = () => {
   const [schemes, setSchemes] = useState([]);
+  const [reload, setReload] = useState(false);
   const [filteredSchemes, setFilteredSchemes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,7 +25,7 @@ const Schemes = () => {
         const response = await fetch('http://165.22.223.49:5000/api/v1/schemes/get', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ language_code: 'en' }),
+          body: JSON.stringify({ language_code: 'hi' }),
         });
 
         if (!response.ok) throw new Error('Failed to fetch schemes');
@@ -40,7 +41,7 @@ const Schemes = () => {
     };
 
     fetchSchemes();
-  }, []);
+  }, [reload]);
 
   const filterSchemes = (filterType) => {
     setSelectedFilter(filterType);
@@ -122,10 +123,14 @@ const Schemes = () => {
     </View>
   );
 
-  const renderItem = ({ item }) => (
+  const renderItem = ({ item }) => {
+   
+    return(
     <TouchableOpacity 
       style={styles.card}
-      onPress={() => setSelectedScheme(item)}
+      onPress={() => {
+        console.log("item --- ",item)
+        setSelectedScheme(item)}}
       activeOpacity={0.9}
     >
       {/* Image thumbnail with fallback */}
@@ -161,19 +166,19 @@ const Schemes = () => {
   
         <View style={styles.metaRow}>
           <Text style={styles.govLevel}>{item.gov_level}</Text>
-          <Text style={styles.fundingAmount}>₹{parseFloat(item.funding_amount).toLocaleString()}</Text>
+          <Text style={styles.statename}>{item.state_or_org}</Text>
+          {/* <Text style={styles.fundingAmount}>₹{parseFloat(item.funding_amount).toLocaleString()}</Text> */}
         </View>
   
         {/* Date information */}
         <View style={styles.dateRow}>
           <Text style={styles.dateLabel} numberOfLines={1}>
-            {new Date(item.start_date).toLocaleDateString()} -{' '}
-            {new Date(item.end_date).toLocaleDateString()}
+            {new Date(item.start_date).toLocaleDateString()}
           </Text>
         </View>
       </View>
     </TouchableOpacity>
-  );
+  )};
 
 
   if (loading) {
@@ -186,8 +191,12 @@ const Schemes = () => {
 
   if (error) {
     return (
-      <View style={styles.center}>
-        <Text style={styles.error}>Error: {error}</Text>
+      <View style={styles.nodata}>
+        <Image style={styles.noScheme} source={require('../../../assets/icons/no_Schem.png')} />
+        <Text style={styles.error}>Failed to load Schemes due to network error or server error</Text>
+        <TouchableOpacity style={styles.reload} onPress={() => setReload(!reload)}>
+          <Text style={styles.reloadText}>Reload</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -485,6 +494,42 @@ const styles = StyleSheet.create({
     color: '#888',
     flex: 1,
   },
+  statename:{
+    fontSize: 12,
+    color: '#888',
+  },
+  nodata:{
+flex:1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  noScheme: {
+   height:130,
+   width:300,
+  },
+  error: {
+    width: '100%',
+    paddingHorizontal: 30,
+    textAlign: 'center',
+    borderColor: 'grey',
+    paddingTop: 10,
+    borderTopWidth: 3,
+    fontSize: 16,
+    color: 'grey',
+   
+  },
+  reload: {
+    marginTop: 10,
+    padding: 10,
+    backgroundColor: '#2b50ed',
+    borderRadius: 5,
+  
+   
+  },
+  reloadText: {
+    color: '#fff',
+  }
+
 });
 
 export default Schemes;

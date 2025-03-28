@@ -1,0 +1,114 @@
+{
+    "translation": {
+        "app_name": "കിസാൻബന്ധു",
+        "app_slogan": "ഉന്നതഭാവിയിലേക്കുള്ള കർഷകരുടെ ശക്തീകരണം",
+        "language": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+        "what we offer": "ഞങ്ങൾ നൽകുന്നത്",
+        "featureCard_plant_heading": "സസ്യരോഗ നിർണയം",
+        "featureCard_plant_content": "രോഗങ്ങൾ കണ്ടെത്താൻ സസ്യത്തിന്റെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക, പരിഹാരങ്ങൾ ലഭ്യമാണ്.",
+        "featureCard_weather_heading": "വാനിലാവസ്ഥ പ്രവചനം",
+        "featureCard_weather_content": "യഥാർത്ഥ സമയം കാലാവസ്ഥാ വിവരങ്ങൾ അറിയുക.",
+        "featureCard_mandi_heading": "ബസാർ വിലകൾ",
+        "featureCard_mandi_content": "ഇന്ത്യയിലെ എല്ലാ മണ്ടികളിലും ഉള്ള ഉൽപ്പന്നങ്ങളുടെ വില പരിശോധിക്കുക.",
+        "featureCard_scheme_heading": "പദ്ധതികൾ",
+        "featureCard_scheme_content": "കർഷകർക്ക് ലഭ്യമായ എല്ലാ സ്വകാര്യ, സർക്കാർ പദ്ധതികളും പരിശോധിക്കുക.",
+        "Get Started": "ആരംഭിക്കൂ",
+
+        // weather_card
+        "loading Weather": "കാലാവസ്ഥാ വിവരം ലോഡുചെയ്യുന്നു ...",
+        "Failed to load weather data": "കാലാവസ്ഥാ ഡാറ്റ ലോഡുചെയ്യാൻ കഴിഞ്ഞില്ല",
+        "Reload": "വീണ്ടും ലോഡ് ചെയ്യുക",
+        "India": "ഇന്ത്യ",
+        "Good for Spraying": "സ്പ്രേയ് ചെയ്യാൻ അനുയോജ്യം",
+        "moderate for Spraying": "സ്പ്രേയ് ചെയ്യാൻ മിതമായ അവസ്ഥ",
+        "Avoid Spraying": "സ്പ്രേയ് ചെയ്യുന്നത് ഒഴിവാക്കുക",
+
+        // weather_description
+        "clear sky": "വെളുത്ത ആകാശം",
+        "sky is clear": "വെളുത്ത ആകാശം",
+        "few clouds": "കുറച്ച് മേഘങ്ങൾ",
+        "scattered clouds": "ചിതറിയ മേഘങ്ങൾ",
+        "broken clouds": "പിളർന്ന മേഘങ്ങൾ",
+        "shower rain": "താരാട്ടം മഴ",
+        "rain": "മഴ",
+        "thunderstorm": "ഇടിമിന്നൽ",
+        "snow": "മഞ്ഞ്",
+        "mist": "മങ്ങിയ അന്തരീക്ഷം",
+
+        "weather forcast": "16 ദിവസത്തെ കാലാവസ്ഥ പ്രവചനം കാണുക",
+
+        // 16 days weather page
+        "16 days weather": "16 ദിവസത്തെ കാലാവസ്ഥാ പ്രവചനം",
+        "4 days Hourly": "ആദ്യ 4 ദിവസം: മണിക്കൂറായി പ്രവചനം",
+        "next 12 days": "അടുത്ത 12 ദിവസം: ദിനപ്രതിദിന പ്രവചനം",
+        "en-US": "ml-IN",
+        "High": "ഉയർന്നത്",
+        "Low": "കുറഞ്ഞത്",
+        "Precipitation": "മഴക്കൊരുക്കം",
+
+        // weather disclaimer
+        "Important Note for Farmers": "കർഷകർക്ക് പ്രധാനപ്പെട്ട കുറിപ്പ്",
+        "Weather forecasts are estimates and actual conditions may vary": "കാലാവസ്ഥാ പ്രവചനം ഏകദേശമാണ്, യഥാർത്ഥ അവസ്ഥ വ്യത്യാസപ്പെട്ടേക്കാം",
+        "Always verify field conditions before agricultural operations": "കൃഷി പ്രവർത്തനങ്ങൾക്കു മുൻപ് സ്ഥലാവസ്ഥ പരിശോധിക്കുക",
+        "Wind speed recommendations are general guidelines": "കാറ്റിന്റെ വേഗത സംബന്ധിച്ച നിർദ്ദേശങ്ങൾ പൊതുവായ മാർഗ്ഗരേഖകളാണ്",
+        "Consider microclimate variations in your specific location": "നിങ്ങളുടെ പ്രത്യേക സ്ഥലത്തെ ক্ষുദ്രകാലാവസ്ഥാ വ്യത്യാസങ്ങൾ പരിഗണിക്കുക",
+        "Consult local agricultural authorities for critical decisions": "പ്രധാന തീരുമാനങ്ങൾക്കായി പ്രാദേശിക കൃഷി അധികാരികളുമായി ബന്ധപ്പെടുക",
+        "Forecast data source: OpenWeatherMap API": "പ്രവചന ഡാറ്റ ഉറവിടം: OpenWeatherMap API",
+        "This information should not be used as sole basis for farming decisions.": "ഈ വിവരം കൃഷി തീരുമാനങ്ങൾക്കുള്ള ഏക അടിസ്ഥാനമായി ഉപയോഗിക്കരുത്.",
+        "The developers assume no liability for actions taken based on this forecast.": "ഈ പ്രവചനം അടിസ്ഥാനമാക്കി സ്വീകരിച്ച നടപടികൾക്കായി ഡെവലപ്പർമാർ ഉത്തരവാദിത്തമില്ല.",
+
+        // market card
+        "Get real-time prices of commodities from mandis across the country": "രാജ്യത്തെ എല്ലാ മണ്ടികളിലെ ഉൽപ്പന്നങ്ങളുടെ യഥാർത്ഥ സമയ വിലകൾ നേടുക",
+        "See mandi prices": "മണ്ടി വിലകൾ കാണുക",
+
+        // plant Diagnosis
+        "Plant Diagnosis": "സസ്യ രോഗ നിർണയം",
+        "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "നിങ്ങളുടെ സസ്യത്തിന്റെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക, രോഗം തിരിച്ചറിയുകയും അനുയോജ്യമായ പരിഹാരങ്ങൾ ലഭ്യമാക്കുകയും ചെയ്യുക.",
+        "Take Image": "ചിത്രം എടുക്കുക",
+        "Get Diagnose": "നിർണയം നേടുക",
+        "See Solution": "പരിഹാരം കാണുക",
+        "Take a Photo": "ഒരു ഫോട്ടോ എടുക്കുക",
+        "Take Photo": "ഫോട്ടോ എടുക്കുക",
+        "Open Gallery": "ഗാലറി തുറക്കുക",
+        "We need your permission to access the camera": "ക്യാമറ ആക്സസ് ചെയ്യാൻ നിങ്ങൾയുടെ അനുമതി ആവശ്യമാണ്",
+        "Grant Permission": "അനുമതി നൽകുക",
+        "Analyzing your plant...": "നിങ്ങളുടെ സസ്യത്തിന്റെ രോഗം വിലയിരുത്തുന്നു...",
+        "choose another image": "മറ്റൊരു ചിത്രം തിരഞ്ഞെടുക്കുക",
+        "See Diagnose": "നിർണയം കാണുക",
+        "Diagnosis Failed": "നിർണയം പരാജയപ്പെട്ടു",
+
+        "Symptoms": "ലക്ഷണങ്ങൾ",
+        "Cause": "കാരണം",
+        "Organic Solution": "സസ്യജന്യ പരിഹാരം",
+        "Regular Solution": "സാധാരണ പരിഹാരം",
+        "Chemical Solution": "രാസ പരിഹാരം",
+        "Important Notes": "പ്രധാനപ്പെട്ട കുറിപ്പുകൾ",
+
+        // diagnose history
+        "Diagnose History": "നിർണയ ചരിത്രം",
+        "Delete Confirmation": "ഡിലീറ്റ് സ്ഥിരീകരണം",
+        "Are you sure you want to delete this item?": "ഈ ഇനം ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് തീർച്ചയാണോ?",
+        "Cancel": "റദ്ദാക്കുക",
+        "Delete": "ഇല്ലാതാക്കുക",
+        "No history available": "ചരിത്രം ലഭ്യമല്ല",
+
+        // market page
+        "No data available": "ഡാറ്റ ലഭ്യമല്ല",
+        "All Markets of": "എല്ലാ മണ്ടികളും",
+        "District": "ജില്ല",
+        "Market Data for": "മണ്ടി വില (₹) :",
+        "Commodity": "വസ്തു",
+        "Min Price": "കുറഞ്ഞ വില",
+        "Max Price": "അധിക വില",
+        "Modal Price": "സാധാരണ വില",
+        "Variety": "വൈവിധ്യം",
+        "Arrival Date": "വരവ് തീയതി",
+
+        "Select State": "സംസ്ഥാനം തിരഞ്ഞെടുക്കുക",
+        "Select District": "ജില്ല തിരഞ്ഞെടുക്കുക",
+        "Search": "തിരയുക",
+        "Select State and District to see Mandi Prices": "മണ്ടി വിലകൾ കാണാൻ സംസ്ഥാനം, ജില്ല തിരഞ്ഞെടുക്കുക",
+        "Please select a market to view commodity prices": "ഉൽപ്പന്ന വിലകൾ കാണാൻ ഒരു മാർക്കറ്റ് തിരഞ്ഞെടുക്കുക",
+        "district : Finding markets ...": "ജില്ല: മാർക്കറ്റ് കണ്ടെത്തുന്നു ..."
+    }
+}

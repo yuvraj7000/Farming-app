@@ -1,0 +1,115 @@
+{
+    "translation": {
+      "app_name" : "கிஸான்பந்து",
+      "app_slogan" : "இன்று விவசாயிகளை சக்தியூட்டியோடு, நாளை அதிகளவில்",
+      "language" : "மொழி தேர்வு செய்யவும்",
+      "what we offer" : "நாம் என்ன தருகிறோம்",
+      "featureCard_plant_heading" : "பொய் பன்றி நோய் கண்டறிதல்",
+      "featureCard_plant_content" : "பொய் பன்றி ஒரு படத்தை பதிவேற்றுங்கள் மற்றும் நோய்களை கண்டறிந்து தீர்வுகள் பெறுங்கள்.",
+      "featureCard_weather_heading" : "வானிலை முன்னறிவிப்பு",
+      "featureCard_weather_content" : "உலகமுழுவதும் நேரடி வானிலை தகவல்களுடன் புதுப்பிக்கவும்.",
+      "featureCard_mandi_heading" : "சந்தை விலைகள்",
+      "featureCard_mandi_content" : "இந்தியாவில் உள்ள அனைத்து சந்தைகளின் கமொடியட்டிகளின் விலைகளை பாருங்கள்.",
+      "featureCard_scheme_heading" : "பொதுவான திட்டங்கள்",
+      "featureCard_scheme_content" : "விவசாயிகளுக்கு உள்ள அனைத்து தனியார் மற்றும் அரசு திட்டங்களை ஆராயுங்கள்.",
+      "Get Started" : "படிப்படியே ஆரம்பிக்கவும்",
+  
+      // weather_card
+      "loading Weather": "வானிலை ஏற்றுதல் ...",
+      "Failed to load weather data": "வானிலை தரவுகளை ஏற்ற முடியவில்லை",
+      "Reload": "மீண்டும் ஏற்றவும்",
+      "India": "இந்தியா",
+      "Good for Spraying": "வெளியிடுவதற்கு சிறந்தது",
+      "moderate for Spraying": "வெளியிடுவதற்கு மிதமானது",
+      "Avoid Spraying": "வெளியிடுவதில் தவிர்க்கவும்",
+      
+      // weather_description
+      "clear sky": "பரிசுத்தமான வானம்",
+      "sky is clear": "வானம் பரிசுத்தமாக உள்ளது",
+      "few clouds": "சில மேகம்",
+      "scattered clouds": "பிரிதியான மேகங்கள்",
+      "broken clouds": "சிதறிய மேகங்கள்",
+      "shower rain": "மழை",
+      "rain": "மழை",
+      "thunderstorm": "மின்னலுடன் மழை",
+      "snow": "பனி",
+      "mist": "மூடுதல்",
+  
+      "weather forcast": "16 நாட்கள் வானிலை முன்னறிவிப்பு காண்க",
+  
+      // 16 days weather page
+      "16 days weather": "16 நாட்கள் வானிலை முன்னறிவிப்பு",
+      "4 days Hourly" : "முதல் 4 நாட்கள்: ஒவ்வொரு மணி நேரத்திற்கு வானிலை முன்னறிவிப்பு",
+      "next 12 days" : "அடுத்த 12 நாட்கள்: தினசரி முன்னறிவிப்பு",
+      "en-US" : "ta-IN",
+      "High": "உயர்",
+      "Low": "குறைந்தது",
+      "Precipitation": "வானிலை நீர்வரவு",
+  
+      // weather disclamer
+      "Important Note for Farmers": "விவசாயிகளுக்கு முக்கிய குறிப்பு",
+      "Weather forecasts are estimates and actual conditions may vary": "வானிலை முன்னறிவிப்புகள் கணிப்புகளாகும், மற்றும் உண்மையான நிலைகள் மாறலாம்",
+      "Always verify field conditions before agricultural operations": "விவசாய நடவடிக்கைகள் செய்யும் முன் எப்போதும் புலம் நிலைகளை சரிபார்க்கவும்",
+      "Wind speed recommendations are general guidelines": "காற்றின் வேக பரிந்துரைகள் பொதுவான வழிகாட்டிகளாகும்",
+      "Consider microclimate variations in your specific location": "உங்கள் இடத்தில் மைக்ரோகிளைமெட்டின் மாற்றங்களை கருத்தில் கொள்ளவும்",
+      "Consult local agricultural authorities for critical decisions": "முக்கியமான முடிவுகளுக்கு உள்ளூர் விவசாய அதிகாரிகளை ஆலோசிக்கவும்",
+      "Forecast data source: OpenWeatherMap API": "பரிந்துரைக்கப்பட்ட தரவு மூலவு: OpenWeatherMap API",
+      "This information should not be used as sole basis for farming decisions.": "இந்த தகவல் விவசாய முடிவுகளுக்கு தனிப்பட்ட ஆதாரமாக பயன்படுத்தப்படக்கூடாது",
+      "The developers assume no liability for actions taken based on this forecast.": "இந்த முன்னறிவிப்பின் அடிப்படையில் மேற்கொள்ளப்பட்ட நடவடிக்கைகளுக்கு டெவலப்பர்கள் எந்தப் பொறுப்பையும் ஏற்கவில்லை",
+  
+      // market card
+      "Get real-time prices of commodities from mandis across the country": "பதிவேற்றப்பட்ட சந்தைகளில் இருந்து தற்காலிக கமொடியட்டிகளின் விலைகளை பெறுங்கள்",
+      "See mandi prices": "சந்தை விலைகளை பார்க்கவும்",
+  
+      // plant Diagnosis
+      "Plant Diagnosis": "பொய் பன்றி நோய் கண்டறிதல்",
+      "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "உங்கள் பஞ்சு பன்றி படத்தை பதிவேற்றவும், நோய்களை கண்டறிந்து உங்களுக்கு தேவையான தீர்வுகளை பெறவும்.",
+      "Take Image": "படத்தை எடுத்துக்கொள்",
+      "Get Diagnose": "கண்டறிதல் பெறவும்",
+      "See Solution": "தீர்வு பார்க்கவும்",
+      "Take a Photo": "படத்தை எடுக்கவும்",
+      "Take Photo": "படம் எடுக்கவும்",
+      "Open Gallery": "கேலரியை திறக்கவும்",
+      "We need your permission to access the camera": "நாங்கள் உங்கள் அனுமதியை கொள்ள வேண்டும்",
+      "Grant Permission": "அனுமதி அளிக்கவும்",
+      "Analyzing your plant...": "உங்கள் பஞ்சு பன்றியை ஆய்வு செய்யவுள்ளதாக...",
+      "choose another image": "மற்றொரு படத்தை தேர்ந்தெடுக்கவும்",
+      "See Diagnose": "நோயினை பார்க்கவும்",
+      "Diagnosis Failed": "நோயினை கண்டறிதல் தோல்வி",
+  
+      "Symptoms": "லட்சணங்கள்",
+      "Cause": "காரணம்",
+      "Organic Solution": "ஜैவிக தீர்வு",
+      "Regular Solution": "பொதுவான தீர்வு",
+      "Chemical Solution": "ரசாயன தீர்வு",
+      "Important Notes": "முக்கிய குறிப்பு",
+  
+      // diagnose history
+      "Diagnose History": "பொய் பன்றி நோய் கண்டறிதலின் வரலாறு",
+      "Delete Confirmation": "அழிப்பதை உறுதிப்படுத்துங்கள்",
+      "Are you sure you want to delete this item?": "நீங்கள் இந்த பொருளை அழிக்க விரும்புகிறீர்களா?",
+      "Cancel": "ரத்து செய்",
+      "Delete": "அழிக்கவும்",
+      "No history available": "வரலாறு இல்லை",
+  
+      // market page
+      "No data available": "தரவு இல்லை",
+      "All Markets of": "எல்லா சந்தைகள்",
+      "District": "மாவட்டம்",
+      "Market Data for": "சந்தை தரவு (₹):",
+      "Commodity": "உதவி பொருள்",
+      "Min Price": "குறைந்த விலை",
+      "Max Price": "உயர்ந்த விலை",
+      "Modal Price": "மாதிரிக விலை",
+      "Variety": "விதம்",
+      "Arrival Date": "வருகை தேதி",
+  
+      "Select State": "மாநிலத்தை தேர்வு செய்க",
+      "Select District": "மாவட்டத்தை தேர்வு செய்க",
+      "Search": "தேடுக",
+      "Select State and District to see Mandi Prices": "மண்டி விலைகளை காண, மாநிலம் மற்றும் மாவட்டம் தேர்வு செய்க",
+      "Please select a market to view commodity prices": "கமொடியட்டிகளின் விலைகளை பார்க்க சந்தையை தேர்வு செய்யவும்",
+      "district : Finding markets ...": "மாவட்டம் : சந்தைகள் கண்டுபிடித்து வருகிறேன் ..."
+    }
+  }
+  

@@ -137,7 +137,7 @@ const Weather = () => {
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp * 1000);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString(t('en-US'), {
       weekday: 'long',
       day: 'numeric',
       month: 'long'
@@ -174,7 +174,7 @@ const Weather = () => {
     return (
       <View style={styles.dailyContainer}>
         <View style={styles.dailydayHeader}>
-          <Text style={styles.dailydateText}>{new Date(item.dt * 1000).toLocaleDateString('hi-IN', {
+          <Text style={styles.dailydateText}>{new Date(item.dt * 1000).toLocaleDateString(t('en-US'), {
     weekday: 'long',
     month: 'long',
     day: 'numeric'

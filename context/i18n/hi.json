@@ -94,6 +94,28 @@
 "No history available": "कोई इतिहास उपलब्ध नहीं है",
 
 
+//market page
+"No data available": "कोई डेटा उपलब्ध नहीं है",
+"All Markets of": "सभी बाजार",
+"District": "जिला",
+"Market Data for": "मंडी भाव (₹) :",
+"Commodity": "वस्तु",
+"Min Price": "न्यूनतम मूल्य",
+"Max Price": "अधिकतम मूल्य",
+"Modal Price": "मॉडल मूल्य",
+"Variety": "प्रकार",
+"Arrival Date": "आगमन तिथि",
+
+  "Select State": "राज्य चुनें",
+  "Select District": "जिला चुनें",
+  "Search": "खोजें",
+  "Select State and District to see Mandi Prices": "मंडी की कीमतें देखने के लिए राज्य और जिला चुनें",
+  "Please select a market to view comodity prices": "कृपया वस्तु की कीमतें देखने के लिए एक बाजार चुनें",
+  "district : Finding markets ...": "जिला : बाजार खोज रहें है ...",
+
+
+
+
 
     }
   }

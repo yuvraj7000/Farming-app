@@ -1,0 +1,115 @@
+{
+    "translation": {
+      "app_name": "কিষাণবন্ধু",
+      "app_slogan": "কৃষকদের জন্য এক উন্নত ভবিষ্যৎ",
+      "language": "ভাষা নির্বাচন করুন",
+      "what we offer": "আমরা কী অফার করি",
+      "featureCard_plant_heading": "উদ্ভিদ রোগ নির্ণয়",
+      "featureCard_plant_content": "উদ্ভিদের ছবি আপলোড করুন, রোগ শনাক্ত করুন এবং সমাধান পান।",
+      "featureCard_weather_heading": "আবহাওয়ার পূর্বাভাস",
+      "featureCard_weather_content": "বাস্তব সময়ের আবহাওয়ার তথ্য পান।",
+      "featureCard_mandi_heading": "বাজার দর",
+      "featureCard_mandi_content": "ভারতের সমস্ত মণ্ডির পণ্যের দাম দেখুন।",
+      "featureCard_scheme_heading": "যোজনা",
+      "featureCard_scheme_content": "সরকারি ও বেসরকারি সমস্ত কৃষি যোজনা এক্সপ্লোর করুন।",
+      "Get Started": "শুরু করুন",
+  
+      //weather_card 
+      "loading Weather": "আবহাওয়ার তথ্য লোড হচ্ছে ...",
+      "Failed to load weather data": "আবহাওয়ার তথ্য লোড করতে ব্যর্থ",
+      "Reload": "পুনরায় লোড করুন",
+      "India": "ভারত",
+      "Good for Spraying": "স্প্রে করার জন্য ভালো",
+      "moderate for Spraying": "স্প্রে করার জন্য মাঝারি",
+      "Avoid Spraying": "স্প্রে করা এড়িয়ে চলুন",
+  
+      //weather_description
+      "clear sky": "পরিষ্কার আকাশ",
+      "sky is clear": "পরিষ্কার আকাশ",
+      "few clouds": "অল্প মেঘ",
+      "scattered clouds": "ছড়ানো মেঘ",
+      "broken clouds": "ভাঙা মেঘ",
+      "shower rain": "বিক্ষিপ্ত বৃষ্টি",
+      "rain": "বৃষ্টি",
+      "thunderstorm": "বজ্রপাত",
+      "snow": "তুষারপাত",
+      "mist": "কুয়াশা",
+  
+      "weather forcast": "১৬ দিনের আবহাওয়ার পূর্বাভাস দেখুন",
+  
+      //16 days weather page
+      "16 days weather": "১৬ দিনের আবহাওয়ার পূর্বাভাস",
+      "4 days Hourly": "প্রথম ৪ দিন: প্রতি ঘণ্টার পূর্বাভাস",
+      "next 12 days": "পরবর্তী ১২ দিন: দৈনিক পূর্বাভাস",
+      "en-US": "bn-IN",
+      "High": "সর্বোচ্চ",
+      "Low": "সর্বনিম্ন",
+      "Precipitation": "বৃষ্টিপাত",
+  
+      //weather disclaimer
+      "Important Note for Farmers": "কৃষকদের জন্য গুরুত্বপূর্ণ তথ্য",
+      "Weather forecasts are estimates and actual conditions may vary": "আবহাওয়ার পূর্বাভাস অনুমাননির্ভর, প্রকৃত পরিস্থিতি পরিবর্তিত হতে পারে।",
+      "Always verify field conditions before agricultural operations": "কৃষিকাজের আগে মাঠের বাস্তব অবস্থা যাচাই করুন।",
+      "Wind speed recommendations are general guidelines": "বাতাসের গতির সুপারিশ সাধারণ নির্দেশিকা মাত্র।",
+      "Consider microclimate variations in your specific location": "আপনার নির্দিষ্ট স্থানের আবহাওয়ার পরিবর্তন বিবেচনা করুন।",
+      "Consult local agricultural authorities for critical decisions": "গুরুত্বপূর্ণ সিদ্ধান্তের জন্য স্থানীয় কৃষি কর্তৃপক্ষের পরামর্শ নিন।",
+      "Forecast data source: OpenWeatherMap API": "পূর্বাভাস তথ্য উৎস: OpenWeatherMap API",
+      "This information should not be used as sole basis for farming decisions.": "এই তথ্যকে একমাত্র ভিত্তি হিসেবে ব্যবহার করা উচিত নয়।",
+      "The developers assume no liability for actions taken based on this forecast.": "এই পূর্বাভাসের ভিত্তিতে নেওয়া পদক্ষেপের জন্য ডেভেলপাররা দায়ী নয়।",
+  
+      //market card
+      "Get real-time prices of commodities from mandis across the country": "দেশের বিভিন্ন মণ্ডির বাস্তব সময়ের পণ্যের দাম পান।",
+      "See mandi prices": "মণ্ডির দাম দেখুন",
+  
+      //plant Diagnosis
+      "Plant Diagnosis": "উদ্ভিদ রোগ নির্ণয়",
+      "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "আপনার উদ্ভিদের ছবি আপলোড করুন, রোগ সনাক্ত করুন এবং উপযুক্ত সমাধান পান।",
+      "Take Image": "ছবি তুলুন",
+      "Get Diagnose": "নির্ণয় করুন",
+      "See Solution": "সমাধান দেখুন",
+      "Take a Photo": "ছবি তুলুন",
+      "Take Photo": "ছবি তুলুন",
+      "Open Gallery": "গ্যালারি খুলুন",
+      "We need your permission to access the camera": "ক্যামেরা ব্যবহারের অনুমতি প্রয়োজন",
+      "Grant Permission": "অনুমতি দিন",
+      "Analyzing your plant...": "আপনার উদ্ভিদ বিশ্লেষণ করা হচ্ছে...",
+      "choose another image": "অন্য ছবি নির্বাচন করুন",
+      "See Diagnose": "নির্ণয় দেখুন",
+      "Diagnosis Failed": "নির্ণয় ব্যর্থ হয়েছে",
+  
+      "Symptoms": "লক্ষণ",
+      "Cause": "কারণ",
+      "Organic Solution": "জৈব সমাধান",
+      "Regular Solution": "সাধারণ সমাধান",
+      "Chemical Solution": "রাসায়নিক সমাধান",
+      "Important Notes": "গুরুত্বপূর্ণ নোট",
+  
+      //diagnose history
+      "Diagnose History": "নির্ণয়ের ইতিহাস",
+      "Delete Confirmation": "মুছে ফেলার নিশ্চিতকরণ",
+      "Are you sure you want to delete this item?": "আপনি কি এটি মুছে ফেলতে চান?",
+      "Cancel": "বাতিল করুন",
+      "Delete": "মুছে ফেলুন",
+      "No history available": "কোনো ইতিহাস নেই",
+  
+      //market page
+      "No data available": "কোনো তথ্য নেই",
+      "All Markets of": "সকল বাজার",
+      "District": "জেলা",
+      "Market Data for": "বাজার মূল্য (₹) :",
+      "Commodity": "পণ্য",
+      "Min Price": "সর্বনিম্ন মূল্য",
+      "Max Price": "সর্বোচ্চ মূল্য",
+      "Modal Price": "মডাল মূল্য",
+      "Variety": "প্রকার",
+      "Arrival Date": "আগমনের তারিখ",
+  
+      "Select State": "রাজ্য নির্বাচন করুন",
+      "Select District": "জেলা নির্বাচন করুন",
+      "Search": "অনুসন্ধান করুন",
+      "Select State and District to see Mandi Prices": "মণ্ডির দাম দেখতে রাজ্য এবং জেলা নির্বাচন করুন",
+      "Please select a market to view commodity prices": "পণ্যের মূল্য দেখার জন্য একটি বাজার নির্বাচন করুন",
+      "district : Finding markets ...": "জেলা : বাজার খোঁজা হচ্ছে..."
+    }
+  }
+  

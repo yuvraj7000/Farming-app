@@ -1,0 +1,125 @@
+{
+    "translation": {
+    "app_name": "किसानबंधु",
+    "app_slogan": "शेतकऱ्यांना उज्ज्वल भविष्यासाठी सक्षम बनवणे",
+    "language": "भाषा निवडा",
+    "what we offer": "आम्ही काय ऑफर करतो",
+    "featureCard_plant_heading": "वनस्पती रोग निदान",
+    "featureCard_plant_content": "रोग ओळखण्यासाठी वनस्पतीचा फोटो अपलोड करा आणि उपाय मिळवा.",
+    "featureCard_weather_heading": "हवामान अंदाज",
+    "featureCard_weather_content": "रिअल-टाइम हवामान माहिती मिळवा.",
+    "featureCard_mandi_heading": "बाजारभाव",
+    "featureCard_mandi_content": "सर्व भारतीय बाजारपेठांतील वस्तूंचे दर पहा.",
+    "featureCard_scheme_heading": "योजना",
+    "featureCard_scheme_content": "शेतकऱ्यांसाठी उपलब्ध असलेल्या सर्व खाजगी आणि सरकारी योजना एक्सप्लोर करा.",
+    "Get Started": "सुरु करा",
+
+
+    //weather_card
+        "loading Weather": "हवामान लोड होत आहे ...",
+        "Failed to load weather data": "हवामान डेटा लोड करण्यात अयशस्वी",
+        "Reload": "पुन्हा लोड करा",
+        "India": "भारत",
+        "Good for Spraying": "फवारणीसाठी चांगले",
+        "moderate for Spraying": "फवारणीसाठी मध्यम",
+        "Avoid Spraying": "फवारणी टाळा",
+     
+    //weather_description
+        "clear sky": "स्वच्छ आकाश",
+        "sky is clear": "स्वच्छ आकाश",
+        "few clouds": "थोडे ढग",
+        "scattered clouds": "विखुरलेले ढग",
+        "broken clouds": "फाटलेले ढग",
+        "shower rain": "पाऊससरी",
+        "rain": "पाऊस",
+        "thunderstorm": "वादळ",
+        "snow": "हिमवर्षाव",
+        "mist": "धुके",
+      
+      "weather forcast": "१६ दिवसांचे हवामान अंदाज पहा",
+
+      
+        //16 days weather page
+          "16 days weather": "१६ दिवसांचे हवामान अंदाज",
+          "4 days Hourly": "पहिले ४ दिवस: तासागणिक अंदाज",
+          "next 12 days": "पुढील १२ दिवस: दैनिक अंदाज",
+          "en-US": "mr-IN",
+          "High": "उच्च",
+          "Low": "कमी",
+          "Precipitation": "पर्जन्यवृष्टी",
+        
+        //weather disclaimer
+          "Important Note for Farmers": "शेतकऱ्यांसाठी महत्त्वाची सूचना",
+          "Weather forecasts are estimates and actual conditions may vary": "हवामान अंदाज हे केवळ अंदाज आहेत आणि वास्तविक परिस्थिती भिन्न असू शकते",
+          "Always verify field conditions before agricultural operations": "शेतीच्या कामांपूर्वी नेहमी प्रत्यक्ष परिस्थिती तपासा",
+          "Wind speed recommendations are general guidelines": "वाऱ्याच्या गतीसंदर्भातील शिफारशी या केवळ सामान्य मार्गदर्शक तत्त्वे आहेत",
+          "Consider microclimate variations in your specific location": "तुमच्या क्षेत्रातील सूक्ष्म हवामानातील बदलांचा विचार करा",
+          "Consult local agricultural authorities for critical decisions": "महत्वाच्या निर्णयांसाठी स्थानिक कृषी अधिकाऱ्यांचा सल्ला घ्या",
+          "Forecast data source: OpenWeatherMap API": "हवामान अंदाज डेटा स्रोत: OpenWeatherMap API",
+          "This information should not be used as sole basis for farming decisions.": "ही माहिती शेतीच्या निर्णयांसाठी एकमेव आधार म्हणून वापरली जाऊ नये.",
+          "The developers assume no liability for actions taken based on this forecast.": "या हवामान अंदाजाच्या आधारे घेतलेल्या कृतींसाठी विकसक जबाबदार राहणार नाहीत.",
+      
+        //market card
+          "Get real-time prices of commodities from mandis across the country": "देशभरातील मंड्यांमधील वस्तूंचे थेट किंमती मिळवा",
+          "See mandi prices": "मंडीच्या किंमती पहा",
+       
+
+     
+
+          
+//plant Diagnosis
+    "Plant Diagnosis": "वनस्पती निदान",
+    "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "तुमच्या वनस्पतीचे चित्र अपलोड करा, रोग ओळखा आणि सानुकूलित उपाय मिळवा.",
+    "Take Image": "प्रतिमा घ्या",
+    "Get Diagnose": "निदान मिळवा",
+    "See Solution": "उपाय पहा",
+    "Take a Photo": "छायाचित्र घ्या",
+    "Take Photo": "छायाचित्र घ्या",
+    "Open Gallery": "गॅलरी उघडा",
+    "We need your permission to access the camera": "कॅमेरा वापरण्यासाठी तुमची परवानगी आवश्यक आहे",
+    "Grant Permission": "परवानगी द्या",
+    "Analyzing your plant...": "तुमच्या वनस्पतीचे निदान होत आहे...",
+    "choose another image": "इतर प्रतिमा निवडा",
+    "See Diagnose": "निदान पहा",
+    "Diagnosis Failed": "निदान अयशस्वी",
+    "Symptoms": "लक्षणे",
+    "Cause": "कारण",
+    "Organic Solution": "सेंद्रिय उपाय",
+    "Regular Solution": "सामान्य उपाय",
+    "Chemical Solution": "रासायनिक उपाय",
+    "Important Notes": "महत्वाच्या टीपा",
+  
+  //diagnose history
+    "Diagnose History": "निदान इतिहास",
+    "Delete Confirmation": "हटविण्याची पुष्टी",
+    "Are you sure you want to delete this item?": "तुम्हाला हे घटक हटवायचे आहे का?",
+    "Cancel": "रद्द करा",
+    "Delete": "हटवा",
+    "No history available": "इतिहास उपलब्ध नाही",
+  
+  //market page
+    "No data available": "डेटा उपलब्ध नाही",
+    "All Markets of": "सर्व बाजार",
+    "District": "जिल्हा",
+    "Market Data for": "बाजार भाव (₹) :",
+    "Commodity": "वस्तू",
+    "Min Price": "किमान किंमत",
+    "Max Price": "कमाल किंमत",
+    "Modal Price": "प्रचलित किंमत",
+    "Variety": "प्रकार",
+    "Arrival Date": "आगमन तारीख",
+    "Select State": "राज्य निवडा",
+    "Select District": "जिल्हा निवडा",
+    "Search": "शोधा",
+    "Select State and District to see Mandi Prices": "मंडीच्या किंमती पाहण्यासाठी राज्य आणि जिल्हा निवडा",
+    "Please select a market to view commodity prices": "वस्तूच्या किंमती पाहण्यासाठी कृपया बाजार निवडा",
+    "district : Finding markets ...": "जिल्हा : बाजार शोधत आहे...",
+
+
+
+
+
+
+
+        }
+      }

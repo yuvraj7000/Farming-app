@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 import RNPickerSelect from 'react-native-picker-select';
-import statesData from '../assets/state_district.json';
+import statesData from '../context/i18n/state_district.json';
 import { usePushNotifications } from '../context/usePushNotification.ts'
 
 const API_URL = 'http://165.22.223.49:5000/api/v1/pushNotification/add';

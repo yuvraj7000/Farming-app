@@ -95,5 +95,28 @@
 
 
 
+
+//market page
+"No data available": "No data available",
+"All Markets of": "All Markets of",
+"District": "District",
+"Market Data for": "Market Price (₹) :",
+"Commodity": "Commodity",
+"Min Price": "Min Price",
+"Max Price": "Max Price",
+"Modal Price": "Modal Price",
+"Variety": "Variety",
+"Arrival Date": "Arrival Date",
+
+
+  "Select State": "Select State",
+  "Select District": "Select District",
+  "Search": "Search",
+  "Select State and District to see Mandi Prices": "Select State and District to see Mandi Prices",
+"Please select a market to view commodity prices": "Please select a market to view comodity prices",
+"district : Finding markets ...": "district : Finding markets ...",
+
+  
+
   }
 }

@@ -1,0 +1,116 @@
+{
+    "translation": {
+      "app_name" : "కిసాన్‌బంధు",
+      "app_slogan" : "ఈ రోజు రైతులను శక్తివంతం చేస్తూ, రేపటి కోసం",
+      "language" : "భాష ఎంచుకోండి",
+      "what we offer" : "మేము ఏమి అందిస్తున్నాము",
+      "featureCard_plant_heading" : "ఉదవంగం రోగ నిర్ధారణ",
+      "featureCard_plant_content" : "ఊధాన్ని తీసుకుని రోగాలను గుర్తించండి మరియు పరిష్కారాలను పొందండి.",
+      "featureCard_weather_heading" : "ఆవాహన యొక్క వాతావరణ సూచన",
+      "featureCard_weather_content" : "ప్రపంచవ్యాప్తంగా ప్రత్యక్ష వాతావరణ సమాచారంతో నవీకరించండి.",
+      "featureCard_mandi_heading" : "మార్కెట్ ధరలు",
+      "featureCard_mandi_content" : "భారతదేశంలోని అన్ని మండీల్లో వస్తువుల ధరలను చూడండి.",
+      "featureCard_scheme_heading" : "స్కీమ్స్",
+      "featureCard_scheme_content" : "రైతులకు అందుబాటులో ఉన్న అన్ని ప్రభుత్వ మరియు ప్రైవేట్ పథకాలను అన్వేషించండి.",
+      "Get Started" : "ప్రారంభించండి",
+  
+      // weather_card
+      "loading Weather": "వాతావరణం లోడ్ అవుతుంది ...",
+      "Failed to load weather data": "వాతావరణ డేటా లోడ్ చేయడంలో విఫలమయ్యింది",
+      "Reload": "మరల్ని లోడ్ చేయండి",
+      "India": "భారతదేశం",
+      "Good for Spraying": "స్ప్రే చేయడానికి సరైనది",
+      "moderate for Spraying": "స్ప్రే చేయడానికి సరాసరి",
+      "Avoid Spraying": "స్ప్రే చేయడం నివారించండి",
+  
+      // weather_description
+      "clear sky": "స్పష్టమైన ఆకాశం",
+      "sky is clear": "ఆకాశం స్పష్టంగా ఉంది",
+      "few clouds": "కొన్ని మేఘాలు",
+      "scattered clouds": "చల్లబడిన మేఘాలు",
+      "broken clouds": "భంగమయమైన మేఘాలు",
+      "shower rain": "వర్షం",
+      "rain": "వర్షం",
+      "thunderstorm": "మబ్బులతో వర్షం",
+      "snow": "హిమం",
+      "mist": "మబ్బు",
+  
+      "weather forcast": "16 రోజుల వాతావరణ భవిష్యవాణీ చూడండి",
+  
+      // 16 days weather page
+      "16 days weather": "16 రోజులు వాతావరణ భవిష్యవాణీ",
+      "4 days Hourly" : "మొత్తం 4 రోజులకు: గంటల వాతావరణ భవిష్యవాణీ",
+      "next 12 days" : "రాబోయే 12 రోజులకు: రోజు వారీ భవిష్యవాణీ",
+      "en-US" : "te-IN",
+      "High": "అధిక",
+      "Low": "కుమారిన",
+      "Precipitation": "వర్షపు పరిమాణం",
+  
+      // weather disclamer
+      "Important Note for Farmers": "రైతులకు ముఖ్యమైన సూచన",
+      "Weather forecasts are estimates and actual conditions may vary": "వాతావరణ భవిష్యవాణీలు అంచనాలు మాత్రమే మరియు వాస్తవ పరిస్థితులు మారవచ్చు",
+      "Always verify field conditions before agricultural operations": "వ్యవసాయ కార్యకలాపాలు ప్రారంభించేముందు ఎప్పుడూ పొలాల పరిస్థితులను సరిచూడండి",
+      "Wind speed recommendations are general guidelines": "గాలివేగ సిఫార్సులు సాధారణ మార్గదర్శకాలు",
+      "Consider microclimate variations in your specific location": "మీ స్థానిక మైక్రోక్లైమేట్ లో మార్పులను పరిశీలించండి",
+      "Consult local agricultural authorities for critical decisions": "క్రిటికల్ నిర్ణయాల కోసం స్థానిక వ్యవసాయ అధికారులు సంప్రదించండి",
+      "Forecast data source: OpenWeatherMap API": "భవిష్యవాణీ డేటా మూలం: OpenWeatherMap API",
+      "This information should not be used as sole basis for farming decisions.": "ఈ సమాచారాన్ని వ్యవసాయ నిర్ణయాలకు ఒంటరిగా ఆధారంగా ఉపయోగించకండి",
+      "The developers assume no liability for actions taken based on this forecast.": "ఈ భవిష్యవాణీ ఆధారంగా తీసుకున్న చర్యలకు డెవలపర్లు ఎలాంటి బాధ్యత తీసుకోరు",
+  
+      // market card
+     "Get real-time prices of commodities from mandis across the country": "దేశవ్యాప్తంగా మండీల实时 ధరలు పొందండి",
+"See mandi prices": "మండి ధరలు చూడండి",
+
+  
+      // plant Diagnosis
+      "Plant Diagnosis": "ప్లాంట్ రోగ నిర్ధారణ",
+      "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "మీ పంట యొక్క చిత్రం అప్‌లోడ్ చేయండి మరియు రోగాలను గుర్తించి మీ అవసరాలకు సరిపోయే పరిష్కారాలను పొందండి.",
+      "Take Image": "చిత్రం తీసుకోండి",
+      "Get Diagnose": "నిర్ధారణ పొందండి",
+      "See Solution": "పరిష్కారాన్ని చూడండి",
+      "Take a Photo": "ఒక ఫోటో తీసుకోండి",
+      "Take Photo": "ఫోటో తీసుకోండి",
+      "Open Gallery": "గ్యాలరీని తెరవండి",
+      "We need your permission to access the camera": "కెమెరాకు అనుమతి ఇవ్వాలి",
+      "Grant Permission": "అనుమతి ఇవ్వండి",
+      "Analyzing your plant...": "మీ పంటను విశ్లేషణ చేస్తున్నాం ...",
+      "choose another image": "మరొక చిత్రం ఎంచుకోండి",
+      "See Diagnose": "నిర్ధారణ చూడండి",
+      "Diagnosis Failed": "నిర్ధారణ విఫలమైంది",
+  
+      "Symptoms": "లక్షణాలు",
+      "Cause": "కారణం",
+      "Organic Solution": "జైవిక పరిష్కారం",
+      "Regular Solution": "సాధారణ పరిష్కారం",
+      "Chemical Solution": "రసాయన పరిష్కారం",
+      "Important Notes": "ముఖ్యమైన సూచనలు",
+  
+      // diagnose history
+      "Diagnose History": "పూర్వ నిర్ధారణలు",
+      "Delete Confirmation": "తొలగింపు నిర్ధారణ",
+      "Are you sure you want to delete this item?": "మీరు ఈ వస్తువును తొలగించాలనుకుంటున్నారా?",
+      "Cancel": "రద్దు చేయి",
+      "Delete": "తొలగించు",
+      "No history available": "ఏ చరిత్ర లేదు",
+  
+      // market page
+      "No data available": "డేటా అందుబాటులో లేదు",
+      "All Markets of": "అన్ని మార్కెట్లు",
+      "District": "జిల్లా",
+      "Market Data for": "మార్కెట్ డేటా (₹):",
+      "Commodity": "వస్తువు",
+      "Min Price": "కనిష్ట ధర",
+      "Max Price": "గరిష్ట ధర",
+      "Modal Price": "మోడల్ ధర",
+      "Variety": "వేరియేటీ",
+      "Arrival Date": "పరిచయ తేదీ",
+  
+      "Select State": "రాష్ట్రం ఎంచుకోండి",
+      "Select District": "జిల్లా ఎంచుకోండి",
+      "Search": "వెతకండి",
+      "Select State and District to see Mandi Prices": "మండీ ధరలను చూడటానికి రాష్ట్రం మరియు జిల్లా ఎంచుకోండి",
+      "Please select a market to view commodity prices": "వస్తు ధరలను చూడటానికి ఒక మార్కెట్ ఎంచుకోండి",
+      "district : Finding markets ...": "జిల్లా : మార్కెట్లను కనుగొంటున్నారు ..."
+    }
+  }
+  

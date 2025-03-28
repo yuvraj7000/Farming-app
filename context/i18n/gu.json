@@ -1,0 +1,119 @@
+{
+    "translation": {
+      "app_name" : "કિસાનબંધુ",
+      "app_slogan" : "સારા આવતીકાલ માટે ખેડુતોને સશક્ત બનાવવું",
+      "language" : "ભાષા પસંદ કરો",
+      "what we offer" : "અમે શું પ્રદાન કરીએ છીએ",
+      "featureCard_plant_heading" : "વનસ્પતિ રોગ નિદાન",
+      "featureCard_plant_content" : "રોગ ઓળખવા માટે વનસ્પતિનો ઈમેજ અપલોડ કરો અને ઉકેલો મેળવો.",
+      "featureCard_weather_heading" : "હવામાન આગાહી",
+      "featureCard_weather_content" : "રિયલ-ટાઈમ હવામાન માહિતી સાથે અપડેટ રહો.",
+      "featureCard_mandi_heading" : "માર્કેટ ભાવ",
+      "featureCard_mandi_content" : "ભારતીય મંડીઓમાં કોમોડિટીના ભાવ તપાસો.",
+      "featureCard_scheme_heading" : "યોજનાઓ",
+      "featureCard_scheme_content" : "ખેડુતો માટે ઉપલબ્ધ બધી ખાનગી અને સરકારી યોજનાઓ શોધો.",
+      "Get Started" : "શરૂ કરો",
+
+
+      //weather_card 
+      "loading Weather": "હવામાન લોડ થઈ રહ્યું છે...",
+      "Failed to load weather data": "હવામાન ડેટા લોડ કરવામાં નિષ્ફળતા",
+      "Reload": "પુનઃલોડ કરો",
+      "India": "ભારત",
+      "Good for Spraying": "છાંટણી માટે ઉત્તમ",
+      "moderate for Spraying": "છાંટણી માટે મધ્યમ",
+      "Avoid Spraying": "છાંટણી ટાળો",
+
+      //weather_description
+      "clear sky": "સ્ફટિક સ્વચ્છ આકાશ",
+      "sky is clear": "સ્ફટિક સ્વચ્છ આકાશ",
+      "few clouds": "થોડા વાદળ",
+      "scattered clouds": "વિખેરાયેલા વાદળ",
+      "broken clouds": "ટૂટી ગયેલા વાદળ",
+      "shower rain": "ઝરમર વરસાદ",
+      "rain": "વરસાદ",
+      "thunderstorm": "ઇલેક્ટ્રિક તોફાન",
+      "snow": "હિમવર્ષા",
+      "mist": "હુમસ",
+
+      "weather forcast": "16 દિવસની હવામાન આગાહી જુઓ",
+
+
+      //16 days weather page
+      "16 days weather": "16 દિવસની હવામાન આગાહી",
+      "4 days Hourly" : "પ્રથમ 4 દિવસ: કલાકવાર આગાહી",
+      "next 12 days" : "આગલા 12 દિવસ: દૈનિક આગાહી",
+      "en-US" : "gu-IN",
+      "High": "ઉચ્ચ",
+      "Low": "નીચું",
+      "Precipitation": "વર્ષા",
+
+      //weather disclaimer
+      "Important Note for Farmers": "ખેડુતો માટે મહત્વની નોંધ",
+      "Weather forecasts are estimates and actual conditions may vary": "હવામાન આગાહી અંદાજ છે અને વાસ્તવિક પરિસ્થિતિ ભિન્ન હોઈ શકે છે",
+      "Always verify field conditions before agricultural operations": "કૃષિ કાર્યો કરતા પહેલા હંમેશા ખેતર પરિસ્થિતિ ચકાસો",
+      "Wind speed recommendations are general guidelines": "પવનની ઝડપ માટે આપેલી ભલામણ સામાન્ય માર્ગદર્શન છે",
+      "Consider microclimate variations in your specific location": "તમારા ચોક્કસ સ્થાન માટે સૂક્ષ્મ-હવામાન ફેરફારો ધ્યાનમાં લો",
+      "Consult local agricultural authorities for critical decisions": "મહત્વપૂર્ણ નિર્ણયો માટે સ્થાનિક કૃષિ સત્તાધીશોને સંપર્ક કરો",
+      "Forecast data source: OpenWeatherMap API": "આગાહીની માહિતી સ્ત્રોત: OpenWeatherMap API",
+      "This information should not be used as sole basis for farming decisions.": "આ માહિતી ફક્ત ખેતી માટેના નિર્ણયો માટે આધારરૂપ ના હોવી જોઈએ.",
+      "The developers assume no liability for actions taken based on this forecast.": "આ આગાહી પર આધાર રાખીને લેવામાં આવેલા પગલાં માટે ડેવલોપર્સ કોઈ જવાબદારી લેતા નથી.",
+
+
+      //market card
+      "Get real-time prices of commodities from mandis across the country": "દેશભરના મંડીઓમાંથી કોમોડિટીના વાસ્તવિક-સમયના ભાવ મેળવો",
+      "See mandi prices": "મંડિ ભાવ જુઓ",
+
+      //plant Diagnosis
+      "Plant Diagnosis": "વનસ્પતિ રોગ નિદાન",
+      "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "તમારા છોડનો ઈમેજ અપલોડ કરો, રોગ ઓળખો અને ઉકેલો મેળવો.",
+      "Take Image": "ઈમેજ લો",
+      "Get Diagnose": "રોગ નિદાન મેળવો",
+      "See Solution": "ઉકેલ જુઓ",
+      "Take a Photo": "ફોટો લો",
+      "Take Photo": "ફોટો લો",
+      "Open Gallery": "ગેલેરી ખોલો",
+      "We need your permission to access the camera": "કેમેરા ઍક્સેસ માટે તમારી મંજૂરી જોઈએ",
+      "Grant Permission": "મંજૂરી આપો",
+      "Analyzing your plant...": "તમારા છોડનું વિશ્લેષણ કરી રહ્યા છીએ...",
+      "choose another image": "બીજુ ઈમેજ પસંદ કરો",
+      "See Diagnose": "નિદાન જુઓ",
+      "Diagnosis Failed": "નિદાન નિષ્ફળ",
+
+      "Symptoms": "લક્ષણો",
+      "Cause": "કારણ",
+      "Organic Solution": "સૌપ્રાકૃતિક ઉકેલ",
+      "Regular Solution": "સામાન્ય ઉકેલ",
+      "Chemical Solution": "રસાયણિક ઉકેલ",
+      "Important Notes": "મહત્વપૂર્ણ નોંધ",
+
+
+      //diagnose history
+      "Diagnose History": "નિદાન ઇતિહાસ",
+      "Delete Confirmation": "કાઢી નાખવાની પુષ્ટિ",
+      "Are you sure you want to delete this item?": "શું તમે ખરેખર આ આઇટમ કાઢી નાખવા માંગો છો?",
+      "Cancel": "રદ કરો",
+      "Delete": "કાઢી નાંખો",
+      "No history available": "કોઈ ઇતિહાસ ઉપલબ્ધ નથી",
+
+
+      //market page
+      "No data available": "કોઈ ડેટા ઉપલબ્ધ નથી",
+      "All Markets of": "બધી બજારો:",
+      "District": "જિલ્લો",
+      "Market Data for": "માર્કેટ ભાવ (₹) :",
+      "Commodity": "ઉત્પાદન",
+      "Min Price": "ન્યુનત્તમ ભાવ",
+      "Max Price": "ઊંચી ભાવ",
+      "Modal Price": "મોડલ ભાવ",
+      "Variety": "પ્રકાર",
+      "Arrival Date": "આગમનની તારીખ",
+
+      "Select State": "રાજ્ય પસંદ કરો",
+      "Select District": "જિલ્લો પસંદ કરો",
+      "Search": "શોધો",
+      "Select State and District to see Mandi Prices": "મંડિ ભાવ જોવા માટે રાજ્ય અને જિલ્લો પસંદ કરો",
+      "Please select a market to view commodity prices": "ઉત્પાદનના ભાવ જોવા માટે બજાર પસંદ કરો",
+      "district : Finding markets ...": "જિલ્લો : બજારો શોધી રહ્યા છીએ..."
+    }
+}

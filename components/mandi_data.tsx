@@ -2,9 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet} from 'react-native';
 import Mandi from './mandi';
 import LottieView from 'lottie-react-native';
+import { useTranslation } from 'react-i18next';
 
-const Mandi_Data = ({district, state}) => {
+const Mandi_Data = ({district, state,  transDistrict}) => {
+    const { t } = useTranslation();
     const[response, setResponse] = useState()
+    const [transD, setTransD] = useState(null)
   const animation = useRef<LottieView>(null);
 
     function getDateArray() {
@@ -137,7 +140,7 @@ const Mandi_Data = ({district, state}) => {
             const minimized = minimizeData(allRecords);
             console.log('Unique records:', minimized.length);
             for(let i=0;i<minimized.length;i++){
-                console.log(minimized[i]);
+                // console.log(minimized[i]);
             }
     
             return minimized;
@@ -149,12 +152,14 @@ const Mandi_Data = ({district, state}) => {
       }
       useEffect(() => {
         handleSearch();
+        setTransD(transDistrict)
       }, []);
 
      if(response){
         console.log("mandi response --",response);
         
-        return <Mandi data={response}/>
+        
+        return <Mandi data={response}  transDistrict={ transD}/>
      }
     
     
@@ -170,7 +175,9 @@ const Mandi_Data = ({district, state}) => {
                       style={styles.lottie}
                       source={require('../assets/animations/market.json')}
                     />
-                    <Text style={styles.loadingText}>Analyzing your plant...</Text>
+                    <Text style={styles.loadingText}>
+                    { transDistrict } { t("district : Finding markets ...")}
+</Text>
                   </View>
     );
 };
@@ -181,12 +188,13 @@ export default Mandi_Data;
 
 const styles = StyleSheet.create({
     animationContainer: {
+        marginTop: 30,
         alignItems: 'center',
         justifyContent: 'center',
       },
       lottie: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
       },
       loadingText: {
         fontWeight: '600',

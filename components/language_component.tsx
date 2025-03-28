@@ -13,6 +13,11 @@ const data = [
     { lan: "ગુજરાતી", code: "gu" },
     { lan: "தமிழ்", code: "ta" },
     { lan: "తెలుగు", code: "te" },
+    { lan: "ਪੰਜਾਬੀ", code: "pa" },
+    { lan: "മലയാളം", code: "ml" },
+    { lan: "বাংলা", code: "bn" }, 
+    { lan: "ଓଡ଼ିଆ", code: "or" }, 
+    { lan: "ಕನ್ನಡ", code: "kn" }
     
     
 ];

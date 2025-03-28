@@ -1,0 +1,115 @@
+{
+    "translation": {
+      "app_name" : "କିସାନବନ୍ଧୁ",
+      "app_slogan" : "ଏକ ଉତ୍ତମ କଲିଁ ପାଇଁ କିସାନଙ୍କୁ ସକ୍ଷମ କରନ୍ତୁ",
+      "language" : "ଭାଷା ବାଛନ୍ତୁ",
+      "what we offer" : "ଆମେ କଣ ଦେଇପାରିବା",
+      "featureCard_plant_heading" : "ଗଛ ରୋଗ ଚିହ୍ନଟ",
+      "featureCard_plant_content" : "ଗଛ ର ଛବି ଅପଲୋଡ୍ କରନ୍ତୁ ଯାହାକି ରୋଗ ଚିହ୍ନଟ କରିବାକୁ ଏବଂ ସମାଧାନ ପାଇଁ ମଦତ କରିବା",
+      "featureCard_weather_heading" : "ମौସମ ପୂର୍ବାନୁମାନ",
+      "featureCard_weather_content" : "ବାସ୍ତବିକ ସମୟରେ ମੌସମ ସୂଚନା ସହିତ ଅପଡେଟ୍ ରହନ୍ତୁ",
+      "featureCard_mandi_heading" : "ବଜାର ମୂଲ୍ୟ",
+      "featureCard_mandi_content" : "ସମସ୍ତ ଭାରତୀୟ ବଜାରରେ ସମଗ୍ରୀର ମୂଲ୍ୟ ଚେକ୍ କରନ୍ତୁ",
+      "featureCard_scheme_heading" : "ସ୍କୀମ୍ସ",
+      "featureCard_scheme_content" : "କିସାନଙ୍କ ପାଇଁ ସମସ୍ତ ନିଜୀ ଏବଂ ସରକାରୀ ସ୍କୀମ୍ସ ଦେଖନ୍ତୁ",
+      "Get Started" : "ଆରମ୍ଭ କରନ୍ତୁ",
+  
+      // weather_card
+      "loading Weather": "ମାଡ଼େ ପୂର୍ବାନୁମାନ ଚାଲୁଛି ...",
+      "Failed to load weather data": "ମौସମ ତଥ୍ୟ ଲୋଡ୍ କରିବାରେ ବିଫଳ",
+      "Reload": "ପୁନଃରୋଧ",
+      "India": "ଭାରତ",
+      "Good for Spraying": "ସ୍ପ୍ରେଇ କରିବାକୁ ଭଲ",
+      "moderate for Spraying": "ସ୍ପ୍ରେଇ ପାଇଁ ମଧ୍ୟମ",
+      "Avoid Spraying": "ସ୍ପ୍ରେଇ କରିବାକୁ ବିଚାର କରନ୍ତୁ",
+      
+      // weather_description
+      "clear sky": "ସଫା ଆକାଶ",
+      "sky is clear": "ଆକାଶ ସଫା",
+      "few clouds": "କିଛି ମেঘ",
+      "scattered clouds": "ପରିଛିଦ ମেঘ",
+      "broken clouds": "ଭାଙ୍ଗା ମেঘ",
+      "shower rain": "ବର୍ଷା",
+      "rain": "ବର୍ଷା",
+      "thunderstorm": "ଆଞ୍ଚଳିକ ତୃଣାୟନ",
+      "snow": "ପହିଲା",
+      "mist": "କୁହାସା",
+  
+      "weather forcast": "16 ଦିନର ମौସମ ପୂର୍ବାନୁମାନ ଦେଖନ୍ତୁ",
+  
+      // 16 days weather page
+      "16 days weather": "16 ଦିନର ମौସମ ପୂର୍ବାନୁମାନ",
+      "4 days Hourly" : "ପ୍ରଥମ 4 ଦିନ: ପ୍ରତି ଘଣ୍ଟା ପୂର୍ବାନୁମାନ",
+      "next 12 days" : "ପରବର୍ତ୍ତୀ 12 ଦିନ: ଦିନ ରିପୋର୍ଟ",
+      "en-US" : "or-IN",
+      "High": "ଉଚ୍ଚ",
+      "Low": "ନିମ୍ନ",
+      "Precipitation": "ବର୍ଷାପାତ",
+  
+      // weather disclamer
+      "Important Note for Farmers": "କିସାନମାନେ ପାଇଁ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଟୀକା",
+      "Weather forecasts are estimates and actual conditions may vary": "ମାଡ଼େ ପୂର୍ବାନୁମାନ ଏକ ଅନୁମାନ ଅଟକିଛି ଏବଂ ବାସ୍ତବିକ ସ୍ଥିତି ଭିନ୍ନ ହୋଇପାରେ",
+      "Always verify field conditions before agricultural operations": "କୃଷି କାର୍ଯ୍ୟ ଆରମ୍ଭ କରିବାରେ ଖେତ୍ର ସ୍ଥିତି ଯାଞ୍ଚ କରନ୍ତୁ",
+      "Wind speed recommendations are general guidelines": "ବାତାସ ବେଗ ସୁପାରିଶ ସାଧାରଣ ମାର୍ଗଦର୍ଶନ ଅଟକିଛି",
+      "Consider microclimate variations in your specific location": "ଆପଣଙ୍କର ସ୍ଥାନୀୟ କ୍ଷେତ୍ରର ମାଇକ୍ରୋକ୍ଲାଇମେଟ୍ ବଦଳକୁ ବିଚାର କରନ୍ତୁ",
+      "Consult local agricultural authorities for critical decisions": "ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସିଦ୍ଧାନ୍ତ ପାଇଁ ସ୍ଥାନୀୟ କୃଷି ପ୍ରଶାସନକୁ ସଲାହ ଦିଅନ୍ତୁ",
+      "Forecast data source: OpenWeatherMap API": "ପୂର୍ବାନୁମାନ ତଥ୍ୟ ସ୍ରୋତ: OpenWeatherMap API",
+      "This information should not be used as sole basis for farming decisions.": "ଏହି ସୂଚନା କୃଷି ନିଷ୍ପତି ପାଇଁ ଏକମାତ୍ର ଆଧାର ଭାବେ ବ୍ୟବହାର କରାଯିବା ଉଚିତ ନୁହେଁ.",
+      "The developers assume no liability for actions taken based on this forecast.": "ପୂର୍ବାନୁମାନ ଉପରେ ଆଧାରିତ କରାଯାଇଥିବା କାର୍ଯ୍ୟରେ ଡିଭେଲପରମାନେ କୌଣସି ଦାୟିତ୍ୱ ନେବେ ନାହିଁ।",
+  
+      // market card
+      "Get real-time prices of commodities from mandis across the country": "ଦେଶର ସମସ୍ତ ମାଣ୍ଡୀରୁ ସମଗ୍ରୀର ବସ୍ତୁ ମୂଲ୍ୟ ରିଆଲ୍-ଟାଇମ୍ ମଧ୍ୟମରେ ଦେଖନ୍ତୁ",
+      "See mandi prices": "ମାଣ୍ଡୀ ମୂଲ୍ୟ ଦେଖନ୍ତୁ",
+  
+      // plant Diagnosis
+      "Plant Diagnosis": "ଗଛ ରୋଗ ଚିହ୍ନଟ",
+      "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "ଗଛର ଛବି ଅପଲୋଡ୍ କରନ୍ତୁ ଯାହାକି ରୋଗ ଚିହ୍ନଟ କରିବାକୁ ଏବଂ ଆପଣଙ୍କର ଆବଶ୍ୟକତାରେ ଅନୁକୂଳ ସମାଧାନ ପାଇଁ",
+      "Take Image": "ଛବି ତୁଲନ୍ତୁ",
+      "Get Diagnose": "ଚିହ୍ନଟ ପାଇଁ ଯାଆନ୍ତୁ",
+      "See Solution": "ସମାଧାନ ଦେଖନ୍ତୁ",
+      "Take a Photo": "ଏକ ଫଟୋ ତୁଲନ୍ତୁ",
+      "Take Photo": "ଫଟୋ ତୁଲନ୍ତୁ",
+      "Open Gallery": "ଗ୍ୟାଲେରୀ ଖୋଲନ୍ତୁ",
+      "We need your permission to access the camera": "ଆମେ କ୍ୟାମେରାକୁ ପ୍ରବେଶ କରିବା ପାଇଁ ଆପଣଙ୍କର ଅନୁମତି ଆବଶ୍ୟକ",
+      "Grant Permission": "ଅନୁମତି ଦିଅନ୍ତୁ",
+      "Analyzing your plant...": "ଆପଣଙ୍କର ଗଛ ଚିହ୍ନଟ କରାଯାଉଛି ...",
+      "choose another image": "ଅନ୍ୟ ଛବି ବାଛନ୍ତୁ",
+      "See Diagnose": "ଚିହ୍ନଟ ଦେଖନ୍ତୁ",
+      "Diagnosis Failed": "ଚିହ୍ନଟ ବିଫଳ",
+  
+      "Symptoms": "ଲକ୍ଷଣ",
+      "Cause": "କାରଣ",
+      "Organic Solution": "ଜୈବିକ ସମାଧାନ",
+      "Regular Solution": "ସାଧାରଣ ସମାଧାନ",
+      "Chemical Solution": "ରାସାୟନିକ ସମାଧାନ",
+      "Important Notes": "ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଟୀକା",
+  
+      // diagnose history
+      "Diagnose History": "ଚିହ୍ନଟ ଇତିହାସ",
+      "Delete Confirmation": "ମୁଚ୍ଛଲାନା ସନ୍ଦେହ",
+      "Are you sure you want to delete this item?": "ଆପଣ ଏହି ବସ୍ତୁକୁ ଡିଲିଟ୍ କରିବାକୁ ସୁନିଶ୍ଚିତ ଅଟକିଛନ୍ତି କି?",
+      "Cancel": "ବାତିଲ୍",
+      "Delete": "ଡିଲିଟ୍",
+      "No history available": "ଇତିହାସ ଉପଲବ୍ଧ ନାହିଁ",
+  
+      // market page
+      "No data available": "କୌଣସି ତଥ୍ୟ ଉପଲବ୍ଧ ନାହିଁ",
+      "All Markets of": "ସମସ୍ତ ବଜାର",
+      "District": "ଜିଲ୍ଲା",
+      "Market Data for": "ବଜାର ତଥ୍ୟ (₹):",
+      "Commodity": "ସମଗ୍ରୀ",
+      "Min Price": "ସାର୍ବନିମ୍ନ ମୂଲ୍ୟ",
+      "Max Price": "ସାର୍ବୋଚ୍ଚ ମୂଲ୍ୟ",
+      "Modal Price": "ମୋଡାଲ୍ ମୂଲ୍ୟ",
+      "Variety": "ପ୍ରକାର",
+      "Arrival Date": "ଆଗମନ ତାରିଖ",
+  
+      "Select State": "ରାଜ୍ୟ ବାଛନ୍ତୁ",
+      "Select District": "ଜିଲ୍ଲା ବାଛନ୍ତୁ",
+      "Search": "ସନ୍ଧାନ",
+      "Select State and District to see Mandi Prices": "ମାଣ୍ଡୀ ମୂଲ୍ୟ ଦେଖିବାକୁ ରାଜ୍ୟ ଏବଂ ଜିଲ୍ଲା ବାଛନ୍ତୁ",
+      "Please select a market to view commodity prices": "ଦୟାକରି ସମଗ୍ରୀ ମୂଲ୍ୟ ଦେଖିବାକୁ ଏକ ବଜାର ବାଛନ୍ତୁ",
+      "district : Finding markets ...": "ଜିଲ୍ଲା: ବଜାର ଖୋଜାଯାଉଛି ..."
+    }
+  }
+  

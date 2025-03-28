@@ -1,0 +1,114 @@
+{
+    "translation": {
+        "app_name": "ಕಿಸಾನ್ ಬಂಧು",
+        "app_slogan": "ಉತ್ತಮ ನಾಳೆಯಿಗಾಗಿ ರೈತರನ್ನು ಶಕ್ತಿಮಾಡುವುದು",
+        "language": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "what we offer": "ನಾವು ಏನು ಒದಗಿಸುತ್ತೇವೆ",
+        "featureCard_plant_heading": "ಸಸ್ಯ ರೋಗ ನಿರ್ಧಾರ",
+        "featureCard_plant_content": "ರೋಗಗಳನ್ನು ಗುರುತಿಸಲು ಮತ್ತು ಪರಿಹಾರಗಳನ್ನು ಪಡೆಯಲು ಸಸ್ಯದ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.",
+        "featureCard_weather_heading": "ಹವಾಮಾನ ಮುನ್ಸೂಚನೆ",
+        "featureCard_weather_content": "ನೈಜ-ಸಮಯ ಹವಾಮಾನ ಮಾಹಿತಿಯೊಂದಿಗೆ ನವೀಕೃತವಾಗಿರಿ.",
+        "featureCard_mandi_heading": "ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳು",
+        "featureCard_mandi_content": "ಭಾರತದ ಎಲ್ಲಾ ಮಾರುಕಟ್ಟೆಗಳ ಪತ್ತೆ ಮತ್ತು ಬೆಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
+        "featureCard_scheme_heading": "ಯೋಜನೆಗಳು",
+        "featureCard_scheme_content": "ರೈತರಿಗಾಗಿ ಲಭ್ಯವಿರುವ ಎಲ್ಲಾ ಖಾಸಗಿ ಮತ್ತು ಸರ್ಕಾರಿ ಯೋಜನೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
+        "Get Started": "ಪ್ರಾರಂಭಿಸಿ",
+
+        // weather_card
+        "loading Weather": "ಹವಾಮಾನ ಲೋಡ್ ಆಗುತ್ತಿದೆ ...",
+        "Failed to load weather data": "ಹವಾಮಾನ ಡೇಟಾವನ್ನು ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ",
+        "Reload": "ಮರುಲೋಡ್ ಮಾಡಿ",
+        "India": "ಭಾರತ",
+        "Good for Spraying": "ಒಳಚರತಿಗೆ ಉತ್ತಮ",
+        "moderate for Spraying": "ಒಳಚರತಿಗೆ ಮಧ್ಯಮ",
+        "Avoid Spraying": "ಒಳಚರತಿಯನ್ನು ತಪ್ಪಿಸಿ",
+
+        // weather_description
+        "clear sky": "ಸ್ವಚ್ಛ ಆಕಾಶ",
+        "sky is clear": "ಸ್ವಚ್ಛ ಆಕಾಶ",
+        "few clouds": "ಕೆಲವು ಮೇಘಗಳು",
+        "scattered clouds": "ಚದುರಿದ ಮೋಡಗಳು",
+        "broken clouds": "ಭಾಗಶಃ ಮೋಡಗಳು",
+        "shower rain": "ಮಂದಿ ಮಳೆ",
+        "rain": "ಮಳೆ",
+        "thunderstorm": "ಗಾಳಿ ಜೋರಾದ ಮಳೆ",
+        "snow": "ಹಿಮ",
+        "mist": "ಮಂಜು",
+
+        "weather forcast": "16 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆ ನೋಡಿ",
+
+        // 16 days weather page
+        "16 days weather": "16 ದಿನಗಳ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆ",
+        "4 days Hourly": "ಮೊದಲ 4 ದಿನಗಳು: ತಾಸಾವಾರು ಮುನ್ಸೂಚನೆ",
+        "next 12 days": "ಮುಂದಿನ 12 ದಿನಗಳು: ದಿನದಂದು ಮುನ್ಸೂಚನೆ",
+        "en-US": "kn-IN",
+        "High": "ಗರಿಷ್ಠ",
+        "Low": "ಕನಿಷ್ಠ",
+        "Precipitation": "ಮಳೆ ಪ್ರಮಾಣ",
+
+        // weather disclaimer
+        "Important Note for Farmers": "ರೈತರಿಗಾಗಿ ಮುಖ್ಯ ಸೂಚನೆ",
+        "Weather forecasts are estimates and actual conditions may vary": "ಹವಾಮಾನ ಮುನ್ಸೂಚನೆ ಅಂದಾಜು ಮಾತ್ರ, ಮತ್ತು ನಿಜವಾದ ಪರಿಸ್ಥಿತಿ ಬದಲಾಗಬಹುದು.",
+        "Always verify field conditions before agricultural operations": "ಕೃಷಿ ಕಾರ್ಯಗಳ ಮೊದಲು ಕ್ಷೇತ್ರದ ಪರಿಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ.",
+        "Wind speed recommendations are general guidelines": "ಗಾಳಿಯ ವೇಗಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಶಿಫಾರಸುಗಳು ಸಾಮಾನ್ಯ ಮಾರ್ಗಸೂಚಿಗಳು ಮಾತ್ರ.",
+        "Consider microclimate variations in your specific location": "ನಿಮ್ಮ ನಿರ್ದಿಷ್ಟ ಸ್ಥಳದಲ್ಲಿ ಮೈಕ್ರೋ ಕ್ಲೈಮೇಟ್ ಬದಲಾವಣೆಗಳನ್ನು ಪರಿಗಣಿಸಿ.",
+        "Consult local agricultural authorities for critical decisions": "ಪ್ರಮುಖ ನಿರ್ಧಾರಗಳಿಗಾಗಿ ಸ್ಥಳೀಯ ಕೃಷಿ ಅಧಿಕಾರಿಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ.",
+        "Forecast data source: OpenWeatherMap API": "ಮುನ್ಸೂಚನೆ ಡೇಟಾ ಮೂಲ: OpenWeatherMap API",
+        "This information should not be used as sole basis for farming decisions.": "ಈ ಮಾಹಿತಿಯನ್ನು ಕೃಷಿ ನಿರ್ಧಾರಗಳ ಏಕೈಕ ಆಧಾರವಾಗಿ ಬಳಸಬಾರದು.",
+        "The developers assume no liability for actions taken based on this forecast.": "ಈ ಮುನ್ಸೂಚನೆಯ ಆಧಾರದ ಮೇಲೆ ಕೈಗೊಂಡ ಕ್ರಮಗಳಿಗೆ ಡೆವಲಪರ್‌ಗಳು ಯಾವುದೇ ಹೊಣೆಗಾರಿಕೆಯನ್ನು ಹೊಂದಿಲ್ಲ.",
+
+        // market card
+        "Get real-time prices of commodities from mandis across the country": "ದೇಶದ ವಿವಿಧ ಮಾರುಕಟ್ಟೆಗಳಿಂದ ನೈಜ-ಸಮಯ ಬೆಲೆ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಿರಿ",
+        "See mandi prices": "ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳನ್ನು ನೋಡಿ",
+
+        // plant Diagnosis
+        "Plant Diagnosis": "ಸಸ್ಯ ರೋಗಪರಿಶೀಲನೆ",
+        "Upload an image of your plant to identify diseases and get solutions tailored to your needs.": "ನಿಮ್ಮ ಸಸ್ಯದ ರೋಗಗಳನ್ನು ಗುರುತಿಸಲು ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಪರಿಹಾರಗಳನ್ನು ಪಡೆಯಿರಿ.",
+        "Take Image": "ಚಿತ್ರವನ್ನು ತೆಗೆದುಕೊಳ್ಳಿ",
+        "Get Diagnose": "ನಿದಾನ ಪಡೆಯಿರಿ",
+        "See Solution": "ಪರಿಹಾರ ನೋಡಿ",
+        "Take a Photo": "ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ",
+        "Take Photo": "ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ",
+        "Open Gallery": "ಗ್ಯಾಲರಿ ತೆರೆ",
+        "We need your permission to access the camera": "ಕ್ಯಾಮೆರಾ ಪ್ರವೇಶಿಸಲು ನಿಮ್ಮ ಅನುಮತಿ ಅಗತ್ಯವಿದೆ",
+        "Grant Permission": "ಅನುಮತಿ ನೀಡಿ",
+        "Analyzing your plant...": "ನಿಮ್ಮ ಸಸ್ಯವನ್ನು ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
+        "choose another image": "ಇನ್ನೊಂದು ಚಿತ್ರವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "See Diagnose": "ನಿದಾನ ನೋಡಿ",
+        "Diagnosis Failed": "ನಿದಾನ ವಿಫಲವಾಗಿದೆ",
+
+        "Symptoms": "ಲಕ್ಷಣಗಳು",
+        "Cause": "ಕಾರಣ",
+        "Organic Solution": "ಸಾವಯವ ಪರಿಹಾರ",
+        "Regular Solution": "ಸಾಮಾನ್ಯ ಪರಿಹಾರ",
+        "Chemical Solution": "ರಾಸಾಯನಿಕ ಪರಿಹಾರ",
+        "Important Notes": "ಮುಖ್ಯ ಸೂಚನೆಗಳು",
+
+        // diagnose history
+        "Diagnose History": "ನಿದಾನ ಇತಿಹಾಸ",
+        "Delete Confirmation": "ಅಳಿಸುವ ದೃಢೀಕರಣ",
+        "Are you sure you want to delete this item?": "ನೀವು ಈ ಐಟಂ ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?",
+        "Cancel": "ರದ್ದುಮಾಡಿ",
+        "Delete": "ಅಳಿಸಿ",
+        "No history available": "ಇತಿಹಾಸ ಲಭ್ಯವಿಲ್ಲ",
+
+        // market page
+        "No data available": "ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ",
+        "All Markets of": "ಎಲ್ಲಾ ಮಾರುಕಟ್ಟೆಗಳು",
+        "District": "ಜಿಲ್ಲೆ",
+        "Market Data for": "ಮಾರುಕಟ್ಟೆ ಬೆಲೆ (₹) :",
+        "Commodity": "ಪದಾರ್ಥ",
+        "Min Price": "ಕನಿಷ್ಠ ಬೆಲೆ",
+        "Max Price": "ಗರಿಷ್ಠ ಬೆಲೆ",
+        "Modal Price": "ಸರಾಸರಿ ಬೆಲೆ",
+        "Variety": "ವಿವಿಧತೆ",
+        "Arrival Date": "ಆಗಮನ ದಿನಾಂಕ",
+
+        "Select State": "ರಾಜ್ಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "Select District": "ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "Search": "ಹುಡುಕಿ",
+        "Select State and District to see Mandi Prices": "ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳನ್ನು ನೋಡಲು ರಾಜ್ಯ ಮತ್ತು ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "Please select a market to view commodity prices": "ಪದಾರ್ಥದ ಬೆಲೆಗಳನ್ನು ನೋಡಲು ಮಾರುಕಟ್ಟೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+        "district : Finding markets ...": "ಜಿಲ್ಲೆ: ಮಾರುಕಟ್ಟೆಗಳನ್ನು ಹುಡುಕುತ್ತಿದೆ..."
+    }
+}

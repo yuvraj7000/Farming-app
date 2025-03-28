@@ -1,27 +1,37 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity,Image } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
-import statesData from '../assets/state_district.json';
+import statesData from '../context/i18n/state_district.json';
 import Mandi_Data from './mandi_data';
+import { useTranslation } from 'react-i18next';
+
+const languages = {
+  en: "English",
+  hi: "हिन्दी",
+  ta: "தமிழ்",
+};
 
 const Dropdown = () => {
+  const { t, i18n } = useTranslation();
   const [selectedState, setSelectedState] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [search, setSearch] = useState(false);
   const [key, setKey] = useState(0);
+  const [language, setLanguage] = useState(i18n.language); // Default language
+
 
   const stateItems = statesData.states.map((item) => ({
-    label: item.state,
-    value: item.state,
+    label: item.state[language],
+    value: item.state.en, // Only English value is used for API requests
   }));
 
   const districtItems =
     selectedState &&
     statesData.states
-      .find((item) => item.state === selectedState)
+      .find((item) => item.state.en === selectedState)
       ?.districts.map((district) => ({
-        label: district,
-        value: district,
+        label: district[language],
+        value: district.en, // Only English value is used for API requests
       })) || [];
 
   const handleSearch = () => {
@@ -33,61 +43,80 @@ const Dropdown = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Select State</Text>
-      <RNPickerSelect
-        onValueChange={(value) => {
-          setSelectedState(value);
-          setSelectedDistrict(null);
-        }}
-        placeholder={{ label: 'Select a state', value: null }}
-        items={stateItems}
-        style={pickerSelectStyles}
-        value={selectedState}
-      />
 
-      {selectedState && (
-        <>
-          <Text style={styles.label}>Select District</Text>
-          <RNPickerSelect
-            onValueChange={(value) => setSelectedDistrict(value)}
-            placeholder={{ label: 'Select a district', value: null }}
-            items={districtItems}
-            style={pickerSelectStyles}
-            value={selectedDistrict}
-          />
-        </>
-      )}
+<Text style={styles.label}>{t("Select State")} - </Text>
+<RNPickerSelect
+  onValueChange={(value) => {
+    setSelectedState(value);
+    setSelectedDistrict(null);
+  }}
+  placeholder={{ label: t("Select State"), value: null }}
+  items={stateItems}
+  style={pickerSelectStyles}
+  value={selectedState}
+/>
 
-      <TouchableOpacity style={styles.button} onPress={handleSearch}>
-        <Text style={styles.buttonText}>Search</Text>
-      </TouchableOpacity>
+{selectedState && (
+  <>
+    <Text style={styles.label}>{t("Select District")} - </Text>
+    <RNPickerSelect
+      onValueChange={(value) => setSelectedDistrict(value)}
+      placeholder={{ label: t("Select District"), value: null }}
+      items={districtItems}
+      style={pickerSelectStyles}
+      value={selectedDistrict}
+    />
+  </>
+)}
 
-      {!search && <View  style={styles.notSelected}><Text>Select State and District to see Mandi Prices</Text></View>}
+<TouchableOpacity style={styles.button} onPress={handleSearch}>
+  <Text style={styles.buttonText}>{t("Search")}</Text>
+</TouchableOpacity>
 
-      {search && <Mandi_Data key={key} state={selectedState} district={selectedDistrict} />}
+{!search && (
+  <View style={styles.notSelected}>
+    <Image source={require('../assets/icons/no_mandi_data.png')} style={styles.noimage}></Image>
+    <Text style={styles.notext}>{t("Select State and District to see Mandi Prices")}</Text>
+
+  </View>
+)}
+
+{search && (
+  <Mandi_Data
+    key={key}
+    state={selectedState}
+    district={selectedDistrict}
+    transDistrict={
+      statesData.states
+        .find((s) => s.state.en === selectedState)
+        ?.districts.find((d) => d.en === selectedDistrict)?.[language] || ''
+    }
+  />
+)}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
+    // padding: 5,
   },
   label: {
-    fontSize: 14,
-    // marginBottom: 5,
-    // marginTop: 5,
+    paddingHorizontal: 15,
+    fontSize: 16,
+    color: '#333',
+    fontWeight: 'bold',
   },
   button: {
     backgroundColor: '#007BFF',
-    // marginTop: 10,
     padding: 8,
     borderRadius: 5,
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   notSelected: {
     flex: 1,
@@ -95,28 +124,33 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 400,
   },
+  notext: {
+    fontSize: 16,
+    color: '#333',
+    textAlign: 'center',
+  },
+  noimage: {
+    width: 200,
+    height: 200,
+    marginTop: 20,
+    marginBottom: 10,
+  },
 });
 
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
     fontSize: 14,
-    // paddingVertical: 6,
-    // paddingHorizontal: 8,
     borderWidth: 1,
     borderColor: 'gray',
     borderRadius: 4,
     color: 'black',
-    // marginBottom: 8,
   },
   inputAndroid: {
     fontSize: 14,
-    // paddingHorizontal: 8,
-    // paddingVertical: 6,
-    borderWidth: 0.5,
+    borderWidth: 1,
     borderColor: 'gray',
     borderRadius: 4,
     color: 'black',
-    // marginBottom: 8,
   },
 });
 

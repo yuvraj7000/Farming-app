@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import i18next from 'i18next';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Image } from 'react-native';
 import commodity from '../context/i18n/commodity_Translation.json';
+import market_translation from '../context/i18n/market_Translation.json';
+import { useTranslation } from 'react-i18next';
 
-const Mandi = ({ data }) => {
+const Mandi = ({ data,  transDistrict }) => {
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
   const [selectedMarket, setSelectedMarket] = useState(null);
   const [marketDetails, setMarketDetails] = useState([]);
+
+  console.log( "trans -- ",transDistrict)
 
   const uniqueMarkets = [...new Set(data.map(item => item.Market))];
 
@@ -17,37 +23,70 @@ const Mandi = ({ data }) => {
 
   if(!data || data.length === 0) {
     return (
-      <View style={styles.container}>
-        <Text>No data available</Text>
+      <View style={styles.nocontainer}>
+         <Image
+                source={require('../assets/icons/no_mandi_data.png')}
+                style={
+                  styles.noDataImage
+                }
+              />
+        <Text style={styles.notext}>{transDistrict} {t("District")} : {t("No data available")} </Text>
       </View>
     );
   }
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.marketTitle}>All Markets of {data[0].District} District</Text>
-      <View style={styles.marketContainer}>
-        {uniqueMarkets.map((market, index) => (
-          <TouchableOpacity
-            key={index}
-            style={styles.marketButton}
-            onPress={() => handleMarketClick(market)}
-          >
-            <Text style={styles.marketButtonText}>{market}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+   <Text style={styles.marketTitle}>
+  {t("All Markets of")} <Text style={styles.boldText}>{transDistrict ? transDistrict : data[0].District}</Text> {t("District")}
+</Text>
+
+<View style={styles.marketContainer}>
+  {uniqueMarkets.map((market, index) => (
+    <TouchableOpacity
+      key={index}
+      style={[
+        styles.marketButton,
+        selectedMarket === market && styles.selectedMarketButton, // Apply selected style
+      ]}
+      onPress={() => handleMarketClick(market)}
+    >
+      <Text
+        style={[
+          styles.marketButtonText,
+          selectedMarket === market && styles.selectedMarketButtonText, // Apply selected text style
+        ]}
+      >
+        {market_translation[market][language]
+          ? market_translation[market][language]
+          : market}
+      </Text>
+    </TouchableOpacity>
+  ))}
+</View>
+    
+    {
+      !selectedMarket && (
+        <View style={styles.tableContainer}>
+          <Text style={styles.tableTitle}>{t("Please select a market to view commodity prices")}</Text>
+        </View>
+      )
+    }
+
 
       {selectedMarket && (
         <View style={styles.tableContainer}>
-          <Text style={styles.tableTitle}>Market Data for {selectedMarket}</Text>
+  <Text style={styles.tableTitle}>
+  {t("Market Data for")} <Text style={styles.boldText}>{market_translation[selectedMarket][language] ? market_translation[selectedMarket][language] : selectedMarket}</Text>
+  
+</Text>
           <View style={styles.table}>
-            <View style={styles.tableRow}>
-              <Text style={styles.tableCommodity}>Commodity</Text>
-              <Text style={styles.tableHeader}>Min Price</Text>
-              <Text style={styles.tableHeader}>Max Price</Text>
-              <Text style={styles.tableHeader}>Modal Price</Text>
-            </View>
+          <View style={styles.tableRow}>
+  <Text style={styles.tableCommodity}>{t("Commodity")}</Text>
+  <Text style={styles.tableHeader}>{t("Min Price")}</Text>
+  <Text style={styles.tableHeader}>{t("Max Price")}</Text>
+  <Text style={styles.tableHeader}>{t("Modal Price")}</Text>
+</View>
             {marketDetails.map((item, index) => (
               <View key={index} style={styles.tableRow}>
                 <View style={styles.tableCellLarge}>
@@ -81,29 +120,40 @@ const styles = StyleSheet.create({
   },
   marketTitle: {
     marginTop: 20,
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 16,
     marginBottom: 10,
   },
   marketButton: {
-    backgroundColor: '#FFA001',
+    backgroundColor: '#394D68',
     padding: 8,
     borderRadius: 5,
     alignItems: 'center',
-    marginVertical: 1,
+    marginVertical: 2,
+    marginHorizontal: 2,
   },
   marketButtonText: {
     color: 'white',
     fontSize: 16,
   },
+  selectedMarketButton: {
+    padding:6,
+    borderWidth: 2,
+    borderColor: 'orange', 
+  },
+  selectedMarketButtonText: {
+    color: '#fff', 
+    fontWeight: 'bold',
+  },
   tableContainer: {
     marginTop: 20,
   },
   tableTitle: {
-
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 16,
     marginBottom: 10,
+  },
+  boldText: {
+    fontSize: 17,
+    fontWeight: 'bold',
   },
   table: {
     borderWidth: 1,
@@ -115,7 +165,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ddd',
   },
   tableCommodity: {
-    flex: 3,
+    flex: 2.5,
     fontSize: 16,
     alignItems: 'center',
     justifyContent: 'center',
@@ -124,35 +174,59 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f1f1',
   },
   tableHeader: {
-    flex: 1,
+    flex: 1.1,
     fontSize: 16,
-    padding: 5,
+    paddingVertical: 5,
+    borderColor: '#ddd',
+    borderLeftWidth: 0.7,
+    textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 'bold',
     backgroundColor: '#f1f1f1',
   },
   tableCell: {
-    flex: 1,
+    flex: 1.1,
     padding: 5,
+    textAlign: 'center',
+    borderColor: '#ddd',
+    borderLeftWidth: 0.7,
   },
   tableCellLarge: {
-    flex: 3,
+    flex: 2.97,
     padding: 5,
    
   },
   CommodityText: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   varietyText: {
-    fontSize: 12,
+    fontSize: 11,
     color: '#555',
   },
   dateText: {
     fontSize: 10,
     color: '#888',
   },
+  nocontainer:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 40,
+  },
+  notext:{
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  noDataImage:{
+    width: 150,
+    height: 150,
+    resizeMode: 'contain',
+    marginTop: 20,
+    marginBottom: 10,
+  }
 });
 
 export default Mandi;
