@@ -72,16 +72,12 @@ const Feature = () => {
   }, [expoPushToken]);
 
   const buttonPress = () => {
-    router.push('/home');
+    router.replace('/home');
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        {/* <View style={styles.header}>
-          <Image style={styles.logo} source={require('../../assets/icons/app_logo.png')} />
-          <Text style={styles.title}>KisanBandhu</Text>
-        </View> */}
         <View style={styles.body}>
           <Text style={styles.subtitle}>{t('what we offer')}</Text>
           <View style={styles.cardsContainer}>

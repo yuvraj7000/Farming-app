@@ -5,7 +5,6 @@ import {
   View,
   FlatList,
   Image,
-  ActivityIndicator,
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
@@ -46,7 +45,7 @@ const Schemes = () => {
     };
 
     fetchSchemes();
-  }, [reload]);
+  }, [reload, i18n.language]);
 
   const filterSchemes = (filterType) => {
     setSelectedFilter(filterType);

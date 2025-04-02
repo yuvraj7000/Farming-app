@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios'
 import { Link } from 'expo-router'
@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const Weather_card = () => {
   const [weatherData, setWeatherData] = useState(null)
-  const[reload, setReload] = useState(false)
+  const [reload, setReload] = useState(false)
   const [loading, setLoading] = useState(true)
   const animation = useRef<LottieView>(null);
   const { t } = useTranslation()
@@ -18,16 +18,16 @@ const Weather_card = () => {
   const getSprayCondition = (windSpeed) => {
     const mph = windSpeed * 2.23694; // Convert m/s to mph
     if (mph >= 2 && mph <= 4) {
-        return { text: 'Good for Spraying', color: '#4CAF50', advice: 'Conditions are ideal for spraying.' };
+      return { text: 'Good for Spraying', color: '#4CAF50', advice: 'Conditions are ideal for spraying.' };
     }
     if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) {
-        return { text: 'Moderate for Spraying', color: '#FFC107', advice: 'Spray with caution to avoid drift.' };
+      return { text: 'Moderate for Spraying', color: '#FFC107', advice: 'Spray with caution to avoid drift.' };
     }
     if (mph > 5) {
-        return { text: 'Avoid Spraying', color: '#F44336', advice: 'High wind speeds may cause spray drift.' };
+      return { text: 'Avoid Spraying', color: '#F44336', advice: 'High wind speeds may cause spray drift.' };
     }
     return { text: 'Avoid Spraying', color: '#F44336', advice: 'Low wind speeds may cause uneven application.' };
-};
+  };
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -40,7 +40,7 @@ const Weather_card = () => {
         const response = await axios.get(
           `${process.env.EXPO_PUBLIC_BACKEND_URL}/weather/current?lat=${location.coords.latitude}&lon=${location.coords.longitude}`
         )
-        setWeatherData(response.data.weather) 
+        setWeatherData(response.data.weather)
         setLoading(false)
       } catch (error) {
         console.error(error)
@@ -50,9 +50,9 @@ const Weather_card = () => {
     fetchWeather()
   }, [reload])
 
-if (loading) {
-  return (
-    
+  if (loading) {
+    return (
+
       <View style={styles.animationContainer}>
         <LottieView
           autoPlay
@@ -62,31 +62,31 @@ if (loading) {
         />
         <Text style={styles.loadingText}>{t("loading Weather")}</Text>
       </View>
-  
-  );
-}
 
-if (!weatherData) {
-  return (
-    <View style={styles.weather}>
-      <View style={styles.failedContainer}>
-      <Image
-        source={require('../assets/icons/failed_weather.png')}
-        style={styles.failedWeatherIcon}
-      />
-      <View style={styles.failedWeather}>
-      <Text style={styles.failedWeatherText}>{t("Failed to load weather data")}</Text>
-      <TouchableOpacity
-        style={styles.reloadButton}
-        onPress={() => setReload(!reload)}
-      >
-        <Text style={styles.reloadButtonText}>{t("Reload")}</Text>
-      </TouchableOpacity>
+    );
+  }
+
+  if (!weatherData) {
+    return (
+      <View style={styles.weather}>
+        <View style={styles.failedContainer}>
+          <Image
+            source={require('../assets/icons/failed_weather.png')}
+            style={styles.failedWeatherIcon}
+          />
+          <View style={styles.failedWeather}>
+            <Text style={styles.failedWeatherText}>{t("Failed to load weather data")}</Text>
+            <TouchableOpacity
+              style={styles.reloadButton}
+              onPress={() => setReload(!reload)}
+            >
+              <Text style={styles.reloadButtonText}>{t("Reload")}</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
-      </View>
-    </View>
-  );
-}
+    );
+  }
 
   const sprayCondition = getSprayCondition(weatherData.wind.speed)
   const rainAmount = weatherData.rain?.['1h'] || weatherData.rain?.['3h'] || 0
@@ -112,10 +112,10 @@ if (!weatherData) {
                   {t(weatherData.weather[0].description)}
                 </Text>
               </View>
-              
+
             </View>
 
-            
+
           </View>
         </View>
 
@@ -124,23 +124,23 @@ if (!weatherData) {
             style={styles.weatherIcon}
             source={{ uri: weatherIcon[weatherData.weather[0].icon] }}
           />
-         
+
         </View>
       </View>
 
       <View style={styles.conditiondown}>
-      <View style={styles.rainContainer}>
-                <Text style={styles.conditionValue}>🌧️ {rainAmount}mm</Text>
-              
-              </View>
-              <View style={styles.forcast}>
-                <Link href="/weather">
-                  <View style={styles.linkContainer}>
-                    <Text style={styles.link}>{t("weather forcast")} >></Text>
-                  </View>
-                </Link>
-              </View>
+        <View style={styles.rainContainer}>
+          <Text style={styles.conditionValue}>🌧️ {rainAmount}mm</Text>
+
+        </View>
+        <View style={styles.forcast}>
+          <Link href="/weather">
+            <View style={styles.linkContainer}>
+              <Text style={styles.link}>{t("weather forcast")} >></Text>
             </View>
+          </Link>
+        </View>
+      </View>
     </View>
   )
 }
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     position: 'absolute',
-    top: 0, 
+    top: 0,
     right: 0,
     zIndex: -10,
     alignItems: 'center',

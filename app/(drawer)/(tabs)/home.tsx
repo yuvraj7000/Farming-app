@@ -10,9 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 
 const Home= () => {
-  AsyncStorage.getItem('diagnose_history').then((value) => { 
-    console.log(value)
-  })
+  
   const { t } = useTranslation()
   return (
     <SafeAreaView>

@@ -88,25 +88,25 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   
-    backgroundColor: '#F5F5F5', // Light background for better contrast
+    backgroundColor: '#F5F5F5', 
     padding: 10,
   },
   permissionContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5F5F5', // Light background for better contrast
+    backgroundColor: '#F5F5F5',
     padding: 20,
   },
   permissionMessage: {
     fontSize: 18,
     fontWeight: '500',
-    color: '#333', // Darker text for better readability
+    color: '#333', 
     textAlign: 'center',
     marginBottom: 20,
   },
   permissionButton: {
-    backgroundColor: '#007BFF', // Blue button background
+    backgroundColor: '#007BFF', 
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -114,10 +114,10 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
-    elevation: 5, // Shadow for Android
+    elevation: 5, 
   },
   permissionButtonText: {
-    color: '#FFF', // White text for better contrast
+    color: '#FFF',
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -127,14 +127,14 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     fontSize: 16,
     fontWeight: '500',
-    color: '#333', // Darker text for better readability
+    color: '#333', 
   },
   camera: {
     flex: 1,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    overflow: 'hidden', // Ensures the camera view has rounded corners
+    overflow: 'hidden', 
   },
   buttonContainer: {
 
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#FFF', // White text for better contrast on blue buttons
+    color: '#FFF', 
     marginTop: 5,
   },
   image: {

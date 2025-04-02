@@ -4,7 +4,7 @@ import { Link } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 
 const Market_card = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -12,8 +12,8 @@ const Market_card = () => {
         <View style={styles.textContainer}>
           <Text style={styles.description}>{t("Get real-time prices of commodities from mandis across the country")}</Text>
           <Link href="/market">
-          <View style={styles.linkContainer}>
-            <Text style={styles.link}>{t("See mandi prices")}</Text>
+            <View style={styles.linkContainer}>
+              <Text style={styles.link}>{t("See mandi prices")}</Text>
             </View>
           </Link>
         </View>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     width: 90,
   },
   textContainer: {
- paddingLeft: 20,
+    paddingLeft: 20,
     justifyContent: 'center',
     alignItems: 'center',
     height: 100,
@@ -59,13 +59,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
   },
-    linkContainer: {
-        backgroundColor: '#007BFF',
-        borderRadius: 5,
-        padding: 10,
-        width: 150,
-        alignItems: 'center',
-    },
+  linkContainer: {
+    backgroundColor: '#007BFF',
+    borderRadius: 5,
+    padding: 10,
+    width: 150,
+    alignItems: 'center',
+  },
   link: {
     color: 'white',
     fontSize: 16,

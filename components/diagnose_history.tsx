@@ -26,9 +26,9 @@ const HistoryCard = ({ imageUri, response, onDelete }) => {
 
   return (
     <View style={styles.card}>
-      <Image 
-        source={imageExists ? { uri: imageUri } : require('../assets/icons/placeholder.png')} 
-        style={styles.image} 
+      <Image
+        source={imageExists ? { uri: imageUri } : require('../assets/icons/placeholder.png')}
+        style={styles.image}
       />
       <View style={styles.cardContent}>
         <TouchableOpacity
@@ -71,10 +71,10 @@ const DiagnoseHistory = () => {
   const deleteHistoryItem = async (index) => {
     try {
       const itemToDelete = history[index];
-      
+
       // Delete associated file
       await FileSystem.deleteAsync(itemToDelete.imageUri).catch(console.log);
-      
+
       // Update storage
       const updatedHistory = history.filter((_, i) => i !== index);
       await AsyncStorage.setItem('diagnose_history', JSON.stringify(updatedHistory));
@@ -118,7 +118,7 @@ const DiagnoseHistory = () => {
   );
 };
 
-// Keep the same styles
+
 export default DiagnoseHistory;
 
 const styles = StyleSheet.create({

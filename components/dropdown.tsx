@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity,Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import statesData from '../context/i18n/state_district.json';
 import Mandi_Data from './mandi_data';
@@ -12,7 +12,11 @@ const Dropdown = () => {
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [search, setSearch] = useState(false);
   const [key, setKey] = useState(0);
-  const [language, setLanguage] = useState(i18n.language); // Default language
+  const [language, setLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language, language]);
 
 
   const stateItems = statesData.states.map((item) => ({
@@ -39,55 +43,55 @@ const Dropdown = () => {
   return (
     <View style={styles.container}>
 
-<Text style={styles.label}>{t("Select State")} - </Text>
-<RNPickerSelect
-  onValueChange={(value) => {
-    setSelectedState(value);
-    setSelectedDistrict(null);
-  }}
-  placeholder={{ label: t("Select State"), value: null }}
-  items={stateItems}
-  style={pickerSelectStyles}
-  value={selectedState}
-/>
+      <Text style={styles.label}>{t("Select State")} - </Text>
+      <RNPickerSelect
+        onValueChange={(value) => {
+          setSelectedState(value);
+          setSelectedDistrict(null);
+        }}
+        placeholder={{ label: t("Select State"), value: null }}
+        items={stateItems}
+        style={pickerSelectStyles}
+        value={selectedState}
+      />
 
-{selectedState && (
-  <>
-    <Text style={styles.label}>{t("Select District")} - </Text>
-    <RNPickerSelect
-      onValueChange={(value) => setSelectedDistrict(value)}
-      placeholder={{ label: t("Select District"), value: null }}
-      items={districtItems}
-      style={pickerSelectStyles}
-      value={selectedDistrict}
-    />
-  </>
-)}
+      {selectedState && (
+        <>
+          <Text style={styles.label}>{t("Select District")} - </Text>
+          <RNPickerSelect
+            onValueChange={(value) => setSelectedDistrict(value)}
+            placeholder={{ label: t("Select District"), value: null }}
+            items={districtItems}
+            style={pickerSelectStyles}
+            value={selectedDistrict}
+          />
+        </>
+      )}
 
-<TouchableOpacity style={styles.button} onPress={handleSearch}>
-  <Text style={styles.buttonText}>{t("Search")}</Text>
-</TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={handleSearch}>
+        <Text style={styles.buttonText}>{t("Search")}</Text>
+      </TouchableOpacity>
 
-{!search && (
-  <View style={styles.notSelected}>
-    <Image source={require('../assets/icons/no_mandi_data.png')} style={styles.noimage}></Image>
-    <Text style={styles.notext}>{t("Select State and District to see Mandi Prices")}</Text>
+      {!search && (
+        <View style={styles.notSelected}>
+          <Image source={require('../assets/icons/no_mandi_data.png')} style={styles.noimage}></Image>
+          <Text style={styles.notext}>{t("Select State and District to see Mandi Prices")}</Text>
 
-  </View>
-)}
+        </View>
+      )}
 
-{search && (
-  <Mandi_Data
-    key={key}
-    state={selectedState}
-    district={selectedDistrict}
-    transDistrict={
-      statesData.states
-        .find((s) => s.state.en === selectedState)
-        ?.districts.find((d) => d.en === selectedDistrict)?.[language] || ''
-    }
-  />
-)}
+      {search && (
+        <Mandi_Data
+          key={key}
+          state={selectedState}
+          district={selectedDistrict}
+          transDistrict={
+            statesData.states
+              .find((s) => s.state.en === selectedState)
+              ?.districts.find((d) => d.en === selectedDistrict)?.[language] || ''
+          }
+        />
+      )}
     </View>
   );
 };

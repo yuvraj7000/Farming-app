@@ -4,40 +4,40 @@ import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 
 const Dignose_card = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    const router = useRouter();
+  const router = useRouter();
 
-    const handleNavigate = () => {
-      router.push('/diagnose');
-    };
+  const handleNavigate = () => {
+    router.push('/diagnose');
+  };
 
   return (
     <View style={styles.container}>
-     <Text style={styles.title}>{t("Plant Diagnosis")}</Text>
-<Text style={styles.description}>
-  {t("Upload an image of your plant to identify diseases and get solutions tailored to your needs.")}
-</Text>
-<View style={styles.stepsContainer}>
-  <View style={styles.step}>
-    <Image source={require('../assets/icons/diagnose_icons/takeImage.png')} style={styles.icon} />
-    <Text style={styles.stepText}>{t("Take Image")}</Text>
-  </View>
-  <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
-  <View style={styles.step}>
-    <Image source={require('../assets/icons/diagnose_icons/getDiagnose.png')} style={styles.icon} />
-    <Text style={styles.stepText}>{t("Get Diagnose")}</Text>
-  </View>
-  <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
-  <View style={styles.step}>
-    <Image source={require('../assets/icons/diagnose_icons/seeSolution.png')} style={styles.icon} />
-    <Text style={styles.stepText}>{t("See Solution")}</Text>
-  </View>
-</View>
-<TouchableOpacity onPress={handleNavigate} style={styles.linkContainer}>
-  <Text style={styles.linkText}>{t("Take a Photo")}</Text>
-  <Image source={require('../assets/icons/diagnose_icons/takePhoto.png')} style={styles.takePhoto} />
-</TouchableOpacity>
+      <Text style={styles.title}>{t("Plant Diagnosis")}</Text>
+      <Text style={styles.description}>
+        {t("Upload an image of your plant to identify diseases and get solutions tailored to your needs.")}
+      </Text>
+      <View style={styles.stepsContainer}>
+        <View style={styles.step}>
+          <Image source={require('../assets/icons/diagnose_icons/takeImage.png')} style={styles.icon} />
+          <Text style={styles.stepText}>{t("Take Image")}</Text>
+        </View>
+        <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
+        <View style={styles.step}>
+          <Image source={require('../assets/icons/diagnose_icons/getDiagnose.png')} style={styles.icon} />
+          <Text style={styles.stepText}>{t("Get Diagnose")}</Text>
+        </View>
+        <Image source={require('../assets/icons/diagnose_icons/arrow.png')} style={styles.arrow} />
+        <View style={styles.step}>
+          <Image source={require('../assets/icons/diagnose_icons/seeSolution.png')} style={styles.icon} />
+          <Text style={styles.stepText}>{t("See Solution")}</Text>
+        </View>
+      </View>
+      <TouchableOpacity onPress={handleNavigate} style={styles.linkContainer}>
+        <Text style={styles.linkText}>{t("Take a Photo")}</Text>
+        <Image source={require('../assets/icons/diagnose_icons/takePhoto.png')} style={styles.takePhoto} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     color: '#555',
-    
+
   },
   stepsContainer: {
     margin: 20,
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
   },
-    takePhoto: {
-        width: 25,
-        height: 25,
-    },
+  takePhoto: {
+    width: 25,
+    height: 25,
+  },
 });

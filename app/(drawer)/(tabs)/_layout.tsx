@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
 import { Tabs } from 'expo-router';
-
+import { useTranslation } from 'react-i18next';
 const icons = {
   crop: require('../../../assets/tabBar_icons/farmer.png'),
   weather: require('../../../assets/tabBar_icons/crop.png'),
@@ -10,6 +10,7 @@ const icons = {
 };
 
 const TabIcon = ({ icon, color, name, focused }) => {
+  const { t } = useTranslation();
   return (
     <View style={{width:100, alignItems: 'center', justifyContent: 'center' }}>
       <Image
@@ -25,7 +26,7 @@ const TabIcon = ({ icon, color, name, focused }) => {
           marginTop: 2,
           fontFamily: 'Poppins_400Regular',
           fontWeight: focused ? 'bold' : 'normal',
-      }}>{name}</Text>
+      }}>{t(name)}</Text>
     </View>
   );
 };
@@ -38,7 +39,7 @@ const RootLayout = () => {
         tabBarInactiveTintColor: "#000000",
         tabBarShowLabel: false,
         tabBarLabelStyle: {
-          fontSize: 15, // Change this to the desired font size
+          fontSize: 15, 
         },
         tabBarStyle: {
           backgroundColor: "#fff",
@@ -90,7 +91,7 @@ const RootLayout = () => {
             <TabIcon
               icon="weather"
               color={color}
-              name="Schems"
+              name="Schemes"
               focused={focused}
             />
           ),

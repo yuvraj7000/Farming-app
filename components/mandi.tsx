@@ -5,13 +5,13 @@ import commodity from '../context/i18n/commodity_Translation.json';
 import market_translation from '../context/i18n/market_Translation.json';
 import { useTranslation } from 'react-i18next';
 
-const Mandi = ({ data,  transDistrict }) => {
+const Mandi = ({ data, transDistrict }) => {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
   const [selectedMarket, setSelectedMarket] = useState(null);
   const [marketDetails, setMarketDetails] = useState([]);
 
-  console.log( "trans -- ",transDistrict)
+  console.log("trans -- ", transDistrict)
 
   const uniqueMarkets = [...new Set(data.map(item => item.Market))];
 
@@ -21,15 +21,15 @@ const Mandi = ({ data,  transDistrict }) => {
     setMarketDetails(details);
   };
 
-  if(!data || data.length === 0) {
+  if (!data || data.length === 0) {
     return (
       <View style={styles.nocontainer}>
-         <Image
-                source={require('../assets/icons/no_mandi_data.png')}
-                style={
-                  styles.noDataImage
-                }
-              />
+        <Image
+          source={require('../assets/icons/no_mandi_data.png')}
+          style={
+            styles.noDataImage
+          }
+        />
         <Text style={styles.notext}>{transDistrict} {t("District")} : {t("No data available")} </Text>
       </View>
     );
@@ -37,56 +37,56 @@ const Mandi = ({ data,  transDistrict }) => {
 
   return (
     <ScrollView style={styles.container}>
-   <Text style={styles.marketTitle}>
-  {t("All Markets of")} <Text style={styles.boldText}>{transDistrict ? transDistrict : data[0].District}</Text> {t("District")}
-</Text>
-
-<View style={styles.marketContainer}>
-  {uniqueMarkets.map((market, index) => (
-    <TouchableOpacity
-      key={index}
-      style={[
-        styles.marketButton,
-        selectedMarket === market && styles.selectedMarketButton, // Apply selected style
-      ]}
-      onPress={() => handleMarketClick(market)}
-    >
-      <Text
-        style={[
-          styles.marketButtonText,
-          selectedMarket === market && styles.selectedMarketButtonText, // Apply selected text style
-        ]}
-      >
-        {market_translation[market][language]
-          ? market_translation[market][language]
-          : market}
+      <Text style={styles.marketTitle}>
+        {t("All Markets of")} <Text style={styles.boldText}>{transDistrict ? transDistrict : data[0].District}</Text> {t("District")}
       </Text>
-    </TouchableOpacity>
-  ))}
-</View>
-    
-    {
-      !selectedMarket && (
-        <View style={styles.tableContainer}>
-          <Text style={styles.tableTitle}>{t("Please select a market to view commodity prices")}</Text>
-        </View>
-      )
-    }
+
+      <View style={styles.marketContainer}>
+        {uniqueMarkets.map((market, index) => (
+          <TouchableOpacity
+            key={index}
+            style={[
+              styles.marketButton,
+              selectedMarket === market && styles.selectedMarketButton, // Apply selected style
+            ]}
+            onPress={() => handleMarketClick(market)}
+          >
+            <Text
+              style={[
+                styles.marketButtonText,
+                selectedMarket === market && styles.selectedMarketButtonText, // Apply selected text style
+              ]}
+            >
+              {market_translation[market][language]
+                ? market_translation[market][language]
+                : market}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      {
+        !selectedMarket && (
+          <View style={styles.tableContainer}>
+            <Text style={styles.tableTitle}>{t("Please select a market to view commodity prices")}</Text>
+          </View>
+        )
+      }
 
 
       {selectedMarket && (
         <View style={styles.tableContainer}>
-  <Text style={styles.tableTitle}>
-  {t("Market Data for")} <Text style={styles.boldText}>{market_translation[selectedMarket][language] ? market_translation[selectedMarket][language] : selectedMarket}</Text>
-  
-</Text>
+          <Text style={styles.tableTitle}>
+            {t("Market Data for")} <Text style={styles.boldText}>{market_translation[selectedMarket][language] ? market_translation[selectedMarket][language] : selectedMarket}</Text>
+
+          </Text>
           <View style={styles.table}>
-          <View style={styles.tableRow}>
-  <Text style={styles.tableCommodity}>{t("Commodity")}</Text>
-  <Text style={styles.tableHeader}>{t("Min Price")}</Text>
-  <Text style={styles.tableHeader}>{t("Max Price")}</Text>
-  <Text style={styles.tableHeader}>{t("Modal Price")}</Text>
-</View>
+            <View style={styles.tableRow}>
+              <Text style={styles.tableCommodity}>{t("Commodity")}</Text>
+              <Text style={styles.tableHeader}>{t("Min Price")}</Text>
+              <Text style={styles.tableHeader}>{t("Max Price")}</Text>
+              <Text style={styles.tableHeader}>{t("Modal Price")}</Text>
+            </View>
             {marketDetails.map((item, index) => (
               <View key={index} style={styles.tableRow}>
                 <View style={styles.tableCellLarge}>
@@ -136,12 +136,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   selectedMarketButton: {
-    padding:6,
+    padding: 6,
     borderWidth: 2,
-    borderColor: 'orange', 
+    borderColor: 'orange',
   },
   selectedMarketButtonText: {
-    color: '#fff', 
+    color: '#fff',
     fontWeight: 'bold',
   },
   tableContainer: {
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
   tableCellLarge: {
     flex: 2.97,
     padding: 5,
-   
+
   },
   CommodityText: {
     fontSize: 15,
@@ -209,18 +209,18 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: '#888',
   },
-  nocontainer:{
+  nocontainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 40,
   },
-  notext:{
+  notext: {
     fontSize: 16,
     textAlign: 'center',
     marginBottom: 20,
   },
-  noDataImage:{
+  noDataImage: {
     width: 150,
     height: 150,
     resizeMode: 'contain',

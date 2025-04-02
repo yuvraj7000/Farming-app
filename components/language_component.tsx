@@ -15,8 +15,8 @@ const data = [
     { lan: "తెలుగు", code: "te" },
     { lan: "ਪੰਜਾਬੀ", code: "pa" },
     { lan: "മലയാളം", code: "ml" },
-    { lan: "বাংলা", code: "bn" }, 
-    { lan: "ଓଡ଼ିଆ", code: "or" }, 
+    { lan: "বাংলা", code: "bn" },
+    { lan: "ଓଡ଼ିଆ", code: "or" },
     { lan: "ಕನ್ನಡ", code: "kn" }
 ];
 
@@ -24,7 +24,7 @@ const Language_button = ({ lan, code, language, setLanguage }) => {
     const isSelected = code === language;
 
     return (
-        <TouchableOpacity 
+        <TouchableOpacity
             onPress={() => setLanguage(code)}
             style={styles.buttonWrapper}
         >
@@ -48,16 +48,31 @@ const Language_component = () => {
         setLanguage(code);
     };
 
-    const handleDone = async() => {
+    const handleDone = async () => {
         await AsyncStorage.setItem('language', language)
-        i18n.changeLanguage(language);
-        router.push("/feature");
+        await AsyncStorage.getItem('visit').then((value) => {
+            if (value === null) {
+                AsyncStorage.setItem('visit', '1')
+                i18n.changeLanguage(language);
+                router.push("/feature")
+            }
+            else {
+                AsyncStorage.setItem('visit', (parseInt(value) + 1).toString())
+
+                AsyncStorage.getItem('visit').then((visitCount) => {
+                    console.log("visit count: ", visitCount)
+                })
+                i18n.changeLanguage(language);
+                router.replace("/home")
+            }
+        })
+
     };
 
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{t("language")}</Text>
-            
+
             <View style={styles.gridContainer}>
                 {data.map((item) => (
                     <Language_button
@@ -88,8 +103,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 20,
-        marginTop: 20,
+        marginBottom: 15,
+        marginTop: 35,
         textAlign: 'center',
     },
     gridContainer: {

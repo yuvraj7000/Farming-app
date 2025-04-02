@@ -1,13 +1,14 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
-import { Text, View, StyleSheet, TouchableOpacity  } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity , Image } from 'react-native';
 import { useTranslation  } from 'react-i18next';
 
 
 const DrawerLabel =({label, icon})=>{
+    const { t } = useTranslation();
     return(
         <View>
-        <Text style={styles.drawerLabel}>{label}</Text>
+        <Text style={styles.drawerLabel}>{t(label)}</Text>
         </View>
     )
 }
@@ -21,7 +22,7 @@ export default function Layout() {
         <Drawer.Screen
           name="(tabs)" 
           options={{
-            drawerLabel: () => ( <View><Text style={styles.drawerLabel}>{t('app_name')}</Text></View> ),
+            drawerLabel: () => ( <View><Text style={styles.headerTitle}>{t('app_name')}</Text></View> ),
             title: 'KisanBandhu',
             headerTitle: () => (
               <Text style={styles.headerTitle}>{t('app_name')}</Text>
@@ -37,21 +38,21 @@ export default function Layout() {
           }}
         />
         <Drawer.Screen
-          name="privacy" // This is the name of the page and must match the url from root
+          name="privacy" 
           options={{
             drawerLabel: () => <DrawerLabel label="Privacy Policy" icon="info"/>,
             title: 'Privacy Policy',
           }}
         />
         <Drawer.Screen
-          name="profile" // This is the name of the page and must match the url from root
+          name="profile" 
           options={{
-            drawerLabel: () => <DrawerLabel label="Profile" icon="info"/>,
+            drawerLabel: () => <DrawerLabel label="Notification Settings" icon="info"/>,
             title: 'Profile',
           }}
         />
         <Drawer.Screen
-          name="language" // This is the name of the page and must match the url from root
+          name="language" 
           options={{
             drawerLabel: () => <DrawerLabel label="Select Language" icon="info"/>,
             title: 'Language',
@@ -66,6 +67,10 @@ const styles = StyleSheet.create({
   drawerLabel: {
     fontSize: 16,
     fontWeight: 'bold',
+    paddingVertical: 8,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    borderBottomWidth: 1,
     color: '#333',
   },
   headerTitle: {

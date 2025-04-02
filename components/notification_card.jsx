@@ -6,33 +6,33 @@ const API_URL = `${process.env.EXPO_PUBLIC_BACKEND_URL}/pushNotification/add`;
 
 
 const Notification_Card = () => {
- 
-    const { expoPushToken, notification } = usePushNotifications();
 
-      // Function to send FCM token to the backend
-      const sendFcmToken = async (token) => {
-        try {
-          const response = await axios.post(API_URL, { fcm_token: token });
-          console.log('FCM Token sent:', response.data);
-        } catch (error) {
-          console.error('Error sending FCM token:', error.response?.data || error.message);
-        }
-      };
-    
-      // Send FCM token when it's available
-      useEffect(() => {
-        if (expoPushToken?.data) {
-          sendFcmToken(expoPushToken.data);
-        }
-      }, [expoPushToken]);
+  const { expoPushToken, notification } = usePushNotifications();
+
+  // Function to send FCM token to the backend
+  const sendFcmToken = async (token) => {
+    try {
+      const response = await axios.post(API_URL, { fcm_token: token });
+      console.log('FCM Token sent:', response.data);
+    } catch (error) {
+      console.error('Error sending FCM token:', error.response?.data || error.message);
+    }
+  };
+
+  // Send FCM token when it's available
+  useEffect(() => {
+    if (expoPushToken?.data) {
+      sendFcmToken(expoPushToken.data);
+    }
+  }, [expoPushToken]);
 
 
-    return (
-      <View>
-        <Text>notification_card</Text>
-      </View>
-    )
-  }
+  return (
+    <View>
+      <Text>notification_card</Text>
+    </View>
+  )
+}
 
 
 const styles = StyleSheet.create({})

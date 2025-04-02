@@ -1,32 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity, Button } from 'react-native';
-import cropsData from '../context/crop/crops.json'; // Your actual data
-import cropImages from '../context/crop/crops.js'; // Your image map
+import cropsData from '../context/crop/crops.json';
+import cropImages from '../context/crop/crops.js';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import { use } from 'i18next';
 
 
 const Crop_section = () => {
-  const { t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
-    const router = useRouter();
+  const router = useRouter();
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [
+    i18n.language, language
+  ])
   const handleCropPress = (crop) => {
     console.log(crop);
     router.push(
-        {
-            pathname: '/crop',
-            params: { name: crop.name },
-          }
+      {
+        pathname: '/crop',
+        params: { name: crop.name },
+      }
     );
-    
+
   }
 
   const renderItem = ({ item }) => {
     return (
       <TouchableOpacity style={styles.card} onPress={() => handleCropPress(item)}>
-        <Image 
-          source={cropImages[item.name]} // Use imageKey from data to access images
-          style={styles.cropImage} 
+        <Image
+          source={cropImages[item.name]}
+          style={styles.cropImage}
         />
         <Text style={styles.cropName}>{item[language]}</Text>
       </TouchableOpacity>
@@ -36,17 +43,17 @@ const Crop_section = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>{t("Information of Crops")}</Text>
-      {/* Buttons to change the number of columns */}
-    
+
+
       <FlatList
-        data={cropsData} // Use actual data array
+        data={cropsData}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
-        numColumns={4} // Dynamically set the number of columns
-        key={4} 
+        numColumns={4}
+        key={4}
         contentContainerStyle={styles.listContent}
       />
-    
+
     </View>
   );
 };
@@ -55,7 +62,7 @@ export default Crop_section;
 
 const styles = StyleSheet.create({
   container: {
-    
+
     padding: 10,
     backgroundColor: '#f5f5f5',
   },
@@ -76,7 +83,7 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 1,
-    
+
     width: 100,
     // aspectRatio: 1,
     backgroundColor: 'white',

@@ -4,7 +4,7 @@
     "slug": "app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icons/app_icon.png",
+    "icon": "./assets/icons/applogo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -18,14 +18,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/icons/app_icon.png"
+      "favicon": "./assets/icons/applogo.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/icons/app_icon.png",
+          "image": "./assets/icons/applogo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"

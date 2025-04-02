@@ -1,12 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 import { Stack } from 'expo-router';
 
 const DiagnoseLayout = () => {
   return (
-    <Stack
-     
-    >
+    <Stack>
       <Stack.Screen
         name="diagnose"
         options={{
@@ -26,11 +23,3 @@ const DiagnoseLayout = () => {
 };
 
 export default DiagnoseLayout;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

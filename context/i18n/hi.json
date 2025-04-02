@@ -2,6 +2,10 @@
   "translation": {
     "app_name": "किसान बंधु",
     "app_slogan": "किसानों को एक बेहतर कल के लिए सशक्त बनाना",
+    "Home": "होम",
+    "Markets": "बाजार",
+    "Schemes": "योजनाएँ",
+    "Crops": "फसलें",
     "language": " भाषा चुने",
     "what we offer": "हम क्या प्रदान करते हैं",
     "featureCard_plant_heading": "पौधों की बीमारी का निदान",
@@ -126,6 +130,7 @@
     "Information of Crops": "फसलों की जानकारी",
     "Change Language": "भाषा बदलें",
     "Notification Settings": "सूचना सेटिंग्स",
+    "Select Language": "भाषा चुनें",
     //notifications page
     "Add Area for Notifications": "सूचनाओं के लिए क्षेत्र जोड़ें",
     "Successfully added Area for Notification": "सूचनाओं के लिए क्षेत्र सफलतापूर्वक जोड़ा गया",

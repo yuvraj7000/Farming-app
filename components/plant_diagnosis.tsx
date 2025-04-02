@@ -6,7 +6,7 @@ import axios from 'axios';
 import LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 import languages from '../context/i18n/language.json';
-import  saveHistory  from '../context/diagnoseHistory.ts';
+import saveHistory from '../context/diagnoseHistory.ts';
 
 const PlantDiagnosis = ({ imageUri, setImage }) => {
   const { t, i18n } = useTranslation();
@@ -26,7 +26,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
         }
       }
     };
-  
+
     handleHistorySave();
   }, [response, imageUri]);
 
@@ -40,13 +40,13 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
         type: 'image/jpeg',
       });
       formData.append('language', language);
-  
+
       const res = await axios.post(`${process.env.EXPO_PUBLIC_BACKEND_URL}/diagnose/plant`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-  
+
       const jsonString = res.data.diagnose.replace(/```json|```/g, '');
       const diagnoseObject = JSON.parse(jsonString);
       setResponse(diagnoseObject);
@@ -72,13 +72,13 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   return (
     <View style={styles.container}>
       {imageUri ? (
-        <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => setIsFullScreen(true)}
           activeOpacity={0.8}
         >
-          <Image 
-            source={{ uri: imageUri }} 
-            style={styles.image} 
+          <Image
+            source={{ uri: imageUri }}
+            style={styles.image}
             resizeMode="contain"
           />
         </TouchableOpacity>

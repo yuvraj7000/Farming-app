@@ -87,8 +87,9 @@ const Weather = () => {
   if (errorMsg) {
     return (
       <View style={styles.errorContainer}>
+        <Image source={require('../../assets/icons/failed_weather.png')} style={{ width: 100, height: 100 }} />
         <Text style={styles.errorText}>{errorMsg}</Text>
-        <Text style={styles.errorSubtext}>Please enable location services</Text>
+        <Text style={styles.errorSubtext}>{t("Failed to load weather data")}</Text>
       </View>
     );
   }
@@ -455,7 +456,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#ffe6e6',
   },
   errorText: {
     color: '#cc0000',

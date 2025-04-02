@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity,Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import statesData from '../context/i18n/state_district.json';
 import { useTranslation } from 'react-i18next';
@@ -12,8 +12,12 @@ const Dropdown = () => {
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const [send, setSend] = useState(false);
   const [error, setError] = useState(false);
-  const [language, setLanguage] = useState(i18n.language); // Default language
+  const [language, setLanguage] = useState(i18n.language);
 
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language, language]);
 
   const { expoPushToken } = usePushNotifications();
 
@@ -35,95 +39,95 @@ const Dropdown = () => {
       })) || [];
 
 
-      const sendFcmToken = async (expoPushToken,selectedDistrict) => {
-        try {
-          const response = await axios.post(API_URL, { fcm_token: expoPushToken.data, district: selectedDistrict });
-          console.log('FCM Token sent:', response.data);
-          setSend(true);
-          setError(false)
-        } catch (error) {
-          setError(true)
-          setSend(false)
-          console.error('Error sending FCM token:', error.response?.data || error.message);
-        }
-      };
+  const sendFcmToken = async (expoPushToken, selectedDistrict) => {
+    try {
+      const response = await axios.post(API_URL, { fcm_token: expoPushToken.data, district: selectedDistrict, language: language });
+      console.log('FCM Token sent:', response.data);
+      setSend(true);
+      setError(false)
+    } catch (error) {
+      setError(true)
+      setSend(false)
+      console.error('Error sending FCM token:', error.response?.data || error.message);
+    }
+  };
 
 
 
-      const handleSearch = () => {
-     
-        
-         if (selectedState && selectedDistrict && expoPushToken?.data) {
-        try {
-          sendFcmToken(expoPushToken, selectedDistrict);
-          console.log('FCM Token sent:', expoPushToken, selectedDistrict);
-          setSend(true);
-          setError(false)
-        } catch (error) {
-          setError(true)
-          setSend(false)
-          console.error('Error sending FCM token:', error.response?.data || error.message);
-        }
+  const handleSearch = () => {
+
+
+    if (selectedState && selectedDistrict && expoPushToken?.data) {
+      try {
+        sendFcmToken(expoPushToken, selectedDistrict);
+        console.log('FCM Token sent:', expoPushToken, selectedDistrict);
+        setSend(true);
+        setError(false)
+      } catch (error) {
+        setError(true)
+        setSend(false)
+        console.error('Error sending FCM token:', error.response?.data || error.message);
       }
-      else{
-        console.log('Please select district');
-      }
-    
-      };
-    
+    }
+    else {
+      console.log('Please select district');
+    }
+
+  };
+
 
   return (
     <View style={styles.container}>
 
-<Text style={styles.label}>{t("Select State")} - </Text>
-<RNPickerSelect
-  onValueChange={(value) => {
-    setSelectedState(value);
-    setSelectedDistrict(null);
-  }}
-  placeholder={{ label: t("Select State"), value: null }}
-  items={stateItems}
-  style={pickerSelectStyles}
-  value={selectedState}
-/>
+      <Text style={styles.label}>{t("Select State")} - </Text>
+      <RNPickerSelect
+        onValueChange={(value) => {
+          setSelectedState(value);
+          setSelectedDistrict(null);
+        }}
+        placeholder={{ label: t("Select State"), value: null }}
+        items={stateItems}
+        style={pickerSelectStyles}
+        value={selectedState}
+      />
 
-{selectedState && (
-  <>
-    <Text style={styles.label}>{t("Select District")} - </Text>
-    <RNPickerSelect
-      onValueChange={(value) => setSelectedDistrict(value)}
-      placeholder={{ label: t("Select District"), value: null }}
-      items={districtItems}
-      style={pickerSelectStyles}
-      value={selectedDistrict}
-    />
-  </>
-)}
+      {selectedState && (
+        <>
+          <Text style={styles.label}>{t("Select District")} - </Text>
+          <RNPickerSelect
+            onValueChange={(value) => setSelectedDistrict(value)}
+            placeholder={{ label: t("Select District"), value: null }}
+            items={districtItems}
+            style={pickerSelectStyles}
+            value={selectedDistrict}
+          />
+        </>
+      )}
 
-<TouchableOpacity style={styles.button} onPress={handleSearch}>
-  <Text style={styles.buttonText}>{t("Add Area for Notifications")}</Text>
-</TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={handleSearch}>
+        <Text style={styles.buttonText}>{t("Add Area for Notifications")}</Text>
+      </TouchableOpacity>
 
- {send && (
-  <View style={styles.done}>
-  <Text style={styles.donetext}>{t("Successfully added Area for Notification")}</Text>
-  </View>
- )}
- {error && (
-  <View style={styles.done}>
-  <Text style={styles.errtext}>{t("failed to setup your notifications")}</Text>
-  <Text style={styles.trytext}>{t("Try Again")}</Text>
-  </View>
- )}
- {!send && !error && (
-  <View style={styles.done}>
-  <Text style={styles.dtext}>{t("select state and district for notifications")}</Text>
-  </View>
- )}
+      {send && (
+        <View style={styles.done}>
+          <Text style={styles.donetext}>{t("Successfully added Area for Notification")}</Text>
+        </View>
+      )}
+      {error && (
+        <View style={styles.done}>
+          <Text style={styles.errtext}>{t("failed to setup your notifications")}</Text>
+          <Text style={styles.trytext}>{t("Try Again")}</Text>
+        </View>
+      )}
+      {!send && !error && (
+        <View style={styles.done}>
+          <Text style={styles.dtext}>{t("select state and district for notifications")}</Text>
+        </View>
+      )}
 
- <View style={styles.description}>
-  <Text style={styles.destext}> {t("Stay updated with real-time notifications about important updates, weather alerts, and government schemes tailored to your selected district. Add your area now to never miss out on critical information!")}</Text>
- </View>
+      <View style={styles.description}>
+        <Text style={styles.destext}> {t("Stay updated with real-time notifications about important updates, weather alerts, and government schemes tailored to your selected district. Add your area now to never miss out on critical information!")}</Text>
+      </View>
 
 
     </View>
@@ -132,7 +136,7 @@ const Dropdown = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height:'100%',
+    height: '100%',
     padding: 10,
   },
   label: {
@@ -202,7 +206,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     padding: 20,
   },
-  description:{
+  description: {
     position: 'absolute',
     bottom: 30,
     left: 0,
@@ -211,7 +215,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    
+
   },
   destext: {
     fontSize: 16,

@@ -1,50 +1,23 @@
-# Welcome to your Expo app 👋
+# Kisan Bandhu App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Description
+This Farmer Assistance App is a comprehensive platform designed to assist farmers in India by providing essential tools and information. It helps farmers identify plant diseases, get weather forecasts, check market prices, access government and private schemes/subsidies, and more. The app aims to empower farmers by providing them with the resources they need to make informed decisions for their crops and livelihoods.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Plant Disease Identification**: Take an image of a plant, diagnose potential diseases, and receive organic treatment solutions.
+- **Weather Forecast**: Stay updated with accurate weather forecasts relevant to your region.
+- **Market Prices**: Get real-time market prices of commodities from various mandis across India.
+- **Government and Private Schemes**: Access information about various government and private schemes for farmers.
+- **Subsidies**: Information on available subsidies from both government and private sources.
+- **Comprehensive Crop Information**: Detailed data on various crops to help farmers make informed choices about what to plant.
+- **Mandi Information**: Select a state and district to see details about available mandis, including market prices, commodity details, and arrival dates.
 
-   ```bash
-   npm install
-   ```
+## Technologies Used
 
-2. Start the app
+- **Frontend**: React Native, Expo
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL
+- **Hosting**: DigitalOcean VPS
+- **APIs**: Custom built for plant disease identification, weather forecasting, and market price data
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
