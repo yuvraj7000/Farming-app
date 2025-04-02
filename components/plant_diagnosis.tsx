@@ -41,7 +41,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
       });
       formData.append('language', language);
   
-      const res = await axios.post('http://165.22.223.49:5000/api/v1/diagnose/plant', formData, {
+      const res = await axios.post(`${process.env.EXPO_PUBLIC_BACKEND_URL}/diagnose/plant`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -60,20 +60,6 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
   if (response) {
     return <Diagnose_presentation imageUri={imageUri} data={response} />;
   }
-
-  // if (response) {
-  //   const saveHistory = async (imageUri, response) => {
-  //  try{
-  //   await saveHistory(imageUri, response);
-  //   return <Diagnose_presentation imageUri={imageUri} data={response} />;
-  //  }
-  //  catch{
-  //   console.log("Error saving history");
-  //  }
-  // }
-  
-    
-  // }
 
   const handleRightChoice = () => {
     uploadImage(imageUri, languages[i18n.language]);

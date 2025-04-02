@@ -1,4 +1,4 @@
-import { View, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -18,15 +18,16 @@ const data = [
     { lan: "বাংলা", code: "bn" }, 
     { lan: "ଓଡ଼ିଆ", code: "or" }, 
     { lan: "ಕನ್ನಡ", code: "kn" }
-    
-    
 ];
 
 const Language_button = ({ lan, code, language, setLanguage }) => {
     const isSelected = code === language;
 
     return (
-        <TouchableOpacity onPress={() => setLanguage(code)}>
+        <TouchableOpacity 
+            onPress={() => setLanguage(code)}
+            style={styles.buttonWrapper}
+        >
             <View style={[
                 styles.languageButton,
                 isSelected && styles.selectedLanguage
@@ -56,19 +57,19 @@ const Language_component = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{t("language")}</Text>
-            <FlatList
-                data={data}
-                keyExtractor={(item) => item.code}
-                contentContainerStyle={styles.listContainer}
-                renderItem={({ item }) => (
+            
+            <View style={styles.gridContainer}>
+                {data.map((item) => (
                     <Language_button
+                        key={item.code}
                         lan={item.lan}
                         code={item.code}
                         language={language}
                         setLanguage={changeLanguage}
                     />
-                )}
-            />
+                ))}
+            </View>
+
             <View style={styles.buttonContainer}>
                 <Button handleDone={handleDone} buttonName="Done" />
             </View>
@@ -78,19 +79,28 @@ const Language_component = () => {
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         padding: 20,
-        paddingBottom: 40,
+        paddingTop: 10,
+        paddingBottom: 10,
         backgroundColor: 'white',
     },
     title: {
-        fontSize: 24,
+        fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 10,
+        marginBottom: 20,
         marginTop: 20,
         textAlign: 'center',
     },
-    listContainer: {
+    gridContainer: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
         paddingHorizontal: 10,
+    },
+    buttonWrapper: {
+        width: '48%',
+        marginBottom: 13,
     },
     languageButton: {
         flexDirection: 'row',
@@ -98,9 +108,8 @@ const styles = StyleSheet.create({
         padding: 15,
         backgroundColor: '#fff',
         borderRadius: 10,
-        borderWidth: 1,
+        borderWidth: 1.5,
         borderColor: '#e0e0e0',
-        marginVertical: 5,
     },
     selectedLanguage: {
         backgroundColor: '#e3f2fd',
@@ -108,14 +117,14 @@ const styles = StyleSheet.create({
     },
     languageText: {
         flex: 1,
-        fontSize: 16,
+        fontSize: 18,
     },
     checkmark: {
         color: '#2196f3',
         fontSize: 16,
     },
     buttonContainer: {
-        marginTop: 20,
+        marginTop: 15,
         paddingHorizontal: 15,
     }
 });

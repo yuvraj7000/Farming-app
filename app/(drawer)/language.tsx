@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
+import Language_component from '@/components/language_component'
 
 const Language = () => {
   return (
-    <View>
-      <Text>Language</Text>
-    </View>
+    <ScrollView style={{ flex: 1, backgroundColor: 'white' }}>
+      <Language_component />
+    </ScrollView>
+
   )
 }
 

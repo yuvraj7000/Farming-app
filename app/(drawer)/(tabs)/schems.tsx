@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   StyleSheet,
   Text,
@@ -9,8 +9,12 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import LottieView from 'lottie-react-native';
 
 const Schemes = () => {
+  const { t, i18n } = useTranslation();
+    const animation = useRef<LottieView>(null);
   const [schemes, setSchemes] = useState([]);
   const [reload, setReload] = useState(false);
   const [filteredSchemes, setFilteredSchemes] = useState([]);
@@ -22,10 +26,10 @@ const Schemes = () => {
   useEffect(() => {
     const fetchSchemes = async () => {
       try {
-        const response = await fetch('http://165.22.223.49:5000/api/v1/schemes/get', {
+        const response = await fetch(`${process.env.EXPO_PUBLIC_BACKEND_URL}/schemes/get`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ language_code: 'hi' }),
+          body: JSON.stringify({ language_code: i18n.language }),
         });
 
         if (!response.ok) throw new Error('Failed to fetch schemes');
@@ -33,6 +37,7 @@ const Schemes = () => {
         const data = await response.json();
         setSchemes(data.schemes);
         setFilteredSchemes(data.schemes);
+        setError(null);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -67,22 +72,17 @@ const Schemes = () => {
       style={styles.backButton} 
       onPress={() => setSelectedScheme(null)}
     >
-      <Text style={styles.backButtonText}>‹ Back</Text>
+      <Text style={styles.backButtonText}>く {t("Back")}</Text>
     </TouchableOpacity>
     <ScrollView style={styles.detailsContainer}>
-      {/* <TouchableOpacity 
-        style={styles.backButton} 
-        onPress={() => setSelectedScheme(null)}
-      >
-        <Text style={styles.backButtonText}>‹ Back</Text>
-      </TouchableOpacity> */}
+      
 
       <View style={styles.detailsContent}>
         <Text style={styles.detailsTitle}>{selectedScheme.name}</Text>
         
         <View style={styles.metaRow}>
-          <Text style={styles.metaPill}>{selectedScheme.type}</Text>
-          <Text style={styles.metaPill}>{selectedScheme.gov_level}</Text>
+          <Text style={styles.metaPill}>{t(selectedScheme.type)}</Text>
+          <Text style={styles.metaPill}>{t(selectedScheme.gov_level)}</Text>
         </View>
 
         {selectedScheme.image_url && (
@@ -93,18 +93,17 @@ const Schemes = () => {
         )}
 
         <View style={styles.detailSection}>
-          <Text style={styles.detailHeading}>Funding</Text>
-          <Text style={styles.detailValue}>₹{selectedScheme.funding_amount}</Text>
+          <Text style={styles.detailValue}>{selectedScheme.state_or_org}</Text>
         </View>
 
         <View style={styles.detailSection}>
-          <Text style={styles.detailHeading}>Description</Text>
+          <Text style={styles.detailHeading}>{t("Description")}</Text>
           <Text style={styles.detailText}>{selectedScheme.description}</Text>
         </View>
 
-        <DetailList title="Benefits" items={selectedScheme.benefits} />
-        <DetailList title="Eligibility" items={selectedScheme.eligibility} />
-        <DetailList title="Application Process" items={selectedScheme.application_process} />
+        <DetailList title={t("Benefits")} items={selectedScheme.benefits} />
+        <DetailList title={t("Eligibility")} items={selectedScheme.eligibility} />
+        <DetailList title={t("Application Process")} items={selectedScheme.application_process} />
 
         {/* <TouchableOpacity style={styles.linkButton}>
           <Text style={styles.linkButtonText}>Official Website</Text>
@@ -142,7 +141,7 @@ const Schemes = () => {
         />
       ) : (
         <View style={styles.imagePlaceholder}>
-          <Text style={styles.placeholderText}>No Image</Text>
+          <Text style={styles.placeholderText}>{t("No Image")}</Text>
         </View>
       )}
   
@@ -152,7 +151,7 @@ const Schemes = () => {
           styles.statusIndicator,
           item.status === 'ACTIVE' ? styles.activeStatus : styles.inactiveStatus
         ]}>
-          <Text style={styles.statusText}>{item.status}</Text>
+          <Text style={styles.statusText}>{t(item.status)}</Text>
         </View>
       )}
   
@@ -160,12 +159,12 @@ const Schemes = () => {
         <View style={styles.cardHeader}>
           <Text style={styles.cardTitle} numberOfLines={2}>{item.name}</Text>
           <View style={styles.typeBadge}>
-            <Text style={styles.typeText}>{item.type}</Text>
+            <Text style={styles.typeText}>{t(item.type)}</Text>
           </View>
         </View>
   
         <View style={styles.metaRow}>
-          <Text style={styles.govLevel}>{item.gov_level}</Text>
+          <Text style={styles.govLevel}>{t(item.gov_level)}</Text>
           <Text style={styles.statename}>{item.state_or_org}</Text>
           {/* <Text style={styles.fundingAmount}>₹{parseFloat(item.funding_amount).toLocaleString()}</Text> */}
         </View>
@@ -183,8 +182,15 @@ const Schemes = () => {
 
   if (loading) {
     return (
-      <View style={styles.center}>
-        <ActivityIndicator size="large" color="#0000ff" />
+      <View style={styles.loadcenter}>
+           <LottieView
+                  autoPlay
+                  ref={animation}
+                  style={styles.lottie}
+                  source={require('../../../assets/animations/tractor.json')}
+                />
+                <Text style={styles.loadingText}>{t("Loading Schemes")}...</Text>
+        {/* <ActivityIndicator size="large" color="#0000ff" /> */}
       </View>
     );
   }
@@ -193,10 +199,10 @@ const Schemes = () => {
     return (
       <View style={styles.nodata}>
         <Image style={styles.noScheme} source={require('../../../assets/icons/no_Schem.png')} />
-        <Text style={styles.error}>Failed to load Schemes due to network error or server error</Text>
-        <TouchableOpacity style={styles.reload} onPress={() => setReload(!reload)}>
-          <Text style={styles.reloadText}>Reload</Text>
-        </TouchableOpacity>
+        <Text style={styles.error}>{t("Failed to load Schemes due to network error or server error")}</Text>
+<TouchableOpacity style={styles.reload} onPress={() => setReload(!reload)}>
+  <Text style={styles.reloadText}>{t("Reload")}</Text>
+</TouchableOpacity>
       </View>
     );
   }
@@ -217,28 +223,35 @@ const Schemes = () => {
       ListHeaderComponent={
         <View style={styles.filterContainer}>
           <FilterButton 
-            label="All" 
-            active={selectedFilter === 'all'} 
-            onPress={() => filterSchemes('all')} 
-          />
-          <FilterButton 
-            label="Central" 
-            active={selectedFilter === 'Central'} 
-            onPress={() => filterSchemes('Central')} 
-          />
-          <FilterButton 
-            label="State" 
-            active={selectedFilter === 'State'} 
-            onPress={() => filterSchemes('State')} 
-          />
-          <FilterButton 
-            label="Private" 
-            active={selectedFilter === 'Private'} 
-            onPress={() => filterSchemes('Private')} 
-          />
+  label={t("All")} 
+  active={selectedFilter === 'all'} 
+  onPress={() => filterSchemes('all')} 
+/>
+<FilterButton 
+  label={t("Central")} 
+  active={selectedFilter === 'Central'}
+  onPress={() => filterSchemes('Central')} 
+/>
+<FilterButton 
+  label={t("State")} 
+  active={selectedFilter === 'State'} 
+  onPress={() => filterSchemes('State')} 
+/>
+<FilterButton 
+  label={t("Private")} 
+  active={selectedFilter === 'Private'} 
+  onPress={() => filterSchemes('Private')} 
+/>
         </View>
       }
     />
+    { !filteredSchemes.length && !loading && (
+      <View style={styles.nofilter}>
+        <Text style={styles.noerror}>{t("No Schemes Found for this Filter")}</Text>
+        <Image style={styles.noScheme} source={require('../../../assets/icons/no_Schem.png')} />
+      </View>
+    )}
+
     </View>
   );
 };
@@ -275,7 +288,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e9ecef',
   },
   activeFilter: {
-    backgroundColor: '#2b50ed',
+    backgroundColor: '#007BFF',
   },
   filterText: {
     color: '#495057',
@@ -315,17 +328,18 @@ const styles = StyleSheet.create({
     bottom: 20, // Adjust based on your safe area
     right: 20,
     zIndex: 1000,
-    backgroundColor: 'rgba(76, 73, 246, 1)',
+    backgroundColor: '#007BFF',
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 10,
-    // elevation: 3,
+    elevation: 3,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
   },
   backButtonText: {
+    textAlign: 'center',
     color: 'white',
     fontSize: 16,
     fontWeight: '600',
@@ -528,8 +542,34 @@ flex:1,
   },
   reloadText: {
     color: '#fff',
-  }
-
+  },
+  nofilter:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 3,
+    borderColor: 'grey',
+  },
+  noerror: {
+    width: '100%',
+    paddingHorizontal: 30,
+    textAlign: 'center',
+    marginBottom: 30,
+    fontSize: 16,
+    color: 'grey',
+  },
+  loadcenter: {
+   flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lottie: {
+    width: '100%',
+    height: 300,
+  },
+  loadingText: {
+    fontSize: 20,
+    fontWeight: '600',
+  },
 });
 
 export default Schemes;

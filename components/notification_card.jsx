@@ -2,7 +2,7 @@ import { Text, StyleSheet, View } from 'react-native'
 import React from 'react'
 import { usePushNotifications } from '../context/usePushNotification.ts'
 
-const API_URL = 'http://165.22.223.49:5000/api/v1/pushNotification/add';
+const API_URL = `${process.env.EXPO_PUBLIC_BACKEND_URL}/pushNotification/add`;
 
 
 const Notification_Card = () => {

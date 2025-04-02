@@ -3,10 +3,10 @@ import { View, Image, Text } from 'react-native';
 import { Tabs } from 'expo-router';
 
 const icons = {
-  crop: require('../../../assets/tabBar_icons/crop.png'),
-  weather: require('../../../assets/tabBar_icons/weather.png'),
+  crop: require('../../../assets/tabBar_icons/farmer.png'),
+  weather: require('../../../assets/tabBar_icons/crop.png'),
   market: require('../../../assets/tabBar_icons/market.png'),
-  other: require('../../../assets/tabBar_icons/other.png'),
+  other: require('../../../assets/tabBar_icons/crops.png'),
 };
 
 const TabIcon = ({ icon, color, name, focused }) => {
@@ -17,6 +17,15 @@ const TabIcon = ({ icon, color, name, focused }) => {
         resizeMode="contain"
         style={{ tintColor: color, width: 30, height: 30 }}
       />
+      <Text
+      style={
+        {
+          color: focused ? "#FFA001" : "#000000",
+          fontSize: 14,
+          marginTop: 2,
+          fontFamily: 'Poppins_400Regular',
+          fontWeight: focused ? 'bold' : 'normal',
+      }}>{name}</Text>
     </View>
   );
 };
@@ -27,7 +36,7 @@ const RootLayout = () => {
       screenOptions={{
         tabBarActiveTintColor: "#FFA001",
         tabBarInactiveTintColor: "#000000",
-        tabBarShowLabel: true,
+        tabBarShowLabel: false,
         tabBarLabelStyle: {
           fontSize: 15, // Change this to the desired font size
         },
@@ -36,7 +45,7 @@ const RootLayout = () => {
           borderTopWidth: 1,
           borderTopColor: "#232533",
           height: 75,
-          paddingTop: 8,
+          paddingTop: 18,
           justifyContent: 'center',
           
         },
@@ -50,7 +59,7 @@ const RootLayout = () => {
             <TabIcon
               icon="crop"
               color={color}
-              name="Crop"
+              name="Home"
               focused={focused}
             />
           ),
@@ -65,7 +74,7 @@ const RootLayout = () => {
             <TabIcon
               icon="market"
               color={color}
-              name="Market"
+              name="Markets"
               focused={focused}
             />
           ),
@@ -81,7 +90,7 @@ const RootLayout = () => {
             <TabIcon
               icon="weather"
               color={color}
-              name="schems"
+              name="Schems"
               focused={focused}
             />
           ),
@@ -96,7 +105,7 @@ const RootLayout = () => {
             <TabIcon
               icon="other"
               color={color}
-              name="Other"
+              name="Crops"
               focused={focused}
             />
           ),

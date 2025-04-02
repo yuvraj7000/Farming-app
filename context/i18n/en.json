@@ -21,7 +21,7 @@
 "Reload": "Reload",
 "India": "India",
 "Good for Spraying": "Good for Spraying",
-"moderate for Spraying": "Moderate for Spraying",
+"Moderate for Spraying": "Moderate for Spraying",
 "Avoid Spraying": "Avoid Spraying",
 //weather_description
 "clear sky": "Clear Sky",
@@ -117,6 +117,83 @@
 "district : Finding markets ...": "district : Finding markets ...",
 
   
+
+//schemes page
+"Failed to fetch schemes": "Failed to fetch schemes",
+"Failed to load Schemes due to network error or server error": "Failed to load Schemes due to network error or server error",
+"All": "All",
+"Central": "Central",
+"State": "State",
+"Org": "Org",
+"Private": "Private",
+"No Image": "No Image",
+"ACTIVE": "ACTIVE",
+"EXPIRED": "EXPIRED",
+"UPCOMING": "UPCOMING",
+"INACTIVE": "INACTIVE",
+"Back": "Back",
+"Funding": "Funding",
+"Description": "Description",
+"Benefits": "Benefits",
+"Eligibility": "Eligibility",
+"Application Process": "Application Process",
+"Official Website": "Official Website",
+"Government": "Government",
+"No Schemes Found for this Filter": "No Schemes Found for this Filter",
+"Loading Schemes": "Loading Schemes",
+
+
+
+//crops page
+"Information of Crops": "Information of Crops",
+"Change Language": "Change Language",
+"Notification Settings": "Notification Settings",
+
+
+
+//notifications page
+"Add Area for Notifications": "Add Area for Notifications",
+"Successfully added Area for Notification": "Successfully added Area for Notification",
+"failed to setup your notifications": "Failed to set up your notifications",
+"Try Again": "Try Again",
+"select state and district for notifications": "Select state and district for notifications",
+"Stay updated with real-time notifications about important updates, weather alerts, and government schemes tailored to your selected district. Add your area now to never miss out on critical information!": "Stay updated with real-time notifications about important updates, weather alerts, and government schemes tailored to your selected district. Add your area now to never miss out on critical information!",
+
+//privacy policy
+"Privacy Policy": "Privacy Policy",
+"Your Privacy Matters": "Your Privacy Matters",
+"We are committed to protecting your personal information and being transparent about what we collect.": "We are committed to protecting your personal information and being transparent about what we collect.",
+"Data Collection": "Data Collection",
+"Location data (used solely for weather updates via OpenWeatherMap API)": "Location data (used solely for weather updates via OpenWeatherMap API)",
+"State & District (for personalized notifications)": "State & District (for personalized notifications)",
+"Third-Party Services": "Third-Party Services",
+"Google Gemini API (plant disease analysis)": "Google Gemini API (plant disease analysis)",
+"Government APIs (market price data)": "Government APIs (market price data)",
+"Data Storage": "Data Storage",
+"We maintain our own secure database for:": "We maintain our own secure database for:",
+"Government & private schemes": "Government & private schemes",
+"Crop information": "Crop information",
+"User preferences (state/district)": "User preferences (state/district)",
+"Need More Information?": "Need More Information?",
+
+
+//about page
+"About Us": "About Us",
+"🌱 Empowering Farmers with Technology": "🌱 Empowering Farmers with Technology",
+"KisanBandhu is an AI-powered farming assistant designed to help farmers with real-time insights, disease detection, mandi prices, weather updates, and the latest government schemes. It supports 11 Indian languages to ensure accessibility for all.": "KisanBandhu is an AI-powered farming assistant designed to help farmers with real-time insights, disease detection, mandi prices, weather updates, and the latest government schemes. It supports 11 Indian languages to ensure accessibility for all.",
+"Key Features": "Key Features",
+"Plant Disease Diagnosis – Upload an image to get AI-driven detection and organic solutions": "Plant Disease Diagnosis – Upload an image to get AI-driven detection and organic solutions",
+"Real-time Mandi Prices – Get daily price updates from all government markets across India": "Real-time Mandi Prices – Get daily price updates from all government markets across India",
+"16-Day Weather Forecast – Stay updated on rainfall, temperature, and seasonal trends": "16-Day Weather Forecast – Stay updated on rainfall, temperature, and seasonal trends",
+"Active Government & Private Schemes – Find subsidies, loans, and schemes for farmers": "Active Government & Private Schemes – Find subsidies, loans, and schemes for farmers",
+"Comprehensive Crop Information – Learn about different crops, best practices, and farming techniques": "Comprehensive Crop Information – Learn about different crops, best practices, and farming techniques",
+"Multilingual Support – Available in 11 Indian languages for better accessibility": "Multilingual Support – Available in 11 Indian languages for better accessibility",
+"Personalized Notifications – Get weather alerts, mandi updates, and new schemes for your district": "Personalized Notifications – Get weather alerts, mandi updates, and new schemes for your district",
+"Our Mission": "Our Mission",
+"Empower farmers with the right tools and information for better productivity and profitability through technological innovation and accessible solutions.": "Empower farmers with the right tools and information for better productivity and profitability through technological innovation and accessible solutions.",
+"Contact Us": "Contact Us",
+
+
 
   }
 }

@@ -1,7 +1,10 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, ActivityIndicator } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
+import icon from '../../context/crop/crops'
+import nameTranslation from '../../context/crop/crops.json'
 
 interface Paragraph {
   paragraph_title: string;
@@ -16,6 +19,7 @@ interface CropData {
 }
 
 const Crop = () => {
+  const { t, i18n } = useTranslation();
   const { name } = useLocalSearchParams();
   const [cropData, setCropData] = useState<CropData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -25,7 +29,7 @@ const Crop = () => {
     const fetchCropData = async () => {
       console.log(name)
       try {
-        const response = await axios.post('http://165.22.223.49:5000/api/v1/crop/get', {
+        const response = await axios.post(`${process.env.EXPO_PUBLIC_BACKEND_URL}/crop/get`, {
           name: name,
           language_code: 'hi'
         });
@@ -43,24 +47,31 @@ const Crop = () => {
 
   if (loading) {
     return (
-      <View style={styles.container}>
-        <Text>Loading...</Text>
+      <View style={styles.loadcontainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+        <Text style={styles.loadingtext}>{t("Loading Crop")}</Text>
+        <Image source={icon[name]} style={styles.icon} />
+       
       </View>
     );
   }
 
   if (error) {
     return (
-      <View style={styles.container}>
-        <Text style={styles.errorText}>{error}</Text>
+      <View style={styles.loadcontainer}>
+      
+        <Text style={styles.faildetext}>{t("Failed to Load Crop")}</Text>
+        <Image source={icon[name]} style={styles.icon} />
+       
       </View>
     );
   }
 
   if (!cropData) {
     return (
-      <View style={styles.container}>
-        <Text>Crop data not found</Text>
+      <View style={styles.loadcontainer}>
+        <Text style={styles.loadingtext} >{t("Crop data not found")}</Text>
+        <Image source={icon[name]} style={styles.icon} />
       </View>
     );
   }
@@ -73,7 +84,9 @@ const Crop = () => {
         resizeMode="cover"
       />
       
-      <Text style={styles.title}>{cropData.name.toUpperCase()}</Text>
+      <Text style={styles.title}>
+  {nameTranslation.find((item) => item.name === cropData.name)?.[i18n.language]?.toUpperCase() || cropData.name.toUpperCase()}
+</Text>
 
       {cropData.paragraphs.map((paragraph, index) => (
         <View key={index} style={styles.paragraphContainer}>
@@ -91,7 +104,7 @@ const Crop = () => {
 
 const styles = StyleSheet.create({
   container: {
-    // flexGrow: 1,
+    flexGrow: 1,
     padding: 16,
     backgroundColor: '#fff',
   },
@@ -135,6 +148,30 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
   },
+  loadcontainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  loadingtext: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#333',
+    marginTop: 10,
+  },
+  icon: {
+    width: 100,
+    height: 100,
+    marginTop: 20,
+    borderRadius: 10,
+  },
+  faildetext: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: 'red',
+    marginTop: 10,
+  }
 });
 
 export default Crop;

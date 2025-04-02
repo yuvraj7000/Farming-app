@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity, Button } fro
 import cropsData from '../context/crop/crops.json'; // Your actual data
 import cropImages from '../context/crop/crops.js'; // Your image map
 import { useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 
 
 const Crop_section = () => {
+  const { t, i18n} = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
     const router = useRouter();
-
-
   const handleCropPress = (crop) => {
     console.log(crop);
     router.push(
@@ -27,14 +28,14 @@ const Crop_section = () => {
           source={cropImages[item.name]} // Use imageKey from data to access images
           style={styles.cropImage} 
         />
-        <Text style={styles.cropName}>{item.en}</Text>
+        <Text style={styles.cropName}>{item[language]}</Text>
       </TouchableOpacity>
     );
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Information of Crops</Text>
+      <Text style={styles.header}>{t("Information of Crops")}</Text>
       {/* Buttons to change the number of columns */}
     
       <FlatList
@@ -45,6 +46,7 @@ const Crop_section = () => {
         key={4} 
         contentContainerStyle={styles.listContent}
       />
+    
     </View>
   );
 };
@@ -53,6 +55,7 @@ export default Crop_section;
 
 const styles = StyleSheet.create({
   container: {
+    
     padding: 10,
     backgroundColor: '#f5f5f5',
   },
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
-    color: '#333',
+    // color: 'grey',
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   listContent: {
-    paddingBottom: 20,
+    paddingBottom: 110,
   },
   card: {
     flex: 1,
@@ -100,4 +103,5 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
   },
+
 });

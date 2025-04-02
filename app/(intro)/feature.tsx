@@ -7,8 +7,7 @@ import Button from '@/components/button';
 import { useRouter } from 'expo-router';
 import { usePushNotifications } from '@/context/usePushNotification';
 
-const API_URL = 'http://165.22.223.49:5000/api/v1/pushNotification/add';
-
+const API_URL = `${process.env.EXPO_PUBLIC_BACKEND_URL}/pushNotification/add`;
 
 const data = [
   {

@@ -14,14 +14,20 @@ const Weather_card = () => {
   const animation = useRef<LottieView>(null);
   const { t } = useTranslation()
 
-  const API_KEY = '90d2e1a10f78f0969364bab71f203ed5'
 
   const getSprayCondition = (windSpeed) => {
-    const mph = windSpeed * 2.23694
-    if (mph >= 2 && mph <= 4) return { text: 'Good for Spraying', color: '#4CAF50' }
-    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'Moderate for Spraying', color: '#FFC107' }
-    return { text: 'Avoid Spraying', color: '#F44336' }
-  }
+    const mph = windSpeed * 2.23694; // Convert m/s to mph
+    if (mph >= 2 && mph <= 4) {
+        return { text: 'Good for Spraying', color: '#4CAF50', advice: 'Conditions are ideal for spraying.' };
+    }
+    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) {
+        return { text: 'Moderate for Spraying', color: '#FFC107', advice: 'Spray with caution to avoid drift.' };
+    }
+    if (mph > 5) {
+        return { text: 'Avoid Spraying', color: '#F44336', advice: 'High wind speeds may cause spray drift.' };
+    }
+    return { text: 'Avoid Spraying', color: '#F44336', advice: 'Low wind speeds may cause uneven application.' };
+};
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -32,9 +38,9 @@ const Weather_card = () => {
 
         let location = await Location.getCurrentPositionAsync({})
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=${API_KEY}`
+          `${process.env.EXPO_PUBLIC_BACKEND_URL}/weather/current?lat=${location.coords.latitude}&lon=${location.coords.longitude}`
         )
-        setWeatherData(response.data)
+        setWeatherData(response.data.weather) 
         setLoading(false)
       } catch (error) {
         console.error(error)

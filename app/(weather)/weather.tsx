@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import {
-  SafeAreaView} from 'react-native-safe-area-context';
+  SafeAreaView
+} from 'react-native-safe-area-context';
 import { 
-  
   StyleSheet, 
   Text, 
   View, 
-  FlatList, 
   Image, 
   ActivityIndicator, 
   ScrollView 
@@ -17,83 +16,82 @@ import axios from 'axios';
 import * as Location from 'expo-location';
 import LottieView from 'lottie-react-native';
 
-
-const HOURLY_API = 'https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=44.34&lon=10.99&appid=90d2e1a10f78f0969364bab71f203ed5';
-const DAILY_API = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat=44.34&lon=10.99&cnt=16&appid=90d2e1a10f78f0969364bab71f203ed5';
-
 const Weather = () => {
   const { t } = useTranslation();
-    const [hourlyData, setHourlyData] = useState([]);
-    const [dailyData, setDailyData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [errorMsg, setErrorMsg] = useState<string | null>(null);
-    const [location, setLocation] = useState<{
-      coords: { latitude: number; longitude: number };
-      city: string;
-      country: string;
-    }>({
-      coords: { latitude: 0, longitude: 0 },
-      city: '',
-      country: ''
-    });
-    const animation = useRef<LottieView>(null);
-  
-    useEffect(() => {
-      (async () => {
-        // Request location permission
-        let { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
-          setErrorMsg('Permission to access location was denied');
-          setIsLoading(false);
-          return;
-        }
-  
-        // Get current position
-        let location = await Location.getCurrentPositionAsync({});
-        
-        // Reverse geocode to get city/country
-        const geo = await Location.reverseGeocodeAsync(location.coords);
-        
-        // Update location state
-        setLocation({
-          coords: {
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude
-          },
-          city: geo[0]?.city || 'Unknown City',
-          country: geo[0]?.country || 'Unknown Country'
-        });
-  
-        // Fetch weather data with current coordinates
-        try {
-          const [hourlyRes, dailyRes] = await Promise.all([
-            axios.get(`https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=90d2e1a10f78f0969364bab71f203ed5`),
-            axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?lat=${location.coords.latitude}&lon=${location.coords.longitude}&cnt=16&appid=90d2e1a10f78f0969364bab71f203ed5`)
-          ]);
-  
-          // Process data
-          const processedHourly = processHourlyData(hourlyRes.data.list);
-          const processedDaily = dailyRes.data.list.slice(4, 16);
-          
-          setHourlyData(processedHourly);
-          setDailyData(processedDaily);
-        } catch (error) {
-          console.error('Error fetching weather data:', error);
-          setErrorMsg('Failed to fetch weather data');
-        } finally {
-          setIsLoading(false);
-        }
-      })();
-    }, []);
+  const [hourlyData, setHourlyData] = useState([]);
+  const [dailyData, setDailyData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [location, setLocation] = useState<{
+    coords: { latitude: number; longitude: number };
+    city: string;
+    country: string;
+  }>({
+    coords: { latitude: 0, longitude: 0 },
+    city: '',
+    country: ''
+  });
+  const animation = useRef<LottieView>(null);
 
-    if (errorMsg) {
-        return (
-          <View style={styles.errorContainer}>
-            <Text style={styles.errorText}>{errorMsg}</Text>
-            <Text style={styles.errorSubtext}>Please enable location services</Text>
-          </View>
-        );
+  useEffect(() => {
+    (async () => {
+      // Request location permission
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location was denied');
+        setIsLoading(false);
+        return;
       }
+
+      // Get current position
+      let location = await Location.getCurrentPositionAsync({});
+      
+      // Reverse geocode to get city/country
+      const geo = await Location.reverseGeocodeAsync(location.coords);
+      
+      // Update location state
+      setLocation({
+        coords: {
+          latitude: location.coords.latitude,
+          longitude: location.coords.longitude
+        },
+        city: geo[0]?.city || 'Unknown City',
+        country: geo[0]?.country || 'Unknown Country'
+      });
+
+      // Fetch weather data with current coordinates
+      try {
+        const response = await axios.get(
+          `${process.env.EXPO_PUBLIC_BACKEND_URL}/weather/forcast?lat=${location.coords.latitude}&lon=${location.coords.longitude}`
+        );
+
+        const { hourlyRes, dailyRes } = response.data;
+
+        console.log("hourlyRes : ", hourlyRes.list);
+
+        // Process data
+        const processedHourly = processHourlyData(hourlyRes.list);
+        const processedDaily = dailyRes.list.slice(4, 16);
+        
+        setHourlyData(processedHourly);
+        setDailyData(processedDaily);
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+        setErrorMsg('Failed to fetch weather data');
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+  }, []);
+
+  if (errorMsg) {
+    return (
+      <View style={styles.errorContainer}>
+        <Text style={styles.errorText}>{errorMsg}</Text>
+        <Text style={styles.errorSubtext}>Please enable location services</Text>
+      </View>
+    );
+  }
 
   const processHourlyData = (list) => {
     const grouped = {};
@@ -123,11 +121,18 @@ const Weather = () => {
   };
 
   const getSprayCondition = (windSpeed) => {
-    const mph = windSpeed * 2.23694;
-    if (mph >= 2 && mph <= 4) return { text: 'Good for Spraying', color: '#4CAF50' };
-    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) return { text: 'Moderate for Spraying', color: '#FFC107' };
-    return { text: 'Avoid Spraying', color: '#F44336' };
-  };
+    const mph = windSpeed * 2.23694; // Convert m/s to mph
+    if (mph >= 2 && mph <= 4) {
+        return { text: 'Good for Spraying', color: '#4CAF50', advice: 'Conditions are ideal for spraying.' };
+    }
+    if ((mph >= 1 && mph < 2) || (mph > 4 && mph <= 5)) {
+        return { text: 'Moderate for Spraying', color: '#FFC107', advice: 'Spray with caution to avoid drift.' };
+    }
+    if (mph > 5) {
+        return { text: 'Avoid Spraying', color: '#F44336', advice: 'High wind speeds may cause spray drift.' };
+    }
+    return { text: 'Avoid Spraying', color: '#F44336', advice: 'Low wind speeds may cause uneven application.' };
+};
 
   const formatTime = (timeString) => {
     const [hours, minutes] = timeString.split(':');
@@ -137,186 +142,141 @@ const Weather = () => {
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp * 1000);
-    return date.toLocaleDateString(t('en-US'), {
+    return date.toLocaleDateString(t("en-US"), {
       weekday: 'long',
       day: 'numeric',
       month: 'long'
     });
   };
 
-  const renderHourlyDay = ({ item }) => (
-    <View style={styles.hourdayContainer}>
-      <View style={styles.hourdayHeader}>
-        <Text style={styles.hourdateText}>
-          {new Date(item.date).toLocaleDateString(t('en-US'), {
-            weekday: 'long',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </Text>
-        <Text style={styles.minMaxText}>
-          {t("High")}: {Math.round(item.maxTemp)}°C / {t("Low")}: {Math.round(item.minTemp)}°C
-        </Text>
-      </View>
-      <FlatList
-       horizontal
-        data={item.hours}
-        renderItem={renderHour}
-        keyExtractor={(hour) => hour.dt_txt}
-        showsHorizontalScrollIndicator={false}
-      />
-    </View>
-  );
-
-  const renderDailyDay = ({ item }) => {
-    const sprayCondition = getSprayCondition(item.speed);
-  
-    return (
-      <View style={styles.dailyContainer}>
-        <View style={styles.dailydayHeader}>
-          <Text style={styles.dailydateText}>{new Date(item.dt * 1000).toLocaleDateString(t('en-US'), {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric'
-})}</Text>
-        
-        </View>
-        <Text style={styles.dailyminMaxText}>
-            {t("High")}: {Math.round(item.temp.max - 273.15)}°C / {t("Low")}: {Math.round(item.temp.min - 273.15)}°C
-          </Text>
-        <View style={styles.dailyContent}>
-          <Image
-            source={{ uri: weather_icon[item.weather[0].icon] }}
-            style={styles.weatherIcon}
-          />
-           <Text style={styles.descriptionText}>
-              {t(item.weather[0].description)}
-            </Text>
-         
-            {/* <Text style={styles.descriptionText}>
-              {item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1)}
-            </Text> */}
-            {/* <View style={[styles.sprayCondition, { backgroundColor: sprayCondition.color }]}>
-              <Text style={styles.sprayText}>{sprayCondition.text}</Text>
-            </View> */}
-            <Text style={styles.popText}>🌧️ {Math.round(item.pop * 100)}% {t("Precipitation")}</Text>
-          </View>
-        
-      </View>
-    );
-  };
-
-  const renderHour = ({ item }) => {
-    const sprayCondition = getSprayCondition(item.wind.speed);
+  const renderHour = (hour) => {
+    const sprayCondition = getSprayCondition(hour.wind.speed);
     
     return (
-      <View style={styles.hourContainer}>
+      <View key={hour.dt_txt} style={styles.hourContainer}>
         <Text style={styles.timeText}>
-          {formatTime(item.dt_txt.split(' ')[1])}
+          {formatTime(hour.dt_txt.split(' ')[1])}
         </Text>
         <Image
-          source={{ uri: weather_icon[item.weather[0].icon] }}
+          source={{ uri: weather_icon[hour.weather[0].icon] }}
           style={styles.weatherIcon}
         />
         <Text style={styles.tempText}>
-          {Math.round(item.main.temp - 273.15)}°C
+          {Math.round(hour.main.temp - 273.15)}°C
         </Text>
         <Text style={styles.descriptionText}>
-          {t(item.weather[0].description)}
+          {t(hour.weather[0].description)}
         </Text>
         <View style={[styles.sprayCondition, { backgroundColor: sprayCondition.color }]}>
           <Text style={styles.sprayText}>{t(sprayCondition.text)}</Text>
         </View>
-        <Text style={styles.popText}>🌧️ {Math.round(item.pop * 100)}%</Text>
+        <Text style={styles.popText}>🌧️ {Math.round(hour.pop * 100)}%</Text>
+      </View>
+    );
+  };
+
+  const renderDailyDay = (day) => {
+    const sprayCondition = getSprayCondition(day.speed);
+  
+    return (
+      <View key={day.dt} style={styles.dailyContainer}>
+        <View style={styles.dailydayHeader}>
+          <Text style={styles.dailydateText}>{new Date(day.dt * 1000).toLocaleDateString(t("en-US"), {
+            weekday: 'long',
+            month: 'long',
+            day: 'numeric'
+          })}</Text>
+        </View>
+        <Text style={styles.dailyminMaxText}>
+          {t("High")}: {Math.round(day.temp.max - 273.15)}°C / {t("Low")}: {Math.round(day.temp.min - 273.15)}°C
+        </Text>
+        <View style={styles.dailyContent}>
+          <Image
+            source={{ uri: weather_icon[day.weather[0].icon] }}
+            style={styles.weatherIcon}
+          />
+          <Text style={styles.descriptionText}>
+            {t(day.weather[0].description)}
+          </Text>
+          <Text style={styles.popText}>🌧️ {Math.round(day.pop * 100)}% {t("Precipitation")}</Text>
+        </View>
       </View>
     );
   };
 
   if (isLoading) {
     return (
-         <View style={styles.animationContainer}>
-              <LottieView
-                autoPlay
-                ref={animation}
-                style={styles.lottie}
-                source={require('../../assets/animations/weather.json')}
-              />
-              <Text style={styles.loadingText}>{t("loading Weather")}</Text>
-            </View>
-        
+      <View style={styles.animationContainer}>
+        <LottieView
+          autoPlay
+          ref={animation}
+          style={styles.lottie}
+          source={require('../../assets/animations/weather.json')}
+        />
+        <Text style={styles.loadingText}>{t("loading Weather")}</Text>
+      </View>
     );
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-      <View style={styles.header}>
-  <Text style={styles.title}>
-    {location.city}, {t(location.country)}
-  </Text>
-  <Text style={styles.subtitle}>{t("4 days Hourly")}</Text>
-</View>
+        <View style={styles.header}>
+          <Text style={styles.title}>
+            {location.city}, {t(location.country)}
+          </Text>
+          <Text style={styles.subtitle}>{t("4 days Hourly")}</Text>
+        </View>
 
         {/* Hourly Forecast Section */}
-        <FlatList
-          data={hourlyData}
-          renderItem={renderHourlyDay}
-          keyExtractor={(item, index) => `hourly-${index}`}
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.hourlyList}
-        />
+        {hourlyData.map((day) => (
+          <View key={day.date} style={styles.hourdayContainer}>
+            <View style={styles.hourdayHeader}>
+              <Text style={styles.hourdateText}>
+                {new Date(day.date).toLocaleDateString(t("en-US"), {
+                  weekday: 'long',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </Text>
+              <Text style={styles.minMaxText}>
+                {t("High")}: {Math.round(day.maxTemp)}°C / {t("Low")}: {Math.round(day.minTemp)}°C
+              </Text>
+            </View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {day.hours.map(hour => renderHour(hour))}
+            </ScrollView>
+          </View>
+        ))}
 
         {/* Daily Forecast Section */}
         <Text style={styles.sectionTitle}>{t("next 12 days")}</Text>
-        <FlatList
-          data={dailyData}
-          renderItem={renderDailyDay}
-          keyExtractor={(item, index) => `daily-${index}`}
-          numColumns={2}
-          contentContainerStyle={styles.dailyGrid}
-          scrollEnabled={false} // Disable scrolling since it's inside ScrollView
-        />
-        
-        <FlatList
-      // ... existing props ...
-      ListFooterComponent={
-        <View style={styles.footerContainer}>
-          <View style={styles.dailyGrid}>
-            {/* Daily forecast grid */}
-          </View>
-          
-          {/* Disclaimer Section */}
-          <View style={styles.disclaimerContainer}>
-  <Text style={styles.disclaimerHeading}>{t("Important Note for Farmers")}</Text>
-  <Text style={styles.disclaimerText}>
-    • {t("Weather forecasts are estimates and actual conditions may vary")}{'\n'}
-    • {t("Always verify field conditions before agricultural operations")}{'\n'}
-    • {t("Wind speed recommendations are general guidelines")}{'\n'}
-    • {t("Consider microclimate variations in your specific location")}{'\n'}
-    • {t("Consult local agricultural authorities for critical decisions")}{'\n'}
-    • {t("Forecast data source: OpenWeatherMap API")}{'\n\n'}
-    {t("This information should not be used as sole basis for farming decisions.")}{' '}
-    {t("The developers assume no liability for actions taken based on this forecast.")}
-  </Text>
-</View>
-        </View>
-      }
-    />
-
-    <View style={styles.last}>
-
+        <View style={styles.dailyGrid}>
+          {dailyData.map(day => renderDailyDay(day))}
         </View>
 
+        {/* Disclaimer Section */}
+        <View style={styles.disclaimerContainer}>
+          <Text style={styles.disclaimerHeading}>{t("Important Note for Farmers")}</Text>
+          <Text style={styles.disclaimerText}>
+            • {t("Weather forecasts are estimates and actual conditions may vary")}{'\n'}
+            • {t("Always verify field conditions before agricultural operations")}{'\n'}
+            • {t("Wind speed recommendations are general guidelines")}{'\n'}
+            • {t("Consider microclimate variations in your specific location")}{'\n'}
+            • {t("Consult local agricultural authorities for critical decisions")}{'\n'}
+            • {t("Forecast data source: OpenWeatherMap API")}{'\n\n'}
+            {t("This information should not be used as sole basis for farming decisions.")}{' '}
+            {t("The developers assume no liability for actions taken based on this forecast.")}
+          </Text>
+        </View>
 
+        <View style={styles.last} />
       </ScrollView>
-
-
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  // Keep all your existing hourly styles
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
@@ -338,19 +298,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 4,
   },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-  },
-
   hourdayContainer: {
     marginTop: 8,
     borderWidth: 1,
     borderColor: '#EEE',
     borderRadius: 6,
     backgroundColor: '#FAFAFA',
+    marginHorizontal: 8,
   },
   hourdayHeader: {
     flexDirection: 'row',
@@ -366,57 +320,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#444',
     flex: 1,
-  },
-  
-  dayContainer: {
-    margin: 8,
-    borderWidth: 1,
-    borderColor: '#EEE',
-    borderRadius: 6,
-    backgroundColor: '#FAFAFA',
-  },
-  // dailyContainer: {
-  //   width: 160,
-  //   margin: 8,
-  //   borderWidth: 1,
-  //   borderColor: '#EEE',
-  //   borderRadius: 6,
-  //   backgroundColor: '#FAFAFA',
-  // },
-  dayHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: '#EEE',
-    backgroundColor: '#cae1ed',
-  },
-  dailydayHeader: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#EEE',
-    backgroundColor: '#cae1ed',
-    alignItems: 'center',
-    padding: 8,
-  },
-  dateText: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#444',
-    flex: 1,
-  },
-  dailydateText: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#444',
-    flex: 1,
-  },
-  dailyminMaxText:{
-    padding: 8,
-    fontSize: 13,
-    color: '#666',
-    marginLeft: 8,
-    textAlign: 'center',
   },
   minMaxText: {
     fontSize: 13,
@@ -440,11 +343,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginBottom: 2,
   },
-  // weatherIcon: {
-  //   width: 40,
-  //   height: 40,
-  //   marginVertical: 2,
-  // },
+  weatherIcon: {
+    width: 48,
+    height: 48,
+    marginVertical: 4,
+  },
   tempText: {
     fontSize: 15,
     fontWeight: '600',
@@ -471,59 +374,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlign: 'center',
   },
-  // popText: {
-  //   fontSize: 11,
-  //   color: '#2196F3',
-  //   fontWeight: '500',
-  //   marginTop: 2,
-  // },
-  // dailyContent: {
-  //   flexDirection: 'col',
-  //   justifyContent: 'center',
-  //   padding: 8,
-  //   alignItems: 'center',
-  // },
-  dailyDetails: {
-    flex: 1,
-    marginLeft: 12,
-  },
-  listContent: {
-    paddingBottom: 12,
-  },
-  hourlyList: {
-    paddingHorizontal: 8,
-    paddingBottom: 16,
-  },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#333',
-    marginTop: 16,
-    marginLeft: 16,
-    marginBottom: 8,
-  },
-  dailyGrid: {
-    paddingHorizontal: 8,
-    justifyContent: 'space-between',
-  },
-  dailyContainer: {
-    width: '48%', // Leave 4% space between items
-    margin: 4,
-    borderWidth: 1,
-    borderColor: '#EEE',
-    borderRadius: 8,
-    backgroundColor: '#FAFAFA',
-    paddingBottom: 8,
-  },
-  dailyContent: {
-    alignItems: 'center',
-    padding: 8,
-  },
-  weatherIcon: {
-    width: 48,
-    height: 48,
-    marginVertical: 4,
-  },
   popText: {
     fontSize: 12,
     color: '#2196F3',
@@ -531,8 +381,52 @@ const styles = StyleSheet.create({
     marginTop: 4,
     textAlign: 'center',
   },
-  footerContainer: {
-    paddingBottom: 24, // Add space at bottom
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#333',
+    marginTop: 26,
+    marginLeft: 26,
+    marginBottom: 20,
+  },
+  dailyGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingHorizontal: 8,
+  },
+  dailyContainer: {
+    width: '45%',
+    margin: 5,
+    borderWidth: 1,
+    borderColor: '#EEE',
+    borderRadius: 8,
+    backgroundColor: '#FAFAFA',
+    paddingBottom: 8,
+  },
+  dailydayHeader: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#EEE',
+    backgroundColor: '#cae1ed',
+    alignItems: 'center',
+    padding: 8,
+  },
+  dailydateText: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#444',
+    flex: 1,
+  },
+  dailyminMaxText: {
+    padding: 8,
+    fontSize: 13,
+    color: '#666',
+    marginLeft: 8,
+    textAlign: 'center',
+  },
+  dailyContent: {
+    alignItems: 'center',
+    padding: 8,
   },
   disclaimerContainer: {
     margin: 12,
@@ -578,7 +472,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-
   },
   lottie: {
     width: 300,

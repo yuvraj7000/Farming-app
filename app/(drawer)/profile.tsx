@@ -4,7 +4,6 @@ import NotificationDropdown from '@/components/notification_dropdown'
 const Profile = () => {
   return (
     <View>
-      <Text>Profile</Text>
       <NotificationDropdown/>
     </View>
   )

@@ -5,11 +5,6 @@ import statesData from '../context/i18n/state_district.json';
 import Mandi_Data from './mandi_data';
 import { useTranslation } from 'react-i18next';
 
-const languages = {
-  en: "English",
-  hi: "हिन्दी",
-  ta: "தமிழ்",
-};
 
 const Dropdown = () => {
   const { t, i18n } = useTranslation();

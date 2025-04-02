@@ -32,8 +32,8 @@ const Mandi_Data = ({district, state,  transDistrict}) => {
     const API_KEY = '579b464db66ec23bdd0000010a5d8d330fe04faf5faa8fe9223be9d4';
     
     const UrlByDate = (encodedState, encodedDistrict, encodedDate) => {       
-              return `https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?` +
-                `api-key=${API_KEY}&format=json&limit=1000&` +
+              return `${process.env.EXPO_PUBLIC_GOV_API}/35985678-0d79-46b4-9ed6-6f13308a1d24?` +
+                `api-key=${process.env.EXPO_PUBLIC_GOV_API_KEY}&format=json&limit=1000&` +
                 `filters%5BState.keyword%5D=${encodedState}&` +
                 `filters%5BDistrict.keyword%5D=${encodedDistrict}&` +
                 `filters%5BArrival_Date%5D=${encodedDate}`;
@@ -43,7 +43,7 @@ const Mandi_Data = ({district, state,  transDistrict}) => {
             let urls = [];
             const encodedState = encodeURIComponent(state);
               const encodedDistrict = encodeURIComponent(district);
-              urls.push(`https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${API_KEY}&format=json&limit=1000&filters%5Bstate.keyword%5D=${encodedState}&filters%5Bdistrict%5D=${encodedDistrict}`);
+              urls.push(`${process.env.EXPO_PUBLIC_GOV_API}/9ef84268-d588-465a-a308-a864a43d0070?api-key=${process.env.EXPO_PUBLIC_GOV_API_KEY}&format=json&limit=1000&filters%5Bstate.keyword%5D=${encodedState}&filters%5Bdistrict%5D=${encodedDistrict}`);
             for (let i = 0; i < 5; i++) {
                 const date = dates[i];
                 const url = UrlByDate(encodedState, encodedDistrict, date);
