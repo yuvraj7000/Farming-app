@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.AgriNext.KisanBandhu",
-      "googleServicesFile": "./android/app/google-services.json"
+      "googleServicesFile": "../assets/google-services.json"
     },
     "web": {
       "bundler": "metro",
