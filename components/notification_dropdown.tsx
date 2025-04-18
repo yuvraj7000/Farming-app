@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Modal, ScrollView } from 'react-native';
-import RNPickerSelect from 'react-native-picker-select';
 import statesData from '../context/i18n/state_district.json';
 import { useTranslation } from 'react-i18next';
 import { usePushNotifications } from '../context/usePushNotification.ts'

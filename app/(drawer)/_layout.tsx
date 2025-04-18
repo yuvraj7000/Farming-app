@@ -13,16 +13,34 @@ const DrawerLabel =({label, icon})=>{
     )
 }
 
+
+const YourHeaderComponent = () => {
+  const { t } = useTranslation();
+
+  return (
+    <View style={styles.headerContainer}>
+      <Image 
+        source={require('../../assets/icons/applogo.png')} // update with your image file
+        style={styles.headerImage}
+      />
+      <Text style={styles.headTitle}>{t('app_name')}</Text>
+    </View>
+  );
+};
+
+
+
+
 export default function Layout() {
   const { t } = useTranslation();
  
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={{ flex: 1}}>
       <Drawer>
         <Drawer.Screen
           name="(tabs)" 
           options={{
-            drawerLabel: () => ( <View><Text style={styles.headerTitle}>{t('app_name')}</Text></View> ),
+            drawerLabel: () => <YourHeaderComponent/>,
             title: 'KisanBandhu',
             headerTitle: () => (
               <Text style={styles.headerTitle}>{t('app_name')}</Text>
@@ -77,6 +95,27 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#007BFF',
+  },
+  headerContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 40,
+    borderBottomWidth: 1,
+    padding: 10,
+    paddingBottom: 5,
+  },
+  headerImage: {
+    width: 100,
+    height: 100,
+  
+    borderRadius: 40,
+    marginBottom: 20, 
+  },
+  headTitle: {
+    fontSize: 24,
+    color: '#007BFF',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
