@@ -38,7 +38,7 @@ const Weather_card = () => {
 
         let location = await Location.getCurrentPositionAsync({})
         const response = await axios.get(
-          `http://165.22.223.49:5000/api/v1/weather/current?lat=${location.coords.latitude}&lon=${location.coords.longitude}`
+          `${process.env.EXPO_PUBLIC_BACKEND_URL}/weather/current?lat=${location.coords.latitude}&lon=${location.coords.longitude}`
         )
         setWeatherData(response.data.weather)
         setLoading(false)
