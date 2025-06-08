@@ -4,9 +4,9 @@ import { Tabs } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 const icons = {
   crop: require('../../../assets/tabBar_icons/farmer.png'),
-  weather: require('../../../assets/tabBar_icons/crop.png'),
+  news: require('../../../assets/tabBar_icons/news.png'),
   market: require('../../../assets/tabBar_icons/market.png'),
-  other: require('../../../assets/tabBar_icons/crops.png'),
+  other: require('../../../assets/tabBar_icons/crop.png'),
 };
 
 const TabIcon = ({ icon, color, name, focused }) => {
@@ -99,6 +99,21 @@ const RootLayout = () => {
       />
 
       <Tabs.Screen
+        name="news"
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              icon="news"
+              color={color}
+              name="News"
+              focused={focused}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
         name="other"
         options={{
           headerShown: false,
@@ -112,6 +127,7 @@ const RootLayout = () => {
           ),
         }}
       />
+      
     </Tabs>
   );
 };

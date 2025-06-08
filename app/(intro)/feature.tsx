@@ -5,7 +5,8 @@ import { useTranslation  } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '@/components/button';
 import { useRouter } from 'expo-router';
-import { usePushNotifications } from '@/context/usePushNotification';
+import {PermissionsAndroid} from 'react-native';
+import messaging from '@react-native-firebase/messaging'
 
 const API_URL = `${process.env.EXPO_PUBLIC_BACKEND_URL}/pushNotification/add`;
 
@@ -50,7 +51,6 @@ const FeatureCard = ({ heading, content, image, color }) => {
 };
 
 const Feature = () => {
-  const { expoPushToken, notification } = usePushNotifications();
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -64,12 +64,24 @@ const Feature = () => {
     }
   };
 
-  // Send FCM token when it's available
-  useEffect(() => {
-    if (expoPushToken?.data) {
-      sendFcmToken(expoPushToken.data);
+  const getToken = async () => {
+      try {
+        const token = await messaging().getToken();
+        console.log('FCM Token:', token);
+        if (token) {
+          // Send the token to the backend
+          await sendFcmToken(token);
+        }
+      } catch (error) {
+        console.error('Error getting FCM token:', error);
+      }
     }
-  }, [expoPushToken]);
+
+  // Send FCM token when it's available
+ useEffect(() => {
+     PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
+     getToken();
+   }, []);
 
   const buttonPress = () => {
     router.replace('/home');

@@ -11,7 +11,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import LottieView from 'lottie-react-native';
 
-const Schemes = () => {
+const SchemesComponent = () => {
   const { t, i18n } = useTranslation();
     const animation = useRef<LottieView>(null);
   const [schemes, setSchemes] = useState([]);
@@ -186,7 +186,7 @@ const Schemes = () => {
                   autoPlay
                   ref={animation}
                   style={styles.lottie}
-                  source={require('../../../assets/animations/tractor.json')}
+                  source={require('../assets/animations/tractor.json')}
                 />
                 <Text style={styles.loadingText}>{t("Loading Schemes")}...</Text>
         {/* <ActivityIndicator size="large" color="#0000ff" /> */}
@@ -197,7 +197,7 @@ const Schemes = () => {
   if (error) {
     return (
       <View style={styles.nodata}>
-        <Image style={styles.noScheme} source={require('../../../assets/icons/no_Schem.png')} />
+        <Image style={styles.noScheme} source={require('../assets/icons/no_Schem.png')} />
         <Text style={styles.error}>{t("Failed to load Schemes due to network error or server error")}</Text>
 <TouchableOpacity style={styles.reload} onPress={() => setReload(!reload)}>
   <Text style={styles.reloadText}>{t("Reload")}</Text>
@@ -247,7 +247,7 @@ const Schemes = () => {
     { !filteredSchemes.length && !loading && (
       <View style={styles.nofilter}>
         <Text style={styles.noerror}>{t("No Schemes Found for this Filter")}</Text>
-        <Image style={styles.noScheme} source={require('../../../assets/icons/no_Schem.png')} />
+        <Image style={styles.noScheme} source={require('../assets/icons/no_Schem.png')} />
       </View>
     )}
 
@@ -571,4 +571,4 @@ flex:1,
   },
 });
 
-export default Schemes;
+export default SchemesComponent;

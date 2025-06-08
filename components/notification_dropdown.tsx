@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Modal, ScrollView } from 'react-native';
 import statesData from '../context/i18n/state_district.json';
 import { useTranslation } from 'react-i18next';
-import { usePushNotifications } from '../context/usePushNotification.ts'
 import axios from 'axios';
+import {PermissionsAndroid} from 'react-native';
+import messaging from '@react-native-firebase/messaging'
 
 
 
@@ -65,13 +66,26 @@ const Dropdown = () => {
   const [send, setSend] = useState(false);
   const [error, setError] = useState(false);
   const [language, setLanguage] = useState(i18n.language);
+  const [expoPushToken, setExpoPushToken] = useState(null);
 
 
   useEffect(() => {
     setLanguage(i18n.language);
+     PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
+    const getToken = async () => {
+      try {
+        const token = await messaging().getToken();
+        console.log('FCM Token:', token);
+        setExpoPushToken({ data: token });
+        console.log(' Push Token:', expoPushToken);
+      } catch (error) {
+        console.error('Error getting FCM token:', error);
+      }
+    }
+    getToken();
   }, [i18n.language, language]);
 
-  const { expoPushToken } = usePushNotifications();
+  
 
   const API_URL = `${process.env.EXPO_PUBLIC_BACKEND_URL}/pushNotification/add`;
 
