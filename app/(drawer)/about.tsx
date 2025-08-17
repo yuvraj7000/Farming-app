@@ -57,11 +57,11 @@ const About = () => {
           <Text style={styles.subtitlec}>{t("Contact Us")}</Text>
           <View style={styles.contactItem}>
             <Ionicons name="mail" size={20} color="#4CAF50" />
-            <Text style={styles.contactText}>support@kisanbandhu.com</Text>
+            <Text style={styles.contactText}>yuvraj7000raju@gmail.com</Text>
           </View>
           <View style={styles.contactItem}>
             <Ionicons name="globe" size={20} color="#4CAF50" />
-            <Text style={styles.contactText}>www.kisanbandhu.com</Text>
+            <Text style={styles.contactText}>yuvrajyadav.tech</Text>
           </View>
         </View>
       </ScrollView>

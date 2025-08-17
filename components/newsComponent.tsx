@@ -13,6 +13,11 @@ const NewsComponent = () => {
   const [totalNews, setTotalNews] = useState(0);
   const [selectedNews, setSelectedNews] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+
+  // For full image modal
+  const [imageModalVisible, setImageModalVisible] = useState(false);
+  const [modalImageUrl, setModalImageUrl] = useState('');
+
   const limit = 5;
 
   const extractYoutubeId = (url) => {
@@ -76,6 +81,16 @@ const NewsComponent = () => {
     setSelectedNews(null);
   };
 
+  const openImageModal = (imageUrl: string) => {
+    setModalImageUrl(imageUrl);
+    setImageModalVisible(true);
+  };
+
+  const closeImageModal = () => {
+    setImageModalVisible(false);
+    setModalImageUrl('');
+  };
+
   const renderItem = ({ item }) => (
     <TouchableOpacity 
       style={styles.newsItem}
@@ -84,22 +99,22 @@ const NewsComponent = () => {
     >
       {
       item.image_url ? (
-        < View style={{backgroundColor:'#000', height: 200, width: '100%'}}>
-         <Text style={{color:'#fff', position:'absolute', fontSize: 20, top: '40%', left:'40%'}}>Loading...</Text>
-        <Image 
-          source={{ uri: item.image_url }} 
-          style={styles.newsImage}
-          resizeMode="cover"
-        />
+        <View style={{backgroundColor:'#000', height: 200, width: '100%'}}>
+          <Text style={{color:'#fff', position:'absolute', fontSize: 20, top: '40%', left:'40%'}}>Loading...</Text>
+          <Image 
+            source={{ uri: item.image_url }} 
+            style={styles.newsImage}
+            resizeMode="cover"
+          />
         </View>
       ) : item.youtube_url ? (
         <View style={styles.youtubeContainer}>
-                  <Text style={{color:'#fff', position:'absolute',fontSize:20, top: '40%', left:'40%'}}>Loading...</Text>
-                  <YoutubePlayer
-                    height={250}
-                    play={false}
-                     videoId={extractYoutubeId(item.youtube_url)}
-                  />
+          <Text style={{color:'#fff', position:'absolute',fontSize:20, top: '40%', left:'40%'}}>Loading...</Text>
+          <YoutubePlayer
+            height={250}
+            play={false}
+            videoId={extractYoutubeId(item.youtube_url)}
+          />
         </View>
       ) : null}
       
@@ -155,6 +170,7 @@ const NewsComponent = () => {
         }
       />
 
+      {/* News Detail Modal */}
       <Modal
         animationType="slide"
         transparent={false}
@@ -172,34 +188,56 @@ const NewsComponent = () => {
           {selectedNews && (
             <ScrollView contentContainerStyle={styles.modalContent}>
               {selectedNews.image_url ? (
-                <>
-                <Image 
-                  source={{ uri: selectedNews.image_url }} 
-                  style={styles.modalImage}
-                  resizeMode="cover"
-                />
-                </>
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  onPress={() => openImageModal(selectedNews.image_url)}
+                >
+                  <Image 
+                    source={{ uri: selectedNews.image_url }} 
+                    style={styles.modalImagemain}
+                    resizeMode="contain"
+                  />
+                </TouchableOpacity>
               ) : null}
 
-              
               <View style={styles.modalTextContainer}>
                 <Text style={styles.modalTitle}>{selectedNews.title}</Text>
-                
                 <Text style={styles.modalSource}>{selectedNews.source} • {new Date(selectedNews.date).toLocaleDateString()}</Text>
-                 {selectedNews.youtube_url ? (
-                <View style={styles.youtubeContainer}>
-                  <Text style={{color:'#fff', position:'absolute', fontSize: 20, top: '40%', left:'40%'}}>Loading...</Text>
-                  <YoutubePlayer
-                    height={250}
-                    play={false}
-                    videoId={extractYoutubeId(selectedNews.youtube_url)}
-                  />
-                </View>
-              ) : null}
+                {selectedNews.youtube_url ? (
+                  <View style={styles.youtubeContainer}>
+                    <Text style={{color:'#fff', position:'absolute', fontSize: 20, top: '40%', left:'40%'}}>Loading...</Text>
+                    <YoutubePlayer
+                      height={250}
+                      play={false}
+                      videoId={extractYoutubeId(selectedNews.youtube_url)}
+                    />
+                  </View>
+                ) : null}
                 <Text style={styles.modalText}>{selectedNews.content}</Text>
               </View>
             </ScrollView>
           )}
+        </View>
+      </Modal>
+
+      {/* Full Image Modal */}
+      <Modal
+        visible={imageModalVisible}
+        transparent={true}
+        onRequestClose={closeImageModal}
+      >
+        <View style={styles.fullImageModalContainer}>
+          <TouchableOpacity
+            style={styles.fullImageCloseButton}
+            onPress={closeImageModal}
+          >
+            <Ionicons name="close" size={32} color="#fff" />
+          </TouchableOpacity>
+          <Image
+            source={{ uri: modalImageUrl }}
+            style={styles.fullImage}
+            resizeMode="contain"
+          />
         </View>
       </Modal>
     </View>
@@ -233,9 +271,12 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   youtubeContainer: {
+   
     marginVertical: 20,
     width: '100%',
-    height: 190,
+    maxWidth: 600,
+    
+    aspectRatio: 16 / 9,
     backgroundColor: '#000',
   },
   newsImage: {
@@ -290,6 +331,13 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 250,
   },
+  modalImagemain: {
+    width: '100%',
+    height: 250,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+    backgroundColor: '#000',
+  },
   modalTextContainer: {
     padding: 20,
   },
@@ -308,5 +356,25 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#444',
     lineHeight: 24,
+  },
+  // Full image modal styles
+  fullImageModalContainer: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.95)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  fullImage: {
+    width: '100%',
+    height: '100%',
+  },
+  fullImageCloseButton: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+    zIndex: 2,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    borderRadius: 20,
+    padding: 5,
   },
 });

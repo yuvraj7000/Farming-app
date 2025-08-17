@@ -25,13 +25,14 @@ const Crop = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+
   useEffect(() => {
     const fetchCropData = async () => {
       console.log(name)
       try {
         const response = await axios.post(`${process.env.EXPO_PUBLIC_BACKEND_URL}/crop/get`, {
           name: name,
-          language_code: 'hi'
+          language_code: i18n.language
         });
         console.log(response.data);
         setCropData(response.data.crop);

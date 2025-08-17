@@ -31,6 +31,7 @@ const Mandi = ({ data, transDistrict }) => {
           }
         />
         <Text style={styles.notext}>{transDistrict} {t("District")} : {t("No data available")} </Text>
+        <Text style={styles.notext}>{t("Reason – The mandi may be closed or the data may not have been updated by the mandi. Please try again tomorrow.")}</Text>
       </View>
     );
   }

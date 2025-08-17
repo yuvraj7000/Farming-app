@@ -2,7 +2,7 @@
   "expo": {
     "name": "Kisan Bandhu",
     "slug": "app",
-    "version": "1.0.0",
+    "version": "1.4.0",
     "orientation": "portrait",
     "icon": "./assets/icons/applogo.png",
     "scheme": "myapp",
@@ -13,6 +13,7 @@
     },
     "android": {
       "package": "com.AgriNext.KisanBandhu",
+      "versionCode": 4, 
       "googleServicesFile": "./assets/google-services.json",
       "networkSecurityConfig": "./network_security_config.xml"
     },
@@ -29,14 +30,14 @@
           "image": "./assets/icons/applogo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#055532"
         }
       ],
       [
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": false
           },
           "ios": {
             "flipper": true

@@ -1,10 +1,13 @@
 import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 import { useRouter } from 'expo-router';
 import Button from './button';
+import {PermissionsAndroid} from 'react-native';
+import messaging from '@react-native-firebase/messaging'
+import axios from 'axios';
 
 const data = [
     { lan: "English", code: "en" },
@@ -42,14 +45,45 @@ const Language_button = ({ lan, code, language, setLanguage }) => {
 const Language_component = () => {
     const { t, i18n } = useTranslation();
     const [language, setLanguage] = useState(i18n.language);
+    const [fcmToken, setfcmToken] = useState({ data: "" });
     const router = useRouter();
 
     const changeLanguage = (code) => {
         setLanguage(code);
     };
 
+    const API_URL = `${process.env.EXPO_PUBLIC_BACKEND_URL}/pushNotification/add`;
+
+     useEffect(() => {
+         PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
+        const getToken = async () => {
+          try {
+            const token = await messaging().getToken();
+            console.log('FCM Token:', token);
+            setfcmToken(token);
+            console.log(' Push Token:', fcmToken);
+          } catch (error) {
+            console.error('Error getting FCM token:', error);
+          }
+        }
+        getToken();
+      }, []);
+
+    const sendFcmToken = async (PushToken, language) => {
+          try {
+            const response = await axios.post(API_URL, { fcm_token: PushToken,  language: language });
+            console.log('FCM Token sent:', response.data);
+          } catch (error) {
+            console.error('Error sending FCM token:', error.response?.data || error.message);
+          }
+    };
+
+
+
+
     const handleDone = async () => {
         await AsyncStorage.setItem('language', language)
+        await sendFcmToken(fcmToken, language);
         await AsyncStorage.getItem('visit').then((value) => {
             if (value === null) {
                 AsyncStorage.setItem('visit', '1')
@@ -66,6 +100,7 @@ const Language_component = () => {
                 router.replace("/home")
             }
         })
+
 
     };
 

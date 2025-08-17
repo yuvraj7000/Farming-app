@@ -32,6 +32,7 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
 
   const uploadImage = async (uri, language) => {
     setLoading(true);
+    console.log("Uploading image:", uri, "Language:", language);
     try {
       const formData = new FormData();
       formData.append('image', {
@@ -61,8 +62,8 @@ const PlantDiagnosis = ({ imageUri, setImage }) => {
     return <Diagnose_presentation imageUri={imageUri} data={response} />;
   }
 
-  const handleRightChoice = () => {
-    uploadImage(imageUri, languages[i18n.language]);
+  const handleRightChoice = async() => {
+    await uploadImage(imageUri, languages[i18n.language]);
   };
 
   const handleWrongChoice = () => {

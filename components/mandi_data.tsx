@@ -34,19 +34,22 @@ const Mandi_Data = ({ district, state, transDistrict }) => {
     const UrlByDate = (encodedState, encodedDistrict, encodedDate) => {
         return `${process.env.EXPO_PUBLIC_GOV_API}/35985678-0d79-46b4-9ed6-6f13308a1d24?` +
             `api-key=${process.env.EXPO_PUBLIC_GOV_API_KEY}&format=json&limit=1000&` +
-            `filters%5BState.keyword%5D=${encodedState}&` +
-            `filters%5BDistrict.keyword%5D=${encodedDistrict}&` +
+            `filters%5BState%5D=${encodedState}&` +
+            `filters%5BDistrict%5D=${encodedDistrict}&` +
             `filters%5BArrival_Date%5D=${encodedDate}`;
     }
 
     const getUrls = (dates, state, district) => {
         let urls = [];
         const encodedState = encodeURIComponent(state);
-        const encodedDistrict = encodeURIComponent(district);
+        const encodedDistrict = encodeURIComponent(district); // Use the first date for the additional API
         urls.push(`${process.env.EXPO_PUBLIC_GOV_API}/9ef84268-d588-465a-a308-a864a43d0070?api-key=${process.env.EXPO_PUBLIC_GOV_API_KEY}&format=json&limit=1000&filters%5Bstate.keyword%5D=${encodedState}&filters%5Bdistrict%5D=${encodedDistrict}`);
+        console.log("today- url--", `${process.env.EXPO_PUBLIC_GOV_API}/9ef84268-d588-465a-a308-a864a43d0070?api-key=${process.env.EXPO_PUBLIC_GOV_API_KEY}&format=json&limit=1000&filters%5Bstate.keyword%5D=${encodedState}&filters%5Bdistrict%5D=${encodedDistrict}`)
         for (let i = 0; i < 5; i++) {
-            const date = dates[i];
-            const url = UrlByDate(encodedState, encodedDistrict, date);
+            // const date = dates[i];
+            const encodedDate = encodeURIComponent(dates[i]);
+            const url = UrlByDate(encodedState, encodedDistrict, encodedDate);
+            console.log("url --", url);
             urls.push(url);
         }
 
@@ -96,7 +99,7 @@ const Mandi_Data = ({ district, state, transDistrict }) => {
                 }
                 return acc;
             }, []);
-
+            console.log('Total records fetched:', allRecords);
             return allRecords;
         } catch (error) {
             console.error('Error in request function:', error);

@@ -34,7 +34,7 @@ export default function Diagnose() {
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ['images'],
-      quality: 1,
+      quality: 0.7,
       // base64: true,
     });
 
@@ -49,11 +49,11 @@ export default function Diagnose() {
   const takePhoto = async () => {
     if (cameraRef) {
       let photo = await cameraRef.takePictureAsync({
-        quality: 1,
+        quality: 0.7,
         // base64: true, 
       });
       setImage(photo.uri);
-      console.log(photo);
+      console.log("photo - ", photo);
       
     }
   };
