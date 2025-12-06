@@ -12,6 +12,7 @@ const Mandi = ({ data, transDistrict }) => {
   const [marketDetails, setMarketDetails] = useState([]);
 
   console.log("trans -- ", transDistrict)
+  console.log("data -- ", data);
 
   const uniqueMarkets = [...new Set(data.map(item => item.Market))];
 
@@ -58,7 +59,7 @@ const Mandi = ({ data, transDistrict }) => {
                 selectedMarket === market && styles.selectedMarketButtonText, // Apply selected text style
               ]}
             >
-              {market_translation[market][language]
+              {market_translation[market]?.[language]
                 ? market_translation[market][language]
                 : market}
             </Text>
@@ -78,7 +79,7 @@ const Mandi = ({ data, transDistrict }) => {
       {selectedMarket && (
         <View style={styles.tableContainer}>
           <Text style={styles.tableTitle}>
-            {t("Market Data for")} <Text style={styles.boldText}>{market_translation[selectedMarket][language] ? market_translation[selectedMarket][language] : selectedMarket}</Text>
+            {t("Market Data for")} <Text style={styles.boldText}>{market_translation[selectedMarket]?.[language] ? market_translation[selectedMarket][language] : selectedMarket}</Text>
 
           </Text>
           <View style={styles.table}>
